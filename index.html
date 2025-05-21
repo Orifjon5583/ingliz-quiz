@@ -3,846 +3,912 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stele.css"> <!-- Sizning maxsus uslublaringiz -->
-    <title>Ehtimollar Nazariyasi va Matematik Statistika (1-10)</title>
+    <title>Veb Dasturlash Bo'yicha Savol-Javoblar</title>
+    <link rel="stylesheet" href="stele.css"> <!-- CSS faylingiz nomi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="accordion-container">
-        
+<div class="cantent"> <!-- yoki .accordion-container, agar shunday nomlagan bo'lsangiz -->
+    <div class="where"> <!-- yoki .accordion-container, agar shunday nomlagan bo'lsangiz -->
 
-    <!-- 1-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">1. Distribution function of a random vector and its properties. Random variables of discrete and continuous type.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>The concepts related to the distribution of random variables, both single and multiple (vectors), are fundamental in probability theory.</p>
+        <h1>kopyuter tarmoqlari</h1>
+<!-- VERSION-1 BOSHLANISHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-1, 1. Explain the "Point-to-Point" topology.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>"Nuqtadan-nuqtaga" (Point-to-Point) topologiyasi</strong> bu ikki qurilma o'rtasida to'g'ridan-to'g'ri, maxsus ajratilgan aloqa kanalini o'rnatishdir. Tasavvur qiling, sizning uyingiz va do'stingizning uyi o'rtasida faqat ikkingiz uchun mo'ljallangan maxsus telefon liniyasi bor. Bu juda sodda va xavfsiz, chunki butun aloqa quvvati faqat shu ikki qurilma uchun ishlatiladi.</p>
+<h5>Asosiy xususiyatlari:</h5>
+<ul>
+<li><strong>To'g'ridan-to'g'ri aloqa:</strong> Ma'lumotlar bir qurilmadan ikkinchisiga boshqa oraliq qurilmalarsiz (oddiy takrorlagichlardan tashqari) uzatiladi.</li>
+<li><strong>Maxsus ajratilgan:</strong> Kanalning butun o'tkazuvchanlik qobiliyati faqat shu ikki ulangan qurilma uchun mavjud.</li>
+<li><strong>Soddalik:</strong> O'rnatish va tushunish uchun eng oddiy tarmoq topologiyasi.</li>
+<li><strong>Xavfsizlik:</strong> To'g'ridan-to'g'ri aloqa bo'lgani uchun, agar jismoniy muhit himoyalangan bo'lsa, u umumiy muhitlarga qaraganda xavfsizroq bo'lishi mumkin.</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>Distribution Function of a Random Vector (Joint CDF)</h5>
-                <p>For a random vector (X₁, X₂, ..., Xₙ), the joint cumulative distribution function (CDF) is defined as:</p>
-                <pre class="formula">F(x₁, x₂, ..., xₙ) = P(X₁ ≤ x₁, X₂ ≤ x₂, ..., Xₙ ≤ xₙ)</pre>
-                <p>This function gives the probability that each component Xᵢ of the random vector is less than or equal to the corresponding value xᵢ.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-1, 2. What are the protocols of the transport layer?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>Transport qatlami kompyuteringiz ma'lumotlari uchun pochta xizmati kabi ishlaydi. Uning ikkita asosiy "xizmati" yoki protokoli mavjud:</p>
+<h5>TCP (Transmission Control Protocol - Uzatishni Boshqarish Protokoli):</h5>
+<ul>
+<li><strong>Ishonchli:</strong> Bu buyurtma xat kabi. Ma'lumotlaringiz to'g'ri tartibda yetib borishini va xatoliklarni tekshirishni ta'minlaydi. Ma'lumotlarni yuborishdan oldin aloqa o'rnatadi.</li>
+<li><strong>Foydalanish holatlari:</strong> Veb-sahifalarni ko'rish (HTTP/HTTPS), elektron pochta (SMTP, POP3), fayl uzatish (FTP).</li>
+</ul>
+<h5>UDP (User Datagram Protocol - Foydalanuvchi Datagramma Protokoli):</h5>
+<ul>
+<li><strong>Ishonchsiz, lekin tez:</strong> Bu otkritka yuborish kabi. Barcha ishonchlilik tekshiruvlari yoki aloqa o'rnatish bilan ovora bo'lmaydi, shuning uchun tezroq.</li>
+<li><strong>Foydalanish holatlari:</strong> Video oqimi, onlayn o'yinlar, DNS (Domen Nomlari Tizimi) so'rovlari kabi tezlik mukammal aniqlikdan muhimroq bo'lgan holatlar uchun yaxshi.</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>Properties of the Joint CDF:</h5>
-                <ul>
-                    <li><strong>Non-negativity and Boundedness:</strong> 0 ≤ F(x₁, ..., xₙ) ≤ 1.</li>
-                    <li><strong>Non-decreasing:</strong> F is non-decreasing in each argument. If xᵢ ≤ x'ᵢ, then F(..., xᵢ, ...) ≤ F(..., x'ᵢ, ...).</li>
-                    <li><strong>Limits:</strong>
-                        <ul>
-                            <li>lim (xᵢ→-∞) F(x₁, ..., xₙ) = 0 for any i. (If any component goes to -∞, the probability is 0).</li>
-                            <li>lim (all xᵢ→+∞) F(x₁, ..., xₙ) = 1. (If all components go to +∞, the probability is 1).</li>
-                        </ul>
-                    </li>
-                    <li><strong>Right-continuity:</strong> F is right-continuous in each argument.</li>
-                </ul>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-1, 3. Explain the tree topology.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Daraxtsimon (Tree) topologiya</strong> - bu teskari daraxtni tasavvur qiling. Sizda markaziy "ildiz" qurilma (asosiy kommutator yoki server kabi) mavjud. Ushbu ildizdan boshqa qurilmalar yoki markazlar/kommutatorlarga "shoxlar" tarqaladi va bu shoxlardan ko'proq "novdalar" (alohida kompyuterlar) ulanishi mumkin.</p>
+<h5>Asosiy xususiyatlari:</h5>
+<ul>
+<li><strong>Ierarxik tuzilma:</strong> Tarmoqni kengaytirish uchun ko'pincha ishlatiladi.</li>
+<li><strong>Markaziy nuqtaga bog'liqlik:</strong> Agar ildiz qurilma ishdan chiqsa, tarmoqning katta qismlari ishlamay qolishi mumkin.</li>
+<li><strong>Kengaytirilishi oson:</strong> Yangi shoxlar yoki barglar qo'shish orqali tarmoqni osongina kattalashtirish mumkin.</li>
+<li><strong>Foydalanish:</strong> Katta korporativ tarmoqlarda yoki bir nechta yulduzsimon tarmoqlarni birlashtirishda qo'llaniladi.</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>Random Variables of Discrete Type:</h5>
-                <p>A random variable X is discrete if it can take on a finite or countably infinite number of distinct values {x₁, x₂, ...}. Its distribution is typically described by a <strong>Probability Mass Function (PMF)</strong>, p(xᵢ) = P(X = xᵢ), such that:</p>
-                <ul>
-                    <li>p(xᵢ) ≥ 0 for all i.</li>
-                    <li>Σᵢ p(xᵢ) = 1.</li>
-                </ul>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-1, 4. Describe the Token-Ring network.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Token-Ring tarmog'i</strong> - bu kompyuterlar mantiqiy halqa yoki aylana shaklida ulangan tarmoq turidir. Ushbu halqa bo'ylab "token" deb nomlangan maxsus ma'lumotlar paketi aylanib yuradi.</p>
+<h5>Ishlash prinsipi:</h5>
+<ul>
+<li><strong>Tokenni egallash:</strong> Kompyuter faqatgina tokenni egallagan taqdirdagina ma'lumot yuborishi mumkin.</li>
+<li><strong>Ma'lumotlarni biriktirish:</strong> Tokenni olgach, u o'z ma'lumotlarini unga biriktiradi va belgilangan manzilga yuboradi.</li>
+<li><strong>Tokenni bo'shatish:</strong> Ma'lumotlar yuborilgandan so'ng, token yana halqaga bo'shatiladi.</li>
+<li><strong>To'qnashuvlarning oldini olish:</strong> Bu usul ma'lumotlar to'qnashuvining oldini olishga yordam beradi, chunki bir vaqtning o'zida faqat bitta kompyuter uzatishi mumkin.</li>
+</ul>
+<p>Bu texnologiya eskirgan bo'lib, hozirda Ethernet keng tarqalgan.</p>
+</div>
+</div>
+</div>
 
-                <h5>Random Variables of Continuous Type:</h5>
-                <p>A random variable X is continuous if it can take on any value within a given range or interval (or multiple intervals). The probability that X takes any single specific value is zero, i.e., P(X=c) = 0. Its distribution is described by a <strong>Probability Density Function (PDF)</strong>, f(x), such that:</p>
-                <ul>
-                    <li>f(x) ≥ 0 for all x.</li>
-                    <li>∫<sub>-∞</sub><sup>+∞</sup> f(x)dx = 1.</li>
-                    <li>P(a ≤ X ≤ b) = ∫<sub>a</sub><sup>b</sup> f(x)dx.</li>
-                </ul>
-                <p>The CDF for a continuous random variable is F(x) = ∫<sub>-∞</sub><sup>x</sup> f(t)dt, and f(x) = F'(x) where the derivative exists.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 1-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-1, 5. Give examples of switching methods.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>Kommutatsiya - bu ma'lumotlarni kirish portidan chiqish portiga yo'naltirish usuli. Asosiy kommutatsiya usullariga quyidagilar kiradi:</p>
+<h5>1. Kanallar kommutatsiyasi (Circuit Switching):</h5>
+<ul>
+<li><strong>Ta'rifi:</strong> Eski uslubdagi telefon qo'ng'irog'ini tasavvur qiling. Ikki nuqta o'rtasida aloqa davomida maxsus jismoniy yo'l (kanal) o'rnatiladi. Boshqa hech kim bu yo'ldan foydalana olmaydi.</li>
+<li><strong>Misollar:</strong> An'anaviy telefon tarmoqlari (PSTN).</li>
+</ul>
+<h5>2. Paketlar kommutatsiyasi (Packet Switching):</h5>
+<ul>
+<li><strong>Ta'rifi:</strong> Internetdagi aksariyat ma'lumotlar shu tarzda harakatlanadi. Ma'lumotlar paket deb nomlangan kichik qismlarga bo'linadi. Har bir paket mustaqil ravishda harakatlanishi, ehtimol turli yo'llarni bosib o'tishi va manzilida qayta yig'ilishi mumkin. Tarmoq resurslari umumiy foydalaniladi.</li>
+<li><strong>Turlari:</strong>
+<ul>
+<li><strong>Saqlash va uzatish (Store-and-Forward):</strong> Kommutator butun paketni qabul qiladi, xatoliklarni tekshiradi va keyin uni uzatadi. Sekinroq, lekin ishonchliroq.</li>
+<li><strong>Kesib o'tish (Cut-Through):</strong> Kommutator manzil manzilini o'qishi bilan butun paketni kutmasdan paketni uzatishni boshlaydi. Tezroq, lekin xato paketlarni uzatishi mumkin.</li>
+</ul>
+</li>
+<li><strong>Misollar:</strong> Internet, Ethernet tarmoqlari.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- VERSION-1 TUGASHI -->
 
-    <!-- 2-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">2. Correlation coefficient and its properties.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>The correlation coefficient is a statistical measure that describes the strength and direction of a <strong>linear</strong> relationship between two random variables or two sets of data.</p>
+<!-- VERSION-2 BOSHLANISHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-2, 1. Explain the classes of IPv4.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>IPv4 manzillari (masalan, 192.168.1.1) dastlab katta miqdordagi potentsial manzillarni boshqarish uchun sinflarga (A, B, C, D, E) bo'lingan edi:</p>
+<ul>
+<li><strong>A sinfi (Class A):</strong> Juda katta tarmoqlar uchun (kam sonli tarmoqlar, ko'p sonli xostlar). Birinchi raqam 1-126 oralig'ida bo'ladi. Masalan, 10.0.0.0.</li>
+<li><strong>B sinfi (Class B):</strong> O'rta o'lchamdagi tarmoqlar uchun. Birinchi raqam 128-191 oralig'ida. Masalan, 172.16.0.0.</li>
+<li><strong>C sinfi (Class C):</strong> Kichik tarmoqlar uchun (ko'p sonli tarmoqlar, kam sonli xostlar). Birinchi raqam 192-223 oralig'ida. Masalan, 192.168.1.0.</li>
+<li><strong>D sinfi (Class D):</strong> Ko'p manzilli uzatish (multicasting) uchun ishlatiladi (ma'lumotlarni bir guruh xostlarga yuborish). Birinchi raqam 224-239 oralig'ida.</li>
+<li><strong>E sinfi (Class E):</strong> Eksperimental maqsadlar uchun zaxiralangan. Birinchi raqam 240-255 oralig'ida.</li>
+</ul>
+<p>Bu sinfli tizim asosan eskirgan va Classless Inter-Domain Routing (CIDR) bilan almashtirilgan, ammo sinflarni tushunish hali ham foydalidir.</p>
+</div>
+</div>
+</div>
 
-                <h5>Definition:</h5>
-                <p>The Pearson correlation coefficient (ρ for a population, r for a sample) between two random variables X and Y is calculated as:</p>
-                <pre class="formula">ρ(X,Y) = Cov(X,Y) / (σₓ * σᵧ)</pre>
-                <p>Where:</p>
-                <ul>
-                    <li><strong>Cov(X,Y)</strong> is the covariance between X and Y. Cov(X,Y) = E[(X - μₓ)(Y - μᵧ)].</li>
-                    <li><strong>σₓ</strong> is the standard deviation of X.</li>
-                    <li><strong>σᵧ</strong> is the standard deviation of Y.</li>
-                    <li><strong>μₓ</strong> and <strong>μᵧ</strong> are the means of X and Y, respectively.</li>
-                </ul>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-2, 2. What is FTP?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>FTP (File Transfer Protocol - Fayllarni Uzatish Protokoli)</strong> bu kompyuterlar o'rtasida, masalan, internet orqali fayllarni yuborish va qabul qilish uchun maxsus ishlab chiqilgan raqamli yetkazib berish xizmatidir.</p>
+<h5>Asosiy vazifalari:</h5>
+<ul>
+<li>Fayllarni serverga yuklash (upload).</li>
+<li>Fayllarni serverdan yuklab olish (download).</li>
+<li>Serverdagi fayllar va kataloglar ro'yxatini ko'rish.</li>
+<li>Fayllarni qayta nomlash yoki o'chirish (server ruxsatiga qarab).</li>
+</ul>
+<p>FTP ikkita aloqa kanalidan foydalanadi: biri boshqaruv buyruqlari uchun, ikkinchisi esa ma'lumotlarni uzatish uchun. U an'anaviy ravishda 21-portni boshqaruv uchun va 20-portni ma'lumotlar uchun ishlatadi (faol rejimda).</p>
+</div>
+</div>
+</div>
 
-                <h5>Properties of the Correlation Coefficient:</h5>
-                <ul>
-                    <li><strong>Range:</strong> The value of ρ (or r) always lies between -1 and +1, inclusive.
-                        <pre class="formula">-1 ≤ ρ ≤ +1</pre>
-                    </li>
-                    <li><strong>Interpretation of Values:</strong>
-                        <ul>
-                            <li><strong>ρ = +1:</strong> Perfect positive linear relationship. As X increases, Y increases proportionally.</li>
-                            <li><strong>ρ = -1:</strong> Perfect negative linear relationship. As X increases, Y decreases proportionally.</li>
-                            <li><strong>ρ = 0:</strong> No linear relationship. This does not necessarily mean there is no relationship at all; there could be a non-linear relationship.</li>
-                            <li>Values between 0 and +1 indicate varying degrees of positive linear relationship.</li>
-                            <li>Values between 0 and -1 indicate varying degrees of negative linear relationship.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Symmetry:</strong> The correlation between X and Y is the same as the correlation between Y and X.
-                        <pre class="formula">ρ(X,Y) = ρ(Y,X)</pre>
-                    </li>
-                    <li><strong>Dimensionless:</strong> The correlation coefficient has no units.</li>
-                    <li><strong>Invariance to Linear Transformations:</strong> The correlation coefficient is invariant to changes in scale and origin of the variables. If X' = aX + b and Y' = cY + d (where a and c are non-zero constants):
-                        <ul>
-                            <li>ρ(X',Y') = ρ(X,Y) if a and c have the same sign.</li>
-                            <li>ρ(X',Y') = -ρ(X,Y) if a and c have opposite signs.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Correlation and Independence:</strong> If X and Y are independent, then ρ(X,Y) = 0. However, the converse is not always true (ρ=0 does not necessarily imply independence, except for normally distributed variables).</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- 2-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-2, 3. Provide information about the IPv6 protocol.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>IPv6 (Internet Protocol version 6)</strong> - bu Internet Protokolining yangi avlodi bo'lib, IPv4 manzillarining tugab borayotganligi sababli uni almashtirish uchun ishlab chiqilgan.</p>
+<h5>Asosiy afzalliklari va xususiyatlari:</h5>
+<ul>
+<li><strong>Kengaytirilgan manzil maydoni:</strong> IPv6 128 bitli manzillardan foydalanadi (IPv4 ning 32 bitiga nisbatan). Bu deyarli cheksiz miqdordagi noyob manzillarni taqdim etadi.</li>
+<li><strong>Soddalashtirilgan sarlavha (header):</strong> Paket sarlavhasi optimallashtirilgan, bu esa marshrutizatsiyani samaraliroq qilishi mumkin.</li>
+<li><strong>Avtomatik konfiguratsiya (Stateless Address Autoconfiguration - SLAAC):</strong> Qurilmalar tarmoqqa ulanganda o'zlarini avtomatik ravishda sozlay oladi.</li>
+<li><strong>O'rnatilgan xavfsizlik (IPSec):</strong> IPSec xavfsizlik protokoli IPv6 ning ajralmas qismi sifatida ko'zda tutilgan (ammo uning qo'llanilishi ixtiyoriy).</li>
+<li><strong>Mobil qurilmalar uchun yaxshiroq qo'llab-quvvatlash:</strong> Mobile IPv6 kabi xususiyatlar yaxshiroq integratsiya qilingan.</li>
+<li><strong>Multicasting uchun yaxshilangan qo'llab-quvvatlash.</strong></li>
+</ul>
+</div>
+</div>
+</div>
 
-    <!-- 3-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">3. Primary statistical analysis of a sample. Variation series.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>Primary statistical analysis of a sample involves the initial steps of organizing, summarizing, and describing the main features of a dataset (sample) obtained from a larger population.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-2, 4. Describe and explain the channel allocation of PDH technology.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>PDH (Plesiochronous Digital Hierarchy - Pleziyoxron Raqamli Ierarxiya)</strong> bu telekommunikatsiyalarda bir nechta past tezlikdagi raqamli oqimlarni (masalan, ovozli qo'ng'iroqlarni) uzatish uchun yuqori tezlikdagi oqimlarga birlashtirish uchun ishlatiladigan eski texnologiya.</p>
+<h5>Kanal ajratish (Channel Allocation):</h5>
+<ul>
+<li>"Pleziyoxron" "deyarli sinxron" degan ma'noni anglatadi. Alohida oqimlar biroz farqli soat tezligida ishlaydi.</li>
+<li>PDH multiplekslash tizimidan foydalanadi. Masalan:
+<ul>
+<li><strong>Yevropada (E1 liniyasi):</strong> 30 ta ovozli kanal (har biri 64 kbit/s) va signalizatsiya kanallari birlashtirilib, E1 liniyasini (2.048 Mbit/s) hosil qiladi. Bir nechta E1 lar E2, E3 va hokazolarni hosil qilish uchun birlashtirilishi mumkin.</li>
+<li><strong>Shimoliy Amerikada (T1 liniyasi):</strong> 24 ta ovozli kanal va signalizatsiya kanallari birlashtirilib, T1 liniyasini (1.544 Mbit/s) hosil qiladi.</li>
+</ul>
+</li>
+<li><strong>Bit qo'shish (Stuffing):</strong> Birlashtirilayotgan oqimlar orasidagi kichik vaqt farqlarini boshqarish uchun "qo'shimcha bitlar" (stuffing bits) qo'shiladi. Bu yuqori tezlikdagi oqimdan bitta past tezlikdagi kanalni ajratib olishni murakkablashtiradi; ko'pincha butun oqimni demultiplekslash kerak bo'ladi. Bu SDH/SONET kabi yangi texnologiyalarga nisbatan asosiy kamchilikdir.</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>Steps in Primary Statistical Analysis:</h5>
-                <ol>
-                    <li>
-                        <strong>Data Collection and Organization:</strong>
-                        <ul>
-                            <li>Gathering raw data.</li>
-                            <li>Checking for errors or inconsistencies.</li>
-                            <li>Arranging the data, often by creating a variation series.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Variation Series (Ordered Series):</strong>
-                        <p>A variation series is a sample of data arranged in non-decreasing (or non-increasing) order of magnitude. If a sample consists of n observations x₁, x₂, ..., xₙ, the variation series is denoted as x₍₁₎ ≤ x₍₂₎ ≤ ... ≤ x₍ₙ₎, where x₍ᵢ₎ is the i-th order statistic.</p>
-                        <p><em>Example:</em> If sample data is {5, 2, 8, 2, 5}, the variation series is {2, 2, 5, 5, 8}.</p>
-                    </li>
-                    <li>
-                        <strong>Frequency Distribution:</strong>
-                        <ul>
-                            <li>Grouping data into classes or intervals (for continuous or discrete data with many values).</li>
-                            <li>Counting the frequency (number of occurrences) of each value or within each class.</li>
-                            <li>Calculating relative frequencies (frequency / total number of observations).</li>
-                            <li>Calculating cumulative frequencies.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Calculation of Summary Statistics:</strong>
-                        <ul>
-                            <li><strong>Measures of Central Tendency:</strong> Describe the "center" of the data (e.g., mean, median, mode).</li>
-                            <li><strong>Measures of Dispersion (Variability):</strong> Describe the "spread" or "scatter" of the data (e.g., range, variance, standard deviation, interquartile range).</li>
-                            <li><strong>Measures of Shape:</strong> Describe the asymmetry (skewness) and peakedness (kurtosis) of the distribution.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Graphical Representation:</strong>
-                        <ul>
-                            <li>Visualizing the data using graphs like histograms, frequency polygons, bar charts, pie charts, box plots, stem-and-leaf plots, etc.</li>
-                        </ul>
-                    </li>
-                </ol>
-                <p>The variation series is a fundamental first step as it helps in easily identifying the minimum, maximum, range, and facilitates the calculation of other statistics like the median and quartiles, as well as constructing frequency distributions.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 3-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-2, 5. What kind of protocol is UDP?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>UDP (User Datagram Protocol - Foydalanuvchi Datagramma Protokoli)</strong> bu transport qatlamining "aloqasiz" (connectionless) protokolodir. Uni otkritka yuborishga o'xshatish mumkin:</p>
+<h5>Asosiy xususiyatlari:</h5>
+<ul>
+<li><strong>Aloqa o'rnatilmaydi:</strong> Ma'lumotlarni yuborishdan oldin aloqa o'rnatmaydi. Shunchaki yuboradi.</li>
+<li><strong>Ishonchsiz:</strong> Paketlarning yetib borishini, tartibda kelishini yoki xatosiz bo'lishini kafolatlamaydi.</li>
+<li><strong>Tez va yengil:</strong> TCP kabi qo'shimcha yuklamalari (masalan, tasdiqlashlar va qayta uzatishlar) bo'lmagani uchun u ancha tezroq. Boshqaruv ma'lumotlari kamroq.</li>
+<li><strong>Foydalanish sohalari:</strong> Tezlik muhim va ba'zi ma'lumotlar yo'qolishi qabul qilinadigan ilovalar uchun yaxshi, masalan:
+<ul>
+<li>Video/audio oqimi</li>
+<li>Onlayn o'yinlar</li>
+<li>DNS (Domen Nomlari Tizimi) so'rovlari</li>
+<li>DHCP (Dynamic Host Configuration Protocol)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- VERSION-2 TUGASHI -->
 
-    <!-- 4-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">4. Graphs of variation series. Empirical distribution function.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>Visualizing data from a variation series and understanding its cumulative distribution are key aspects of exploratory data analysis.</p>
+<!-- QOLGAN VERSIONLAR XUDDI SHU TARTIBDA DAVOM ETADI -->
 
-                <h5>Graphs of Variation Series:</h5>
-                <p>Once a variation series (ordered data) is available, and often a frequency distribution is constructed from it, several graphical representations can be used:</p>
-                <ul>
-                    <li>
-                        <strong>Histogram:</strong>
-                        <p>A bar chart where the horizontal axis represents the class intervals (or discrete values) and the vertical axis represents the frequency (or relative frequency). The area of each bar is proportional to the frequency of data points in that interval. Histograms show the shape of the data distribution.</p>
-                    </li>
-                    <li>
-                        <strong>Frequency Polygon:</strong>
-                        <p>Formed by joining the midpoints of the tops of the bars in a histogram with straight lines. It provides a smoother representation of the distribution shape. The polygon is usually "closed" by extending lines to the horizontal axis one class interval beyond the first and last classes.</p>
-                    </li>
-                    <li>
-                        <strong>Ogive (Cumulative Frequency Polygon):</strong>
-                        <p>A graph that shows the cumulative frequency. It plots the cumulative frequencies against the upper class boundaries (for "less than" ogive) or lower class boundaries (for "more than" ogive). The "less than" ogive is more common and visually represents the empirical distribution function.</p>
-                    </li>
-                    <li>
-                        <strong>Box Plot (Box-and-Whisker Plot):</strong>
-                        <p>A standardized way of displaying the distribution of data based on a five-number summary: minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum. It is useful for identifying outliers and comparing distributions.</p>
-                    </li>
-                </ul>
+<!-- VERSION-3 BOSHLANISHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-3, 1. Explain the operator network.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Operator tarmog'i</strong> (yoki provayder tarmog'i) bu telekommunikatsiya xizmatlarini ko'rsatuvchi kompaniyalar (masalan, mobil aloqa operatorlari yoki internet-provayderlar) tomonidan qurilgan va boshqariladigan keng ko'lamli infratuzilmadir. Bu bizga qo'ng'iroq qilish, SMS yuborish va internetga kirish imkonini beruvchi kabellar, minoralar, kommutatorlar, marshrutizatorlar va serverlarning murakkab tarmog'idir.</p>
+<h5>Asosiy komponentlari va vazifalari:</h5>
+<ul>
+<li><strong>Kirish tarmog'i (Access Network):</strong> Foydalanuvchilarni (abonentlarni) tarmoqning markaziy qismiga ulaydi (masalan, mobil telefonlar uchun tayanch stansiyalari, uy interneti uchun DSLAM yoki OLT qurilmalari).</li>
+<li><strong>Tayanch tarmog'i (Core Network / Backbone Network):</strong> Yuqori tezlikdagi aloqa kanallari orqali turli hududlardagi kirish tarmoqlarini va boshqa operator tarmoqlarini o'zaro bog'laydi. Ma'lumotlar trafigining asosiy qismini qayta ishlaydi.</li>
+<li><strong>Transport tarmog'i:</strong> Ma'lumotlarni tarmoqning turli qismlari o'rtasida tashish uchun ishlatiladigan texnologiyalar (masalan, optik tolali liniyalar, mikroto'lqinli aloqa).</li>
+<li><strong>Boshqaruv va monitoring tizimlari:</strong> Tarmoq ishini nazorat qilish, nosozliklarni aniqlash va tuzatish, xizmat sifatini ta'minlash uchun zarur.</li>
+<li><strong>Xizmat ko'rsatish platformalari:</strong> Ovozli aloqa, ma'lumotlar uzatish, SMS, internetga kirish kabi turli xizmatlarni taqdim etish uchun serverlar va dasturiy ta'minot.</li>
+</ul>
+<p>Operator tarmoqlari yuqori darajada ishonchli, kengaytiriladigan va xavfsiz bo'lishi uchun doimiy ravishda modernizatsiya qilinadi.</p>
+</div>
+</div>
+</div>
 
-                <h5>Empirical Distribution Function (EDF), F̂(x):</h5>
-                <p>The empirical distribution function (EDF), often denoted as F̂(x) or Fₙ(x), is an estimate of the true underlying cumulative distribution function (CDF) of the population from which the sample was drawn. It is a step function that jumps up by 1/n at each of the n data points in an ordered sample.</p>
-                <p>For a sample x₁, x₂, ..., xₙ, the EDF is defined as:</p>
-                <pre class="formula">F̂(x) = (Number of observations ≤ x) / n</pre>
-                <p>Alternatively, if x₍₁₎ ≤ x₍₂₎ ≤ ... ≤ x₍ₙ₎ is the ordered sample (variation series):</p>
-                <pre class="formula">
-F̂(x) = 0,            if x < x₍₁₎
-F̂(x) = k/n,         if x₍k₎ ≤ x < x₍k+1₎, for k = 1, ..., n-1
-F̂(x) = 1,            if x ≥ x₍ₙ₎
-                </pre>
-                <p><strong>Properties of EDF:</strong></p>
-                <ul>
-                    <li>It is a step function.</li>
-                    <li>It is non-decreasing.</li>
-                    <li>0 ≤ F̂(x) ≤ 1.</li>
-                    <li>As the sample size n increases, the EDF F̂(x) converges to the true CDF F(x) (Glivenko-Cantelli theorem).</li>
-                </ul>
-                <p>The "less than" ogive is a graphical representation of the empirical distribution function.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 4-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-3, 2. How are routers classified based on their usage?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>Marshrutizatorlar (routerlar), ya'ni tarmoqlar o'rtasidagi trafikni yo'naltiruvchi qurilmalar, ularning ishlatilish joyi va vazifasiga qarab quyidagicha tasniflanishi mumkin:</p>
+<ul>
+<li><strong>Magistral marshrutizatorlar (Core Routers):</strong>
+    <ul>
+    <li>Bular eng kuchli va tezkor marshrutizatorlar bo'lib, internetning yoki juda katta korporativ tarmoqlarning magistralini (backbone) tashkil qiladi. Ular ulkan hajmdagi trafikni qayta ishlaydi. Juda yuqori o'tkazuvchanlik va ishonchlilikka ega.</li>
+    </ul>
+</li>
+<li><strong>Chekka marshrutizatorlar (Edge Routers yoki Border Routers):</strong>
+    <ul>
+    <li>Bu marshrutizatorlar tarmoqning chekkasida joylashadi va uni boshqa tarmoqlarga (masalan, ISP tarmog'iga yoki boshqa kompaniyaning tarmog'iga) ulaydi. Ular ko'pincha xavfsizlik (firewall), xizmat sifati (QoS) va tarmoq manzillarini translatsiya qilish (NAT) kabi vazifalarni bajaradi.</li>
+    </ul>
+</li>
+<li><strong>Taqsimlovchi marshrutizatorlar (Distribution Routers):</strong>
+    <ul>
+    <li>Kattaroq tarmoqlarda bu marshrutizatorlar bir nechta kirish marshrutizatorlaridan kelayotgan trafikni jamlaydi va uni magistralga yo'naltiradi. Ular kirish qatlami va magistral qatlami o'rtasida vositachi bo'lib xizmat qiladi.</li>
+    </ul>
+</li>
+<li><strong>Kirish marshrutizatorlari (Access Routers):</strong>
+    <ul>
+    <li>Bular odatda uylarda (Wi-Fi routeringiz) yoki kichik ofislarda topiladigan marshrutizatorlar bo'lib, oxirgi foydalanuvchi qurilmalarini tarmoqqa ulanishini ta'minlaydi. Ko'pincha kommutator, simsiz kirish nuqtasi va marshrutizator funksiyalarini birlashtiradi.</li>
+    </ul>
+</li>
+<li><strong>Virtual marshrutizatorlar (Virtual Routers):</strong>
+    <ul>
+    <li>Bular jismoniy qurilma emas, balki dasturiy ta'minot asosida ishlaydigan marshrutizatorlardir. Virtualizatsiya texnologiyalari va bulutli hisoblashlarda keng qo'llaniladi.</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
 
-    <!-- 5-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">5. Numerical characteristics of a sample.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>Numerical characteristics of a sample, also known as sample statistics, are values calculated from sample data to summarize its key features. They provide quantitative descriptions of the data's central tendency, dispersion, and shape, serving as estimates for the corresponding population parameters.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-3, 3. Explain the layers of SDN architecture.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>SDN (Software-Defined Networking - Dasturiy Ta'minot Bilan Belgilanadigan Tarmoqlar)</strong> tarmoqning boshqaruvini ("miya") haqiqiy ma'lumotlarni uzatuvchi uskunalardan ("mushak") ajratadi. Uning qatlamli arxitekturasi quyidagicha:</p>
+<h5>1. Ilova qatlami (Application Layer):</h5>
+<ul>
+<li>Bu yerda tarmoq ilovalari va xizmatlari ishlaydi, masalan, yuklama muvozanati (load balancing), xavfsizlik monitoringi yoki tarmoq virtualizatsiyasi. Ushbu ilovalar kontrollerga qanday tarmoq xatti-harakati kerakligini aytadi.</li>
+<li>Masalan, xavfsizlik ilovasi shubhali trafikni bloklash uchun kontrollerga ko'rsatma berishi mumkin.</li>
+</ul>
+<h5>2. Boshqaruv qatlami (Control Layer):</h5>
+<ul>
+<li>Bu "miya". Markazlashtirilgan SDN kontrolleri tarmoqni boshqaradi. U ilova qatlamidan ko'rsatmalarni oladi va ularni ma'lumotlarni uzatuvchi qurilmalar uchun konfiguratsiyalarga aylantiradi. U tarmoqning global ko'rinishiga ega.</li>
+<li>Asosiy komponent bu <strong>SDN Controller</strong>. U tarmoq qurilmalarining holatini biladi va ularga qanday ishlash kerakligini aytadi.</li>
+</ul>
+<h5>3. Infratuzilma qatlami (Infrastructure Layer yoki Data Plane):</h5>
+<ul>
+<li>Bu qatlam haqiqiy ma'lumotlar paketlarini uzatuvchi jismoniy yoki virtual kommutatorlar va marshrutizatorlardan iborat. Ular kontrollerdan <strong>OpenFlow</strong> kabi interfeys orqali ko'rsatmalarni oladi.</li>
+<li>Bu qurilmalar (switchlar, routerlar) faqat kontroller aytgan ishni qiladi, o'zlari "o'ylamaydi".</li>
+</ul>
+<p>SDN ning asosiy g'oyasi tarmoqni dasturlash imkoniyatini berish, uni yanada moslashuvchan, boshqariladigan va innovatsion qilishdir.</p>
+</div>
+</div>
+</div>
 
-                <h5>Measures of Central Tendency (Location):</h5>
-                <p>These statistics describe the "center" or typical value of the dataset.</p>
-                <ul>
-                    <li><strong>Sample Mean (x̄):</strong> The arithmetic average of the observations.
-                        <pre class="formula">x̄ = (Σ xᵢ) / n</pre>
-                    </li>
-                    <li><strong>Sample Median (Me or x̃):</strong> The middle value when the data is ordered. If n is odd, it's the (n+1)/2-th value. If n is even, it's usually the average of the n/2-th and (n/2 + 1)-th values.</li>
-                    <li><strong>Sample Mode (Mo):</strong> The value(s) that occur most frequently in the dataset. A dataset can be unimodal, bimodal, multimodal, or have no mode.</li>
-                </ul>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-3, 4. Explain the VPN secure network.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>VPN (Virtual Private Network - Virtual Xususiy Tarmoq)</strong> bu ochiq tarmoq (masalan, internet) orqali xavfsiz, shifrlangan "tunnel" yaratadigan texnologiyadir. Tasavvur qiling, siz oddiy pochta orqali maxfiy xabar yuboryapsiz, lekin uni faqat qabul qiluvchida kaliti bor qulflangan qutiga solib qo'ygansiz.</p>
+<h5>VPN qanday xavfsizlikni ta'minlaydi:</h5>
+<ul>
+<li><strong>Maxfiylik (Privacy):</strong> Sizning internetdagi faoliyatingizni ISP (Internet Service Provider) va ochiq tarmoqdagi boshqalardan yashiradi. Sizning haqiqiy IP manzilingiz VPN serverining IP manzili bilan almashtiriladi.</li>
+<li><strong>Xavfsizlik (Security):</strong> Shifrlash ma'lumotlaringizni xakerlar tomonidan ushlab qolinishi va o'qilishidan himoya qiladi. Barcha trafik shifrlangan tunnel orqali o'tadi.</li>
+<li><strong>Ma'lumotlar yaxlitligi (Data Integrity):</strong> Ba'zi VPN protokollari ma'lumotlarning uzatish paytida o'zgartirilmaganligini tekshirishga yordam beradi.</li>
+<li><strong>Autentifikatsiya (Authentication):</strong> Foydalanuvchi va VPN serveri bir-birining haqiqiyligini tekshiradi.</li>
+</ul>
+<h5>VPN turlari:</h5>
+<ul>
+<li><strong>Masofaviy kirish VPN (Remote Access VPN):</strong> Alohida foydalanuvchilarga (masalan, masofadan ishlaydigan xodimlarga) xususiy tarmoqqa xavfsiz ulanish imkonini beradi.</li>
+<li><strong>Saytdan-saytga VPN (Site-to-Site VPN):</strong> Ikki yoki undan ortiq alohida tarmoqlarni (masalan, kompaniyaning filiallarini) internet orqali xavfsiz bog'laydi.</li>
+</ul>
+<p>VPN xavfsizlikni oshirish, geocheklovlarni chetlab o'tish va xususiy resurslarga masofadan kirish uchun keng qo'llaniladi.</p>
+</div>
+</div>
+</div>
 
-                <h5>Measures of Dispersion (Variability or Spread):</h5>
-                <p>These statistics describe how spread out or scattered the data points are.</p>
-                <ul>
-                    <li><strong>Sample Range (R):</strong> The difference between the maximum and minimum values in the sample.
-                        <pre class="formula">R = x<sub>max</sub> - x<sub>min</sub></pre>
-                    </li>
-                    <li><strong>Sample Variance (s²):</strong> The average of the squared deviations of each observation from the sample mean.
-                        <pre class="formula">s² = [Σ (xᵢ - x̄)²] / (n-1)</pre>
-                        (Using n-1 in the denominator provides an unbiased estimator of the population variance.)
-                    </li>
-                    <li><strong>Sample Standard Deviation (s):</strong> The square root of the sample variance. It measures the typical deviation of observations from the mean, in the original units of the data.
-                        <pre class="formula">s = √s²</pre>
-                    </li>
-                    <li><strong>Interquartile Range (IQR):</strong> The difference between the third quartile (Q3, 75th percentile) and the first quartile (Q1, 25th percentile). It measures the spread of the middle 50% of the data and is less sensitive to outliers than the range.
-                        <pre class="formula">IQR = Q3 - Q1</pre>
-                    </li>
-                    <li><strong>Coefficient of Variation (CV):</strong> The ratio of the standard deviation to the mean, often expressed as a percentage. It's a relative measure of dispersion.
-                        <pre class="formula">CV = (s / |x̄|) * 100%</pre>
-                    </li>
-                </ul>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-3, 5. What is the UMTS standard?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>UMTS (Universal Mobile Telecommunications System - Universal Mobil Telekommunikatsiya Tizimi)</strong> bu <strong>3G (uchinchi avlod)</strong> mobil aloqa texnologiyasi standartidir. U 2G (masalan, GSM) dan keyingi muhim yangilanish bo'lib, ancha yuqori ma'lumotlar uzatish tezligini taklif qilgan.</p>
+<h5>Asosiy xususiyatlari va imkoniyatlari:</h5>
+<ul>
+<li><strong>Yuqori ma'lumotlar tezligi:</strong> 2G ga nisbatan ancha tezroq ma'lumotlar uzatish imkoniyatini berdi (nazariy jihatdan bir necha Mbit/s gacha), bu esa mobil internetdan foydalanish, videoqo'ng'iroqlar va multimedia xabarlar kabi xizmatlarni rivojlantirishga turtki bo'ldi.</li>
+<li><strong>W-CDMA (Wideband Code Division Multiple Access):</strong> Asosiy radio interfeysi sifatida keng polosali kodli ko'p martalik kirish texnologiyasidan foydalanadi. Bu bir vaqtning o'zida ko'proq foydalanuvchilarga xizmat ko'rsatish va chastota spektridan samaraliroq foydalanish imkonini beradi.</li>
+<li><strong>Global standart:</strong> Dunyoning ko'plab mamlakatlarida 3G tarmoqlari uchun asosiy standart sifatida qabul qilingan.</li>
+<li><strong>Xizmatlar:</strong> Ovozli aloqa, videoqo'ng'iroqlar, mobil internet, multimedia xabarlar (MMS), joylashuvni aniqlash xizmatlari va boshqalar.</li>
+<li><strong>Evolyutsiya:</strong> Keyinchalik HSPA (High-Speed Packet Access) va HSPA+ kabi takomillashtirilgan versiyalari bilan tezlik va samaradorlik yanada oshirildi, bu esa 4G/LTE ga o'tish uchun zamin yaratdi.</li>
+</ul>
+<p>UMTS mobil aloqa tarixida muhim bosqich bo'lib, mobil qurilmalarning imkoniyatlarini sezilarli darajada kengaytirdi.</p>
+</div>
+</div>
+</div>
+<!-- VERSION-3 TUGASHI -->
 
-                <h5>Measures of Shape:</h5>
-                <p>These statistics describe the shape of the data distribution.</p>
-                <ul>
-                    <li><strong>Sample Skewness (g₁):</strong> Measures the asymmetry of the distribution.
-                        <ul>
-                            <li>g₁ > 0: Positively skewed (tail to the right).</li>
-                            <li>g₁ < 0: Negatively skewed (tail to the left).</li>
-                            <li>g₁ ≈ 0: Approximately symmetric.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Sample Kurtosis (g₂):</strong> Measures the "peakedness" or "tailedness" of the distribution relative to a normal distribution.
-                        <ul>
-                            <li>g₂ > 0 (Leptokurtic): More peaked, heavier tails.</li>
-                            <li>g₂ < 0 (Platykurtic): Flatter, lighter tails.</li>
-                            <li>g₂ ≈ 0 (Mesokurtic): Similar peakedness to a normal distribution. (Excess kurtosis is often reported, where normal distribution has excess kurtosis of 0).</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- 5-MAVZU TUGASHI -->
+<!-- VERSION-4 BOSHLANISHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-4, 1. The most common LAN topologies.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>LAN (Lokal Tarmoq) topologiyalari qurilmalarning jismoniy yoki mantiqiy ulanish usullarini tavsiflaydi. Eng keng tarqalgan LAN topologiyalari quyidagilar:</p>
+<h5>1. Yulduzsimon topologiya (Star Topology):</h5>
+<ul>
+<li><strong>Tuzilishi:</strong> Barcha qurilmalar markaziy qurilmaga (masalan, kommutator yoki hab) ulanadi.</li>
+<li><strong>Afzalliklari:</strong> Boshqarish va nosozliklarni aniqlash oson; agar bitta kabel ishdan chiqsa, faqat o'sha qurilma ta'sirlanadi. Yangi qurilma qo'shish oson.</li>
+<li><strong>Kamchiliklari:</strong> Agar markaziy qurilma ishdan chiqsa, butun tarmoq ishlamay qoladi. Ko'proq kabel talab qiladi.</li>
+<li><strong>Hozirgi holati:</strong> Bugungi kunda eng keng tarqalgan LAN topologiyasi.</li>
+</ul>
+<h5>2. Shina topologiyasi (Bus Topology):</h5>
+<ul>
+<li><strong>Tuzilishi:</strong> Barcha qurilmalar bitta umumiy aloqa liniyasiga (shina) ulanadi. Liniyaning ikki uchida terminatorlar bo'ladi.</li>
+<li><strong>Afzalliklari:</strong> O'rnatish oddiy va arzon. Kam kabel talab qiladi.</li>
+<li><strong>Kamchiliklari:</strong> Agar asosiy kabel uzilsa, butun tarmoq ishdan chiqadi. Ma'lumotlar to'qnashuvi muammo bo'lishi mumkin. Nosozlikni aniqlash qiyin.</li>
+<li><strong>Hozirgi holati:</strong> Hozir kamroq qo'llaniladi.</li>
+</ul>
+<h5>3. Halqasimon topologiya (Ring Topology):</h5>
+<ul>
+<li><strong>Tuzilishi:</strong> Qurilmalar aylana shaklida bir-biriga ulanadi. Ma'lumotlar bir yo'nalishda harakatlanadi.</li>
+<li><strong>Afzalliklari:</strong> Token Ring kabi protokollar bilan to'qnashuvlar bo'lmaydi.</li>
+<li><strong>Kamchiliklari:</strong> Bitta qurilma yoki kabelning ishdan chiqishi butun halqani ishdan chiqarishi mumkin (ba'zi dizaynlar bundan mustasno). Qurilma qo'shish yoki olib tashlash tarmoqni buzishi mumkin.</li>
+<li><strong>Hozirgi holati:</strong> LANlar uchun kamroq tarqalgan, ammo ba'zi magistral tarmoqlarda (masalan, Token Ring, garchi bu ko'proq protokol bo'lsa ham) qo'llaniladi.</li>
+</ul>
+<h5>4. To'rsimon topologiya (Mesh Topology):</h5>
+<ul>
+<li><strong>Tuzilishi:</strong> Har bir qurilma boshqa har bir qurilmaga (to'liq to'r) yoki kamida bir nechta boshqa qurilmalarga (qisman to'r) ulanadi.</li>
+<li><strong>Afzalliklari:</strong> Juda chidamli va yuqori trafikni bajara oladi. Agar bitta aloqa uzilsa, alternativ yo'llar mavjud.</li>
+<li><strong>Kamchiliklari:</strong> Simlarni ulash qimmat va murakkab. Ko'p port talab qiladi.</li>
+<li><strong>Hozirgi holati:</strong> Odatda WAN magistrallarida yoki yuqori ishonchlilik talab qilinadigan joylarda ishlatiladi.</li>
+</ul>
+</div>
+</div>
+</div>
 
-    <!-- 6-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">6. Distribution as statistical estimates of non-normal parameters.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>This topic refers to the use of <strong>sampling distributions</strong> of estimators to make inferences (like constructing confidence intervals or performing hypothesis tests) about population parameters, especially when these parameters belong to non-normal distributions, or when the parameters themselves are not means (e.g., variances, proportions).</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-4, 2. What is an optical splitter?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Optik ajratgich (Optical Splitter)</strong> bu optik tolali tarmoqlarda ishlatiladigan passiv qurilmadir (ya'ni, u quvvat talab qilmaydi). U bitta tolada kelayotgan yagona optik signalni (yorug'likni) bir nechta tolalarda chiqadigan ko'p signallarga ajratadi.</p>
+<h5>Ishlash prinsipi va vazifalari:</h5>
+<ul>
+<li><strong>Signalni taqsimlash:</strong> Uni bog'ning shlangi uchun Y-ajratgichga o'xshatish mumkin, faqat bu yorug'lik uchun.</li>
+<li><strong>Passiv qurilma:</strong> Elektr ta'minotisiz ishlaydi, bu esa uni arzonroq va texnik xizmat ko'rsatishni osonlashtiradi.</li>
+<li><strong>PON arxitekturalarida muhimligi:</strong> Ular PON (Passiv Optik Tarmoq) arxitekturalarida, masalan, FTTH (Uyga Tolali Optika) da markaziy ofisdan keladigan bitta tolani bir nechta abonentlar o'rtasida taqsimlash uchun juda muhimdir.</li>
+<li><strong>Ajratish nisbati:</strong> Optik ajratgichlar turli xil ajratish nisbatlariga ega bo'lishi mumkin (masalan, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64). Bu kirish signalining qancha chiqish portiga taqsimlanishini bildiradi. Ajratish nisbati qanchalik yuqori bo'lsa, har bir chiqish portidagi signal kuchi shunchalik past bo'ladi (signal yo'qotilishi tufayli).</li>
+</ul>
+<p>Optik ajratgichlar optik tolali aloqa tarmoqlarini samarali va tejamkor tarzda kengaytirishga yordam beradi.</p>
+</div>
+</div>
+</div>
 
-                <h5>Key Concepts:</h5>
-                <ul>
-                    <li>
-                        <strong>Estimators and Sampling Distributions:</strong>
-                        <p>An estimator (e.g., sample mean x̄, sample variance s², sample proportion p̂) is a statistic calculated from a sample to estimate an unknown population parameter (e.g., population mean μ, population variance σ², population proportion p). Since estimators vary from sample to sample, they are random variables and have their own probability distributions, known as <strong>sampling distributions</strong>.</p>
-                    </li>
-                    <li>
-                        <strong>Central Limit Theorem (CLT):</strong>
-                        <p>Even if the underlying population distribution is not normal, the sampling distribution of the sample mean (x̄) tends to be approximately normal for sufficiently large sample sizes (usually n ≥ 30). This is crucial for making inferences about the population mean μ.</p>
-                    </li>
-                    <li>
-                        <strong>Estimating Parameters of Non-Normal Distributions:</strong>
-                        <p>Many real-world phenomena are not normally distributed (e.g., exponential, Poisson, binomial, gamma distributions). We still need to estimate their parameters.</p>
-                        <ul>
-                            <li><strong>Example (Binomial):</strong> If we want to estimate the success probability 'p' of a binomial distribution, we use the sample proportion p̂ = k/n (number of successes / number of trials). For large n, the sampling distribution of p̂ can be approximated by a normal distribution.</li>
-                            <li><strong>Example (Poisson):</strong> The parameter λ (mean rate) of a Poisson distribution can be estimated by the sample mean x̄. For large λ, the Poisson distribution itself can be approximated by a normal distribution.</li>
-                            <li><strong>Example (Exponential):</strong> The rate parameter λ of an exponential distribution is often estimated by 1/x̄. The sampling distribution of x̄ (and thus 1/x̄) can be complex but may involve distributions like the Gamma distribution.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Estimating Non-Mean Parameters (e.g., Variance):</strong>
-                        <p>If the population is normal, the sampling distribution of the sample variance s² (when scaled) follows a <strong>Chi-squared (χ²) distribution</strong>. This allows us to make inferences about the population variance σ².</p>
-                        <pre class="formula">(n-1)s² / σ² ~ χ²<sub>(n-1)</sub></pre>
-                    </li>
-                    <li>
-                        <strong>Use of t-distribution:</strong>
-                        <p>When estimating the mean μ of a normally distributed population with an unknown population standard deviation σ, and using the sample standard deviation s, the statistic (x̄ - μ) / (s/√n) follows a <strong>t-distribution</strong> with n-1 degrees of freedom. This is also robust to moderate departures from normality, especially for larger sample sizes.</p>
-                    </li>
-                    <li>
-                        <strong>Bootstrap Methods:</strong>
-                        <p>For complex distributions or when analytical sampling distributions are unknown, resampling methods like bootstrapping can be used to approximate the sampling distribution of an estimator and construct confidence intervals, even for non-normal parameters.</p>
-                    </li>
-                </ul>
-                <p>In summary, statistical inference often relies on knowing or approximating the sampling distribution of an estimator. While normality assumptions simplify many procedures, various techniques and distributions (CLT, Chi-squared, t-distribution, approximations for proportions, bootstrapping) allow us to estimate and make inferences about parameters from non-normal distributions or parameters other than the mean.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 6-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-4, 3. List and explain all OSI layers related to networking.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>OSI (Open Systems Interconnection - Ochiq Tizimlarning O'zaro Aloqasi) modeli</strong> bu tarmoq aloqasi qanday amalga oshishini tavsiflovchi 7 qatlamli konseptual asosdir:</p>
+<ol>
+<li><strong>Fizik qatlam (Physical Layer - Layer 1):</strong>
+    <ul>
+    <li>Tarmoqning jismoniy xususiyatlarini (kabellar, ulagichlar, kuchlanishlar, bit uzatish) belgilaydi. Bu xom bitlarni jismoniy muhit orqali yuborish bilan bog'liq. Masalan, Ethernet kabeli, Wi-Fi radio to'lqinlari.</li>
+    </ul>
+</li>
+<li><strong>Kanal qatlami (Data Link Layer - Layer 2):</strong>
+    <ul>
+    <li>Bir xil tarmoqdagi ikkita to'g'ridan-to'g'ri ulangan tugunlar o'rtasida ma'lumotlarni uzatish uchun jismoniy manzillash (MAC manzillari) va xatoliklarni aniqlash/tuzatish bilan shug'ullanadi. Kommutatorlar shu qatlamda ishlaydi. LLC (Logical Link Control) va MAC (Media Access Control) kichik qatlamlariga bo'linadi.</li>
+    </ul>
+</li>
+<li><strong>Tarmoq qatlami (Network Layer - Layer 3):</strong>
+    <ul>
+    <li>Mantiqiy manzillash (IP manzillari) va paketlarni turli tarmoqlar bo'ylab marshrutlash uchun mas'ul. Marshrutizatorlar ushbu qatlamda ishlaydi.</li>
+    </ul>
+</li>
+<li><strong>Transport qatlami (Transport Layer - Layer 4):</strong>
+    <ul>
+    <li>Xostlar o'rtasida ishonchli yoki ishonchsiz ma'lumotlarni yetkazib berishni ta'minlaydi. TCP (ishonchli) va UDP (ishonchsiz) shu yerda ishlaydi. Segmentatsiya, oqim nazorati va xato nazorati bilan shug'ullanadi.</li>
+    </ul>
+</li>
+<li><strong>Sessiya qatlami (Session Layer - Layer 5):</strong>
+    <ul>
+    <li>Ilovalar o'rtasidagi aloqalarni (sessiyalarni) boshqaradi. Ushbu sessiyalarni o'rnatish, saqlash va tugatish bilan shug'ullanadi (masalan, tizimga kirish sessiyalari).</li>
+    </ul>
+</li>
+<li><strong>Taqdimot qatlami (Presentation Layer - Layer 6):</strong>
+    <ul>
+    <li>Ma'lumotlarni formatlash, shifrlash va siqish bilan shug'ullanadi. Bir tizim tomonidan yuborilgan ma'lumotlarning boshqasi tomonidan o'qilishi mumkinligini ta'minlaydi (masalan, belgilar kodirovkalarini o'zgartirish).</li>
+    </ul>
+</li>
+<li><strong>Ilova qatlami (Application Layer - Layer 7):</strong>
+    <ul>
+    <li>Foydalanuvchiga eng yaqin qatlam. Ilovalarga tarmoq xizmatlariga kirish uchun interfeysni taqdim etadi (masalan, veb-brauzer uchun HTTP, fayl uzatish uchun FTP, elektron pochta uchun SMTP).</li>
+    </ul>
+</ol>
+</div>
+</div>
+</div>
 
-    <!-- 7-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">7. Method of least squares (MLS). Mean approximation error. Average coefficient of elasticity. Coefficient of determination.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>These concepts are central to regression analysis, which aims to model the relationship between a dependent variable and one or more independent variables.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-4, 4. Wireless systems and their types.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Simsiz tizimlar</strong> ma'lumotlarni kabellar o'rniga radio to'lqinlar yordamida uzatadi. Keng tarqalgan turlari quyidagilar:</p>
+<ul>
+<li><strong>Wi-Fi (Wireless Fidelity, IEEE 802.11 standartlariga asoslangan):</strong>
+    <ul>
+    <li>Uylarda, ofislarda va jamoat joylarida mahalliy tarmoqlar (WLAN) uchun ishlatiladi. Turli standartlar (802.11a/b/g/n/ac/ax) har xil tezlik va masofalarni taklif qiladi.</li>
+    </ul>
+</li>
+<li><strong>Bluetooth:</strong>
+    <ul>
+    <li>Qurilmalar o'rtasida qisqa masofali aloqa uchun ishlatiladi, masalan, telefonni naushnikka, sichqonchani kompyuterga yoki aqlli uy qurilmalarini ulash.</li>
+    </ul>
+</li>
+<li><strong>Uyali aloqa tarmoqlari (masalan, 3G, 4G/LTE, 5G):</strong>
+    <ul>
+    <li>Uyali aloqa minoralari yordamida keng geografik hududlarda mobil ovozli va ma'lumotlar xizmatlarini taqdim etadi.</li>
+    </ul>
+</li>
+<li><strong>Sun'iy yo'ldosh aloqasi (Satellite):</strong>
+    <ul>
+    <li>Yerni aylanib yuruvchi sun'iy yo'ldoshlardan foydalanib aloqani ta'minlaydi, ko'pincha uzoq hududlar, GPS yoki televizion eshittirishlar uchun ishlatiladi.</li>
+    </ul>
+</li>
+<li><strong>NFC (Near Field Communication - Yaqin Maydon Aloqasi):</strong>
+    <ul>
+    <li>Juda qisqa masofali (bir necha santimetr) aloqa, masalan, kontaktsiz to'lovlar va qurilmalarni bir-biriga tekkizish orqali ma'lumotlarni uzatish uchun ishlatiladi.</li>
+    </ul>
+</li>
+<li><strong>Mikroto'lqinli aloqa (Microwave):</strong>
+    <ul>
+    <li>Uzoqroq masofalarda nuqtadan-nuqtaga aloqa uchun yuqori chastotali radio to'lqinlardan foydalanadi, ko'pincha magistral ulanishlar (backhaul links) uchun ishlatiladi.</li>
+    </ul>
+</li>
+<li><strong>Infraqizil aloqa (Infrared):</strong>
+    <ul>
+    <li>Qisqa masofali, to'g'ridan-to'g'ri ko'rish talab qiladigan aloqa uchun (masalan, televizor pultlari).</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>Method of Least Squares (MLS):</h5>
-                <p>The Method of Least Squares is a standard approach in regression analysis used to find the "best fit" line or curve for a set of data points. It works by minimizing the sum of the squares of the residuals (the differences between the observed values of the dependent variable and the values predicted by the model).</p>
-                <p>For a simple linear regression model ŷ = b₀ + b₁x:</p>
-                <ul>
-                    <li>yᵢ is the observed value for the i-th observation.</li>
-                    <li>ŷᵢ is the predicted value for the i-th observation.</li>
-                    <li>The residual for the i-th observation is eᵢ = yᵢ - ŷᵢ.</li>
-                </ul>
-                <p>MLS finds the values of the coefficients (b₀ and b₁) that minimize the Sum of Squared Residuals (SSR) or Sum of Squared Errors (SSE):</p>
-                <pre class="formula">SSR = Σ eᵢ² = Σ (yᵢ - ŷᵢ)² = Σ (yᵢ - (b₀ + b₁xᵢ))²</pre>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-4, 5. What is a domain?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>Tarmoq sohasida "domen" bir nechta narsani anglatishi mumkin:</p>
+<ul>
+<li><strong>Domen nomi (DNS da):</strong>
+    <ul>
+    <li>Internet resursi uchun odamlar o'qiy oladigan nom, masalan, <code>www.google.com</code>. Domen Nomlari Tizimi (DNS) bu nomlarni IP manzillariga tarjima qiladi. Bu internetda saytlarni topishni osonlashtiradi.</li>
+    </ul>
+</li>
+<li><strong>Keng tarqatish domeni (Broadcast Domain):</strong>
+    <ul>
+    <li>Tarmoqning mantiqiy hududi bo'lib, unda biron bir qurilma keng tarqatish kadrini (broadcast frame) uzatsa, u shu hududdagi boshqa barcha qurilmalar tomonidan qabul qilinadi. Odatda marshrutizatorlar keng tarqatish domenlarini ajratadi. Kommutatorlar esa bitta keng tarqatish domenini hosil qiladi (VLANlar ishlatilmagan bo'lsa).</li>
+    </ul>
+</li>
+<li><strong>To'qnashuv domeni (Collision Domain):</strong>
+    <ul>
+    <li>Tarmoqning hududi bo'lib, agar ikkita qurilma bir vaqtning o'zida uzatsa, ularning signallari to'qnashishi va buzilishi mumkin. Kommutatorlar to'qnashuv domenlarini segmentlarga ajratishga yordam beradi (har bir port alohida to'qnashuv domeni bo'ladi), hablar esa bitta to'qnashuv domenini yaratadi.</li>
+    </ul>
+</li>
+<li><strong>Ma'muriy domen (masalan, Windows Domeni):</strong>
+    <ul>
+    <li>Umumiy qoidalar va xavfsizlik siyosatlari ostida boshqariladigan kompyuterlar va foydalanuvchilar guruhi, ko'pincha markaziy server (domen kontrolleri) tomonidan boshqariladi. Bu korporativ muhitlarda resurslarni markazlashtirilgan boshqarish va xavfsizlikni ta'minlash uchun ishlatiladi.</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- VERSION-4 TUGASHI -->
 
-                <h5>Mean Approximation Error (often Mean Squared Error - MSE):</h5>
-                <p>The Mean Squared Error (MSE) is a common measure of the average squared difference between the estimated values and the actual values. It quantifies the quality of an estimator or a model's predictions.</p>
-                <p>In the context of regression, MSE is calculated as:</p>
-                <pre class="formula">MSE = SSR / (n - k - 1)   or sometimes   MSE = SSR / n</pre>
-                <p>Where:</p>
-                <ul>
-                    <li>SSR is the Sum of Squared Residuals.</li>
-                    <li>n is the number of observations.</li>
-                    <li>k is the number of independent variables in the model. (n - k - 1) represents the degrees of freedom for the error.</li>
-                </ul>
-                <p>The <strong>Root Mean Squared Error (RMSE)</strong> = √MSE, is often used as it is in the same units as the dependent variable.</p>
+<!-- VERSION-5 BOSHLANISHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-5, 1. What kind of protocol is UDP?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>UDP (User Datagram Protocol - Foydalanuvchi Datagramma Protokoli)</strong> bu transport qatlamining "aloqasiz" (connectionless) protokolodir. Uni otkritka yuborishga o'xshatish mumkin:</p>
+<h5>Asosiy xususiyatlari:</h5>
+<ul>
+<li><strong>Aloqa o'rnatilmaydi:</strong> Ma'lumotlarni yuborishdan oldin aloqa o'rnatmaydi. Shunchaki yuboradi.</li>
+<li><strong>Ishonchsiz:</strong> Paketlarning yetib borishini, tartibda kelishini yoki xatosiz bo'lishini kafolatlamaydi. Agar paket yo'qolsa, UDP uni qayta yubormaydi.</li>
+<li><strong>Tez va yengil:</strong> TCP kabi qo'shimcha yuklamalari (masalan, tasdiqlashlar va qayta uzatishlar) bo'lmagani uchun u ancha tezroq. Sarlavhasi kichik.</li>
+<li><strong>Foydalanish sohalari:</strong> Tezlik muhim va ba'zi ma'lumotlar yo'qolishi qabul qilinadigan ilovalar uchun yaxshi, masalan:
+<ul>
+<li>Video/audio oqimi (streaming)</li>
+<li>Onlayn o'yinlar</li>
+<li>DNS (Domen Nomlari Tizimi) so'rovlari</li>
+<li>DHCP (Dynamic Host Configuration Protocol)</li>
+<li>TFTP (Trivial File Transfer Protocol)</li>
+</ul>
+</li>
+</ul>
+<p>UDP "eng yaxshi harakat" (best-effort) yetkazib berishni ta'minlaydi, ya'ni u paketlarni yetkazib berishga harakat qiladi, lekin muvaffaqiyatni kafolatlamaydi.</p>
+</div>
+</div>
+</div>
 
-                <h5>Average Coefficient of Elasticity:</h5>
-                <p>In economics, elasticity measures the responsiveness of one variable to a percentage change in another. For a function y = f(x), point elasticity is defined as:</p>
-                <pre class="formula">Elasticity (E) = (% change in y) / (% change in x) = (dy/y) / (dx/x) = (dy/dx) * (x/y)</pre>
-                <p>The "average coefficient of elasticity" in a regression context often refers to calculating this elasticity at the mean values of the variables (x̄, ȳ) using the estimated regression coefficients.</p>
-                <p>For a linear model y = b₀ + b₁x, the slope b₁ = dy/dx. So, average elasticity is:</p>
-                <pre class="formula">E_avg = b₁ * (x̄ / ȳ)</pre>
-                <p>For a log-log model (ln(y) = β₀ + β₁ln(x)), the coefficient β₁ itself is the elasticity.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-5, 2. Explain the VPN secure network.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>VPN (Virtual Private Network - Virtual Xususiy Tarmoq)</strong> bu ochiq tarmoq (masalan, internet) orqali xavfsiz, shifrlangan "tunnel" yaratadigan texnologiyadir. Bu sizga internet orqali xuddi xususiy tarmoqqa ulanganingizdek xavfsiz aloqa qilish imkonini beradi.</p>
+<h5>VPN qanday xavfsizlikni ta'minlaydi:</h5>
+<ul>
+<li><strong>Shifrlash (Encryption):</strong> Sizning internet trafigingiz shifrlanadi, bu esa uni uchinchi shaxslar (masalan, xakerlar yoki internet provayderingiz) tomonidan o'qilishini qiyinlashtiradi.</li>
+<li><strong>Tunnel yaratish (Tunneling):</strong> Ma'lumotlaringiz ochiq internet orqali o'tadigan maxsus "tunnel" ichiga joylashtiriladi. Bu sizning ma'lumotlaringizni tashqi muhitdan ajratib turadi.</li>
+<li><strong>IP manzilni yashirish (IP Masking):</strong> VPN sizning haqiqiy IP manzilingizni VPN serverining IP manzili bilan almashtiradi, bu esa sizning onlayn anonimligingizni va joylashuvingizni yashirishga yordam beradi.</li>
+<li><strong>Ma'lumotlar yaxlitligi (Data Integrity):</strong> Ba'zi VPN protokollari ma'lumotlarning uzatish paytida o'zgartirilmaganligini tekshirishga yordam beradi.</li>
+</ul>
+<h5>VPN ning qo'llanilishi:</h5>
+<ul>
+<li>Jamoat Wi-Fi tarmoqlarida xavfsizlikni oshirish.</li>
+<li>Geografik cheklovlarni chetlab o'tish (masalan, ma'lum bir mamlakatda mavjud bo'lmagan kontentga kirish).</li>
+<li>Korporativ tarmoqlarga masofadan xavfsiz ulanish.</li>
+<li>Onlayn maxfiylikni himoya qilish.</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>Coefficient of Determination (R²):</h5>
-                <p>The Coefficient of Determination (R-squared) is a statistic that indicates the proportion of the variance in the dependent variable (y) that is predictable from the independent variable(s) (x) in a regression model. It ranges from 0 to 1 (or 0% to 100%).</p>
-                <ul>
-                    <li>An R² of 1 indicates that the regression predictions perfectly fit the data.</li>
-                    <li>An R² of 0 indicates that the model explains none of the variability of the response data around its mean.</li>
-                </ul>
-                <p>R² is calculated as:</p>
-                <pre class="formula">R² = 1 - (SSR / SST) = (SST - SSR) / SST = SSM / SST</pre>
-                <p>Where:</p>
-                <ul>
-                    <li><strong>SSR (Sum of Squared Residuals):</strong> Σ (yᵢ - ŷᵢ)² (unexplained variation)</li>
-                    <li><strong>SST (Total Sum of Squares):</strong> Σ (yᵢ - ȳ)² (total variation in y)</li>
-                    <li><strong>SSM (Sum of Squares Model or Regression Sum of Squares):</strong> Σ (ŷᵢ - ȳ)² (explained variation)</li>
-                </ul>
-                <p>A higher R² generally indicates a better fit of the model to the data, but it should be interpreted with caution, especially when comparing models with different numbers of predictors (adjusted R² is often preferred then).</p>
-            </div>
-        </div>
-    </div>
-    <!-- 7-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-5, 3. Describe the general characteristics of the ICMP protocol.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>ICMP (Internet Control Message Protocol - Internet Boshqaruv Xabarlari Protokoli)</strong> bu IP protokolining yordamchi protokolodir. U foydalanuvchi ma'lumotlarini tashish uchun emas, balki tarmoq sharoitlari haqida xatolik xabarlari va operatsion ma'lumotlarni yuborish uchun ishlatiladi. Uni tarmoqning muammolar va holatlar haqidagi xabarchisiga o'xshatish mumkin.</p>
+<h5>Asosiy xususiyatlari va vazifalari:</h5>
+<ul>
+<li><strong>Xatoliklarni xabarlash:</strong> Agar marshrutizator paketni yetkaza olmasa (masalan, manzilga erishib bo'lmaydi, paket juda katta), u manbaga ICMP orqali xabar yuboradi. Misollar: "Destination Unreachable" (Manzilga erishib bo'lmaydi), "Time Exceeded" (Vaqt tugadi).</li>
+<li><strong>Diagnostika:</strong> <code>ping</code> (ulanish imkoniyatini tekshiradi) va <code>traceroute</code> (paketlar bosib o'tadigan yo'lni ko'rsatadi) kabi yordamchi dasturlar ICMP xabarlaridan foydalanadi.
+    <ul>
+    <li><code>ping</code> "Echo Request" va "Echo Reply" ICMP xabarlarini ishlatadi.</li>
+    </ul>
+</li>
+<li><strong>Boshqaruv, ma'lumot emas:</strong> Veb-sahifalar yoki elektron pochta kabi ilova ma'lumotlarini tashimaydi.</li>
+<li><strong>Tarmoq qatlamida ishlaydi:</strong> U IP bilan birga ishlaydi. ICMP xabarlari IP paketlari ichiga joylashtiriladi.</li>
+<li><strong>Ishonchsiz:</strong> ICMP xabarlarining o'zi ishonchli yetkazib berilishini kafolatlamaydi (garchi ular ko'pincha yetib borsa ham).</li>
+</ul>
+<p>ICMP tarmoq muammolarini aniqlash va tarmoqning umumiy holatini tushunish uchun muhim vositadir.</p>
+</div>
+</div>
+</div>
 
-    <!-- 8-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">8. Interval estimates. Confidence level and confidence interval.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>In statistical inference, we often want to estimate an unknown population parameter (e.g., population mean μ, population proportion p) using sample data. While a point estimate provides a single best guess, an interval estimate provides a range of plausible values for the parameter.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-5, 4. What are malicious programs?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Zararli dasturlar (Malicious Programs yoki Malware)</strong> bu kompyuter tizimlariga, tarmoqlariga yoki foydalanuvchilariga ularning roziligisiz zarar yetkazish yoki ulardan foydalanish uchun mo'ljallangan dasturiy ta'minotdir.</p>
+<h5>Keng tarqalgan zararli dastur turlari:</h5>
+<ul>
+<li><strong>Viruslar (Viruses):</strong> O'zlarini qonuniy dasturlarga biriktiradi va ushbu dasturlar ishga tushirilganda tarqaladi. Ular fayllarni buzishi, o'chirishi yoki tizim ishini sekinlashtirishi mumkin.</li>
+<li><strong>Chuvalchanglar (Worms):</strong> O'z-o'zini ko'paytiradigan dasturlar bo'lib, xost dasturiga ehtiyoj sezmasdan tarmoqlar bo'ylab tarqaladi. Ular tarmoq trafigini ortiqcha yuklashi va xavfsizlik zaifliklaridan foydalanishi mumkin.</li>
+<li><strong>Troyanlar (Trojan Horses):</strong> O'zlarini qonuniy dasturiy ta'minot sifatida niqoblaydi, lekin dastur ishga tushirilganda bajariladigan zararli kodni o'z ichiga oladi. Ular ma'lumotlarni o'g'irlashi, tizimga ruxsatsiz kirishni ta'minlashi yoki boshqa zararli dasturlarni o'rnatishi mumkin.</li>
+<li><strong>Shifrlagich-tovlamachilar (Ransomware):</strong> Foydalanuvchining fayllarini shifrlaydi va ularni shifrdan chiqarish uchun to'lov (tovlama) talab qiladi.</li>
+<li><strong>Josus dasturlar (Spyware):</strong> Foydalanuvchining faoliyati haqida yashirincha ma'lumot to'playdi va uni uchinchi shaxsga yuboradi (masalan, klaviatura bosishlari, veb-sayt tarixini kuzatish).</li>
+<li><strong>Reklama dasturlari (Adware):</strong> Istalmagan reklamalarni ko'rsatadi, ba'zan josuslik funksiyalarini ham o'z ichiga olishi mumkin.</li>
+<li><strong>Botnetlar (Botnets):</strong> Zararlangan kompyuterlar tarmog'i ("botlar") bo'lib, ular markazlashtirilgan holda kiberjinoyatchi tomonidan boshqariladi va spam yuborish, DDoS hujumlari kabi zararli harakatlar uchun ishlatiladi.</li>
+<li><strong>Rootkitlar (Rootkits):</strong> Zararli dasturlarning mavjudligini va faoliyatini yashirish uchun mo'ljallangan dasturlar to'plami, tizimga chuqur kirib oladi.</li>
+</ul>
+<p>Zararli dasturlardan himoyalanish uchun antivirus dasturlarini ishlatish, dasturiy ta'minotni yangilab turish va ehtiyotkorlik bilan internetdan foydalanish muhim.</p>
+</div>
+</div>
+</div>
 
-                <h5>Interval Estimate:</h5>
-                <p>An <strong>interval estimate</strong> is a range of values, calculated from sample data, that is likely to contain the true value of an unknown population parameter. It acknowledges the uncertainty inherent in estimating from a sample.</p>
-                <p>An interval estimate takes the form:</p>
-                <pre class="formula">Point Estimate ± Margin of Error</pre>
-                <p>The margin of error depends on the desired confidence level, the variability of the data (e.g., standard deviation), and the sample size.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-5, 5. Protocols used for data transmission at the data link layer?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p>Kanal qatlami (Data Link Layer - OSI modelining 2-qatlami) ikkita to'g'ridan-to'g'ri ulangan tugunlar o'rtasida ishonchli ma'lumotlarni uzatish bilan shug'ullanadi. Ushbu qatlamda ma'lumotlarni uzatish uchun ishlatiladigan keng tarqalgan protokollar quyidagilar:</p>
+<ul>
+<li><strong>Ethernet:</strong>
+    <ul>
+    <li>Eng keng tarqalgan lokal tarmoq (LAN) texnologiyasi. U ma'lumotlarning kadrlarga (frames) qanday formatlanishini va qurilmalarning umumiy muhitga kirish usulini (masalan, CSMA/CD yordamida) belgilaydi. MAC manzillarini ishlatadi.</li>
+    </ul>
+</li>
+<li><strong>PPP (Point-to-Point Protocol - Nuqtadan-Nuqtaga Protokol):</strong>
+    <ul>
+    <li>Ko'pincha ikkita tarmoq tugunlari o'rtasida to'g'ridan-to'g'ri aloqalarni o'rnatish uchun ishlatiladi, masalan, dial-up ulanishlar yoki ba'zi keng polosali ulanishlar (PPPoE - PPP over Ethernet). Autentifikatsiya, siqish va xatoliklarni aniqlash kabi xususiyatlarni taqdim etadi.</li>
+    </ul>
+</li>
+<li><strong>HDLC (High-Level Data Link Control - Yuqori Darajadagi Kanal Boshqaruvi Protokoli):</strong>
+    <ul>
+    <li>Nuqtadan-nuqtaga va ko'p nuqtali ulanishlar uchun ishlatiladigan bitga yo'naltirilgan protokol. Ko'pincha WAN ulanishlarida ishlatilgan. Boshqa ko'plab kanalli protokollar uchun asos bo'lgan (masalan, PPP, Frame Relay).</li>
+    </ul>
+</li>
+<li><strong>Frame Relay:</strong>
+    <ul>
+    <li>Eskirgan WAN texnologiyasi bo'lib, ulanishga yo'naltirilgan kanal qatlami aloqasini ta'minlaydi. Paketlarni kommutatsiya qilish texnologiyasining bir turi bo'lib, bir nechta virtual kanallarni bitta jismoniy liniya orqali uzatish imkonini beradi.</li>
+    </ul>
+</li>
+<li><strong>ATM (Asynchronous Transfer Mode - Asinxron Uzatish Rejimi):</strong>
+    <ul>
+    <li>Kichik, qat'iy o'lchamdagi katakchalarga (cells) asoslangan kommutatsiya texnologiyasi. Ham LAN, ham WAN uchun ishlatilgan va Xizmat Sifati (QoS) imkoniyatlari bilan mashhur bo'lgan. Hozirda kamroq qo'llaniladi.</li>
+    </ul>
+</li>
+<li><strong>Wi-Fi (IEEE 802.11 protokollari):</strong>
+    <ul>
+    <li>Simsiz lokal tarmoqlar uchun kanal qatlami protokollarini (shu jumladan MAC kichik qatlamini) belgilaydi. CSMA/CA (Collision Avoidance) kabi muhitga kirish usullaridan foydalanadi.</li>
+    </ul>
+</li>
+</ul>
+<p>Bu protokollar ma'lumotlarning kadrlarga qadoqlanishi, jismoniy manzillanishi (MAC), xatoliklarni aniqlash va muhitga kirishni boshqarish kabi vazifalarni bajaradi.</p>
+</div>
+</div>
+</div>
+<!-- VERSION-5 TUGASHI -->
 
-                <h5>Confidence Level:</h5>
-                <p>The <strong>confidence level</strong> is the probability (often expressed as a percentage, e.g., 90%, 95%, 99%) that the method used to construct the interval will produce an interval that captures the true population parameter, *if the sampling process were repeated many times*. It reflects the reliability or success rate of the estimation procedure, not the probability that a *specific* calculated interval contains the true parameter.</p>
-                <p>Common confidence levels are:</p>
-                <ul>
-                    <li>90% (α = 0.10)</li>
-                    <li>95% (α = 0.05)</li>
-                    <li>99% (α = 0.01)</li>
-                </ul>
-                <p>Here, α (alpha) is the significance level, representing the probability that the interval will *not* contain the true parameter (1 - confidence level).</p>
+<!-- QOLGAN 15 TA VERSION XUDDI SHU TARTIBDA HTML FORMATIDA BO'LADI. BU YERDA FAQAT BIR NECHTA VERSION KO'RSATILDI. -->
+<!-- ... (Version 6 dan Version 20 gacha bo'lgan HTML kodlari shu yerda davom etadi) ... -->
 
-                <h5>Confidence Interval (CI):</h5>
-                <p>A <strong>confidence interval</strong> is the actual computed range [lower bound, upper bound] obtained from a specific sample using a particular confidence level. Once a CI is calculated from a sample, it either contains the true parameter or it does not. The confidence level tells us about the long-run performance of the method.</p>
-                <p><strong>Interpretation:</strong></p>
-                <p>If we construct a 95% confidence interval for a population mean μ, say [L, U], we interpret it as: "We are 95% confident that this specific interval [L, U] contains the true population mean μ." This means that if we were to take many random samples of the same size from the population and construct a 95% CI for each sample, about 95% of those intervals would actually contain μ.</p>
+<!-- VERSION-20 BOSHLANISHI (NAMUNA UCHUN OXIRGISI) -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-20, 1. What kind of protocol is TCP?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>TCP (Transmission Control Protocol - Uzatishni Boshqarish Protokoli)</strong> bu TCP/IP to'plamidagi asosiy <strong>transport qatlami</strong> protokolodir. U quyidagi xususiyatlari bilan mashhur:</p>
+<ul>
+<li><strong>Aloqaga yo'naltirilgan (Connection-Oriented):</strong> Ikki aloqa qiluvchi qurilma o'rtasida har qanday ma'lumot yuborilishidan oldin aloqa ("uch tomonlama qo'l siqish" - three-way handshake) o'rnatadi. Ushbu aloqa ma'lumotlarni uzatish tugaguniga qadar saqlanadi va keyin tugatiladi.</li>
+<li><strong>Ishonchli (Reliable):</strong> TCP bir uchdan yuborilgan ma'lumotlarning boshqa uch tomonidan to'g'ri, tartibda va takrorlanmasdan qabul qilinishini kafolatlaydi.
+    <ul>
+    <li><strong>Tasdiqlashlar (Acknowledgements - ACKs):</strong> Qabul qiluvchi qabul qilingan ma'lumot segmentlari uchun yuboruvchiga tasdiqlashlarni qaytaradi.</li>
+    <li><strong>Qayta uzatish (Retransmission):</strong> Agar yuboruvchi ma'lum bir vaqt ichida ACK olmasa, u yo'qolgan segmentni qayta yuboradi.</li>
+    <li><strong>Ketma-ketlik (Sequencing):</strong> Ma'lumotlar segmentlarga bo'linadi va har bir segment raqamlanadi, shunda ular manzilida to'g'ri tartibda qayta yig'ilishi mumkin.</li>
+    </ul>
+</li>
+<li><strong>Oqim nazorati (Flow Control):</strong> Tez yuboruvchining sekin qabul qiluvchini ortiqcha yuklashini oldini olish uchun ma'lumotlarni uzatish tezligini boshqaradi.</li>
+<li><strong>Tirbandlik nazorati (Congestion Control):</strong> Tarmoq sharoitlariga qarab yuborish tezligini sozlash orqali tarmoq tirbandligini oldini olishga yordam beradi.</li>
+<li><strong>Baytlar oqimi (Byte Stream):</strong> TCP ma'lumotlarni uzluksiz baytlar oqimi sifatida qaraydi.</li>
+<li><strong>Foydalanish sohalari:</strong> Ishonchlilik muhim bo'lgan ilovalar uchun ishlatiladi, masalan, veb-brauzer (HTTP/HTTPS), elektron pochta (SMTP, POP3, IMAP), fayl uzatish (FTP) va xavfsiz qobiq (SSH).</li>
+</ul>
+</div>
+</div>
+</div>
 
-                <h5>General Form for a Confidence Interval for a Mean (known σ or large n):</h5>
-                <pre class="formula">x̄ ± z<sub>α/2</sub> * (σ / √n)</pre>
-                <p>Where:</p>
-                <ul>
-                    <li>x̄ is the sample mean.</li>
-                    <li>z<sub>α/2</sub> is the critical value from the standard normal distribution corresponding to the confidence level (e.g., for 95% CI, z<sub>α/2</sub> ≈ 1.96).</li>
-                    <li>σ is the population standard deviation (if unknown and n is small, s is used and z is replaced by t from the t-distribution).</li>
-                    <li>n is the sample size.</li>
-                </ul>
-                <p>The width of the confidence interval depends on:</p>
-                <ul>
-                    <li><strong>Confidence Level:</strong> Higher confidence level → wider interval.</li>
-                    <li><strong>Sample Standard Deviation (s or σ):</strong> Higher variability → wider interval.</li>
-                    <li><strong>Sample Size (n):</strong> Larger sample size → narrower interval.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- 8-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-20, 2. What are multiplexing and demultiplexing processes?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Multiplekslash (Multiplexing)</strong> va <strong>Demultiplekslash (Demultiplexing)</strong> tarmoqlarda cheklangan resurslardan (masalan, bitta aloqa kanali) samarali foydalanish uchun muhim jarayonlardir.</p>
+<h5>Multiplekslash (Multiplexing):</h5>
+<ul>
+<li><strong>Ta'rifi:</strong> Bir nechta signal yoki ma'lumotlar oqimini bitta umumiy aloqa kanaliga yoki muhitiga birlashtirish jarayoni. Tasavvur qiling, bir nechta yo'l chizig'i bitta katta magistralga qo'shiladi.</li>
+<li><strong>Maqsadi:</strong> Umumiy resursdan (kabel, radiochastota diapazoni) samarali foydalanish. Xarajatlarni kamaytirish va o'tkazuvchanlik qobiliyatini oshirish.</li>
+<li><strong>Misollar:</strong>
+    <ul>
+    <li><strong>Vaqtinchalik multiplekslash (Time Division Multiplexing - TDM):</strong> Har bir manbaga umumiy kanalda uzatish uchun ma'lum bir vaqt oralig'i (time slot) ajratiladi.</li>
+    <li><strong>Chastotali multiplekslash (Frequency Division Multiplexing - FDM):</strong> Har bir manbaga umumiy kanal ichida turli chastota diapazoni ajratiladi.</li>
+    <li><strong>To'lqin uzunligi bo'yicha multiplekslash (Wavelength Division Multiplexing - WDM/DWDM):</strong> Optik tolalarda ishlatiladi, bunda turli ma'lumotlar oqimlari turli yorug'lik to'lqin uzunliklarida (ranglarida) uzatiladi.</li>
+    <li><strong>Statistik multiplekslash:</strong> O'tkazuvchanlik qobiliyatini talabga qarab ajratadi, notekis (bursty) trafik uchun samaraliroq.</li>
+    </ul>
+</li>
+</ul>
+<h5>Demultiplekslash (Demultiplexing):</h5>
+<ul>
+<li><strong>Ta'rifi:</strong> Teskari jarayon. Qabul qiluvchi tomonda birlashtirilgan signal yana o'zining asl alohida ma'lumotlar oqimlariga ajratiladi va ular tegishli manzillariga yo'naltiriladi. Bu magistraldan chiqayotgan trafikning o'ziga xos chiqish yo'llariga yo'naltirilishiga o'xshaydi.</li>
+<li><strong>Talab:</strong> Demultipleksor signallarning qanday birlashtirilganligini bilishi kerak, shunda ularni to'g'ri ajrata oladi. Masalan, transport qatlamida port raqamlari demultiplekslash uchun ishlatiladi, ya'ni kelgan segment qaysi ilovaga tegishli ekanligini aniqlaydi.</li>
+</ul>
+</div>
+</div>
+</div>
 
-    <!-- 9-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">9. Distribution as statistical estimates of non-normal parameters.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>This topic refers to the use of <strong>sampling distributions</strong> of estimators to make inferences (like constructing confidence intervals or performing hypothesis tests) about population parameters, especially when these parameters belong to non-normal distributions, or when the parameters themselves are not means (e.g., variances, proportions).</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-20, 3. Explain the concept of the Telecommunication Management Network (TMN).</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>TMN (Telecommunication Management Network - Telekommunikatsiya Boshqaruv Tarmog'i)</strong> bu telekommunikatsiya tarmoqlarini boshqarish uchun ITU-T tomonidan belgilangan model yoki arxitekturadir. U turli boshqaruv funksiyalari va tizimlari qanday o'zaro ta'sir qilishi kerakligi uchun asosni taqdim etadi.</p>
+<h5>Asosiy maqsadlari va prinsiplari:</h5>
+<ul>
+<li>Telekommunikatsiya tarmoqlari va xizmatlarini samarali boshqarish uchun standartlashtirilgan yondashuvni ta'minlash.</li>
+<li>Turli ishlab chiqaruvchilarning uskunalari va boshqaruv tizimlarining o'zaro ishlashini (interoperability) osonlashtirish.</li>
+<li>Boshqaruv operatsiyalarini avtomatlashtirish va optimallashtirish.</li>
+</ul>
+<h5>TMN ning funksional sohalari (FCAPS):</h5>
+<p>TMN beshta asosiy boshqaruv funksional sohasini belgilaydi, ular FCAPS qisqartmasi bilan tanilgan:</p>
+<ul>
+<li><strong>F - Fault Management (Nosozliklarni boshqarish):</strong> Tarmoqdagi nosozliklarni aniqlash, izolyatsiya qilish, tuzatish va qayd etish.</li>
+<li><strong>C - Configuration Management (Konfiguratsiyani boshqarish):</strong> Tarmoq qurilmalari va xizmatlarini sozlash, nazorat qilish va inventarizatsiya qilish.</li>
+<li><strong>A - Accounting Management (Hisob-kitobni boshqarish / Billing):</strong> Tarmoqdan foydalanishni hisobga olish va billing uchun ma'lumotlarni to'plash.</li>
+<li><strong>P - Performance Management (Ishlash samaradorligini boshqarish):</strong> Tarmoqning ishlashini kuzatish, tahlil qilish va optimallashtirish, xizmat sifatini (QoS) ta'minlash.</li>
+<li><strong>S - Security Management (Xavfsizlikni boshqarish):</strong> Tarmoq resurslarini ruxsatsiz kirishdan himoya qilish, xavfsizlik siyosatlarini amalga oshirish.</li>
+</ul>
+<h5>TMN ning mantiqiy qatlamli arxitekturasi:</h5>
+<ul>
+<li><strong>Biznes boshqaruvi qatlami (Business Management Layer - BML)</strong></li>
+<li><strong>Xizmat boshqaruvi qatlami (Service Management Layer - SML)</strong></li>
+<li><strong>Tarmoq boshqaruvi qatlami (Network Management Layer - NML)</strong></li>
+<li><strong>Element boshqaruvi qatlami (Element Management Layer - EML)</strong></li>
+<li><strong>Tarmoq elementi qatlami (Network Element Layer - NEL)</strong></li>
+</ul>
+<p>TMN murakkab, ko'pincha ko'p vendorli telekommunikatsiya tarmoqlarini samarali va standartlashtirilgan boshqarish imkonini berishga qaratilgan.</p>
+</div>
+</div>
+</div>
 
-                <h5>Key Concepts:</h5>
-                <ul>
-                    <li>
-                        <strong>Estimators and Sampling Distributions:</strong>
-                        <p>An estimator (e.g., sample mean x̄, sample variance s², sample proportion p̂) is a statistic calculated from a sample to estimate an unknown population parameter (e.g., population mean μ, population variance σ², population proportion p). Since estimators vary from sample to sample, they are random variables and have their own probability distributions, known as <strong>sampling distributions</strong>.</p>
-                    </li>
-                    <li>
-                        <strong>Central Limit Theorem (CLT):</strong>
-                        <p>Even if the underlying population distribution is not normal, the sampling distribution of the sample mean (x̄) tends to be approximately normal for sufficiently large sample sizes (usually n ≥ 30). This is crucial for making inferences about the population mean μ.</p>
-                    </li>
-                    <li>
-                        <strong>Estimating Parameters of Non-Normal Distributions:</strong>
-                        <p>Many real-world phenomena are not normally distributed (e.g., exponential, Poisson, binomial, gamma distributions). We still need to estimate their parameters.</p>
-                        <ul>
-                            <li><strong>Example (Binomial):</strong> If we want to estimate the success probability 'p' of a binomial distribution, we use the sample proportion p̂ = k/n (number of successes / number of trials). For large n, the sampling distribution of p̂ can be approximated by a normal distribution.</li>
-                            <li><strong>Example (Poisson):</strong> The parameter λ (mean rate) of a Poisson distribution can be estimated by the sample mean x̄. For large λ, the Poisson distribution itself can be approximated by a normal distribution.</li>
-                            <li><strong>Example (Exponential):</strong> The rate parameter λ of an exponential distribution is often estimated by 1/x̄. The sampling distribution of x̄ (and thus 1/x̄) can be complex but may involve distributions like the Gamma distribution.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Estimating Non-Mean Parameters (e.g., Variance):</strong>
-                        <p>If the population is normal, the sampling distribution of the sample variance s² (when scaled) follows a <strong>Chi-squared (χ²) distribution</strong>. This allows us to make inferences about the population variance σ².</p>
-                        <pre class="formula">(n-1)s² / σ² ~ χ²<sub>(n-1)</sub></pre>
-                    </li>
-                    <li>
-                        <strong>Use of t-distribution:</strong>
-                        <p>When estimating the mean μ of a normally distributed population with an unknown population standard deviation σ, and using the sample standard deviation s, the statistic (x̄ - μ) / (s/√n) follows a <strong>t-distribution</strong> with n-1 degrees of freedom. This is also robust to moderate departures from normality, especially for larger sample sizes.</p>
-                    </li>
-                    <li>
-                        <strong>Bootstrap Methods:</strong>
-                        <p>For complex distributions or when analytical sampling distributions are unknown, resampling methods like bootstrapping can be used to approximate the sampling distribution of an estimator and construct confidence intervals, even for non-normal parameters.</p>
-                    </li>
-                </ul>
-                <p>In summary, statistical inference often relies on knowing or approximating the sampling distribution of an estimator. While normality assumptions simplify many procedures, various techniques and distributions (CLT, Chi-squared, t-distribution, approximations for proportions, bootstrapping) allow us to estimate and make inferences about parameters from non-normal distributions or parameters other than the mean.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 9-MAVZU TUGASHI -->
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-20, 4. What kind of technology is E-PON?</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>E-PON (Ethernet Passive Optical Network - Ethernet Passiv Optik Tarmog'i)</strong> bu passiv optik tarmoqlar uchun yana bir standart bo'lib, u ham FTTH (Uyga Tolali Optika) uchun ishlatiladi. U IEEE tomonidan standartlashtirilgan (IEEE 802.3ah).</p>
+<h5>Asosiy xususiyatlari va G-PON bilan taqqoslash:</h5>
+<ul>
+<li><strong>Ethernet asosidagi:</strong> Nomidan ko'rinib turibdiki, u ma'lumotlarni uzatish uchun standart Ethernet kadrlaridan (frames) foydalanadi. Bu esa uni mavjud Ethernet LAN tarmoqlari bilan yaxshi integratsiya qilish imkonini beradi.</li>
+<li><strong>Tejamkorlik:</strong> Ko'pincha Ethernet komponentlarining keng tarqalganligi va arzonligi tufayli ba'zi hollarda G-PON ga qaraganda tejamkorroq hisoblanadi.</li>
+<li><strong>Simmetrik o'tkazuvchanlik:</strong> Odatda simmetrik o'tkazuvchanlikni taklif qiladi (yuqoriga va pastga yo'nalishda bir xil tezlik, masalan, 1 Gbit/s yuqoriga / 1 Gbit/s pastga), ammo o'zgarishlar mavjud.</li>
+<li><strong>Standartlashtirish:</strong> E-PON IEEE tomonidan, G-PON esa ITU-T tomonidan standartlashtirilgan. Ular PON bozorida raqobatlashuvchi texnologiyalardir.</li>
+<li><strong>Qo'llanilishi:</strong> Asosan Osiyo mamlakatlarida keng tarqalgan, ammo boshqa hududlarda ham qo'llaniladi.</li>
+<li><strong>Tarmoq arxitekturasi:</strong> G-PON kabi, E-PON ham bitta markaziy ofis tolasi (OLT - Optical Line Terminal) va bir nechta abonent qurilmalari (ONU - Optical Network Unit yoki ONT - Optical Network Terminal) o'rtasida passiv optik ajratgichlardan foydalanadigan nuqtadan-ko'p nuqtaga (point-to-multipoint) arxitekturaga ega.</li>
+</ul>
+<p>E-PON va G-PON ikkalasi ham yuqori tezlikdagi internet, IPTV va VoIP xizmatlarini optik tola orqali yetkazib berish uchun samarali texnologiyalardir.</p>
+</div>
+</div>
+</div>
 
-    <!-- 10-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">10. Statistical, classical, and geometrical definitions of probability.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>Probability is a measure of the likelihood of an event occurring. There are several ways to define and interpret probability.</p>
+<div class="accordion-item">
+<button class="accordion-button" aria-expanded="false">
+<span class="accordion-title">Version-20, 5. Explain the router device.</span>
+<span class="accordion-icon open-icon">+</span>
+<span class="accordion-icon close-icon">×</span>
+</button>
+<div class="accordion-content">
+<div class="accordion-content-inner">
+<p><strong>Marshrutizator (Router)</strong> bu turli tarmoqlarni bir-biriga ulash va ular o'rtasida ma'lumotlar paketlarini yo'naltirish (marshrutlash) vazifasini bajaradigan tarmoq qurilmasidir.</p>
+<h5>Asosiy vazifalari va xususiyatlari:</h5>
+<ul>
+<li><strong>Tarmoqlararo ulanish:</strong> Lokal tarmoqni (LAN) global tarmoqqa (WAN, masalan, Internet) yoki boshqa lokal tarmoqlarga ulash imkonini beradi.</li>
+<li><strong>Marshrutlash (Routing):</strong> Paketning manzil IP-manziliga qarab, uni keyingi eng yaxshi yo'nalishga (next hop) yuborish to'g'risida qaror qabul qiladi. Buning uchun u o'zining marshrutlash jadvalidan (routing table) foydalanadi.</li>
+<li><strong>Tarmoq qatlamida (Layer 3) ishlash:</strong> OSI modelining tarmoq qatlamida ishlaydi va IP-manzillar asosida ish ko'radi.</li>
+<li><strong>Keng tarqatish domenlarini ajratish (Broadcast Domain Segmentation):</strong> Kommutatorlardan (2-qatlam) farqli o'laroq, marshrutizatorlar sukut bo'yicha keng tarqatish kadrlarini (broadcast frames) uzatmaydi. Bu tarmoqlarni segmentlarga ajratishga va keraksiz trafikni kamaytirishga yordam beradi.</li>
+<li><strong>Marshrutlash jadvallari:</strong> U erishishi mumkin bo'lgan tarmoqlar va ularga boradigan eng yaxshi yo'llar haqida ma'lumot saqlaydi. Bu jadvallar statik ravishda (qo'lda) yoki dinamik ravishda (RIP, OSPF, EIGRP, BGP kabi marshrutlash protokollari yordamida) yangilanib turishi mumkin.</li>
+<li><strong>Paketlarni filtrlash:</strong> Xavfsizlik devori (firewall) funksiyalari orqali ma'lum paketlarni bloklashi yoki ruxsat berishi mumkin.</li>
+<li><strong>Qo'shimcha funksiyalar:</strong> Zamonaviy marshrutizatorlar ko'pincha NAT (Network Address Translation), DHCP-server (Dynamic Host Configuration Protocol), VPN (Virtual Private Network) xizmatlarini ham taqdim etadi. Uy routerlari odatda kommutator va simsiz kirish nuqtasi funksiyalarini ham o'z ichiga oladi.</li>
+</ul>
+<p>Marshrutizatorlar Internetning ishlashi uchun muhim qurilmalar bo'lib, dunyodagi son-sanoqsiz tarmoqlarni bir-biriga bog'laydi.</p>
+</div>
+</div>
+</div>
+<!-- VERSION-20 TUGASHI -->
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.simple-button');
+    const messageArea = document.getElementById('message-area');
 
-                <h5>Classical Definition of Probability:</h5>
-                <p>This definition applies when an experiment has a finite number of <strong>equally likely</strong> and <strong>mutually exclusive</strong> outcomes.</p>
-                <p>If an experiment can result in N equally likely and mutually exclusive outcomes, and M of these outcomes are favorable to an event A, then the probability of event A is given by:</p>
-                <pre class="formula">P(A) = M / N</pre>
-                <p>Where:</p>
-                <ul>
-                    <li><strong>M</strong> is the number of outcomes favorable to event A.</li>
-                    <li><strong>N</strong> is the total number of possible elementary outcomes.</li>
-                </ul>
-                <p><em>Example:</em> The probability of rolling a '3' on a fair six-sided die is P(rolling a 3) = 1/6, because there is 1 favorable outcome (rolling a 3) and 6 total equally likely outcomes {1, 2, 3, 4, 5, 6}.</p>
-                <p><em>Limitation:</em> This definition is restrictive as it requires equally likely outcomes and a finite sample space.</p>
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent;
+            const message = `Siz "${buttonText}" tugmasini bosdingiz!`;
 
-                <h5>Statistical (or Empirical/Frequency) Definition of Probability:</h5>
-                <p>This definition is based on the relative frequency of an event in a large number of repeated trials conducted under identical conditions.</p>
-                <p>If an experiment is repeated n times, and event A occurs n(A) times, then the relative frequency of event A is n(A)/n. The probability of event A is defined as the limit of this relative frequency as the number of trials n approaches infinity:</p>
-                <pre class="formula">P(A) = lim<sub>n→∞</sub> [n(A) / n]</pre>
-                <p><em>Example:</em> If a coin is flipped 1000 times and heads appears 503 times, the relative frequency of heads is 503/1000 = 0.503. The probability of heads is approached as the number of flips becomes very large.</p>
-                <p><em>Advantage:</em> Applicable even when outcomes are not equally likely or the sample space is not easily enumerated. It's based on observation.</p>
-                <p><em>Limitation:</em> It requires a large number of trials to get a good estimate, and we can never truly perform an infinite number of trials.</p>
+            console.log(message);
 
-                <h5>Geometrical Definition of Probability:</h5>
-                <p>This definition applies when the sample space can be represented as a geometric region (e.g., length, area, volume) and outcomes are considered to be uniformly distributed over this region.</p>
-                <p>If the set of all possible outcomes of an experiment can be represented by a region Ω in a geometric space (with measure m(Ω)), and the outcomes favorable to an event A form a sub-region A' within Ω (with measure m(A')), then the probability of event A is:</p>
-                <pre class="formula">P(A) = measure(A') / measure(Ω)</pre>
-                <p>Where "measure" can refer to length, area, or volume depending on the dimension of the space.</p>
-                <p><em>Example:</em> If a point is chosen at random from a square of side length 'L', the probability that it falls within a smaller circle of radius 'r' inscribed within the square is P(point in circle) = (Area of circle) / (Area of square) = (πr²) / L².</p>
-                <p><em>Limitation:</em> Assumes a uniform distribution of outcomes over the geometric space.</p>
+            if (messageArea) {
+                messageArea.textContent = message;
+            }
 
-                <p><em>Note:</em> The axiomatic definition of probability by Kolmogorov provides a more general and mathematically rigorous foundation, encompassing these classical, statistical, and geometrical interpretations as special cases.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 10-MAVZU TUGASHI -->
-
-    <!-- 11-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">11. Interval estimates. Confidence level and confidence interval.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>In statistical inference, we often want to estimate an unknown population parameter (e.g., population mean μ, population proportion p) using sample data. While a point estimate provides a single best guess, an interval estimate provides a range of plausible values for the parameter.</p>
-
-                <h5>Interval Estimate:</h5>
-                <p>An <strong>interval estimate</strong> is a range of values, calculated from sample data, that is likely to contain the true value of an unknown population parameter. It acknowledges the uncertainty inherent in estimating from a sample.</p>
-                <p>An interval estimate takes the form:</p>
-                <pre class="formula">Point Estimate ± Margin of Error</pre>
-                <p>The margin of error depends on the desired confidence level, the variability of the data (e.g., standard deviation), and the sample size.</p>
-
-                <h5>Confidence Level:</h5>
-                <p>The <strong>confidence level</strong> is the probability (often expressed as a percentage, e.g., 90%, 95%, 99%) that the method used to construct the interval will produce an interval that captures the true population parameter, *if the sampling process were repeated many times*. It reflects the reliability or success rate of the estimation procedure, not the probability that a *specific* calculated interval contains the true parameter.</p>
-                <p>Common confidence levels are:</p>
-                <ul>
-                    <li>90% (α = 0.10)</li>
-                    <li>95% (α = 0.05)</li>
-                    <li>99% (α = 0.01)</li>
-                </ul>
-                <p>Here, α (alpha) is the significance level, representing the probability that the interval will *not* contain the true parameter (1 - confidence level).</p>
-
-                <h5>Confidence Interval (CI):</h5>
-                <p>A <strong>confidence interval</strong> is the actual computed range [lower bound, upper bound] obtained from a specific sample using a particular confidence level. Once a CI is calculated from a sample, it either contains the true parameter or it does not. The confidence level tells us about the long-run performance of the method.</p>
-                <p><strong>Interpretation:</strong></p>
-                <p>If we construct a 95% confidence interval for a population mean μ, say [L, U], we interpret it as: "We are 95% confident that this specific interval [L, U] contains the true population mean μ." This means that if we were to take many random samples of the same size from the population and construct a 95% CI for each sample, about 95% of those intervals would actually contain μ.</p>
-
-                <h5>General Form for a Confidence Interval for a Mean (known σ or large n):</h5>
-                <pre class="formula">x̄ ± z<sub>α/2</sub> * (σ / √n)</pre>
-                <p>Where:</p>
-                <ul>
-                    <li>x̄ is the sample mean.</li>
-                    <li>z<sub>α/2</sub> is the critical value from the standard normal distribution corresponding to the confidence level (e.g., for 95% CI, z<sub>α/2</sub> ≈ 1.96).</li>
-                    <li>σ is the population standard deviation (if unknown and n is small, s is used and z is replaced by t from the t-distribution).</li>
-                    <li>n is the sample size.</li>
-                </ul>
-                <p>The width of the confidence interval depends on:</p>
-                <ul>
-                    <li><strong>Confidence Level:</strong> Higher confidence level → wider interval.</li>
-                    <li><strong>Sample Standard Deviation (s or σ):</strong> Higher variability → wider interval.</li>
-                    <li><strong>Sample Size (n):</strong> Larger sample size → narrower interval.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- 11-MAVZU TUGASHI -->
-
-    <!-- 12-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">12. Formula of total probability. Bayes' formula.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>The formula of total probability and Bayes' formula (or Bayes' Theorem) are fundamental concepts in probability theory that deal with conditional probabilities and updating beliefs based on new evidence.</p>
-
-                <h5>Formula of Total Probability:</h5>
-                <p>The formula of total probability allows us to find the probability of an event A by considering all possible mutually exclusive scenarios (a partition of the sample space) under which A can occur.</p>
-                <p>Let B₁, B₂, ..., Bₙ be a set of events that form a <strong>partition</strong> of the sample space Ω. This means:</p>
-                <ol>
-                    <li>The events Bᵢ are mutually exclusive (Bᵢ ∩ Bⱼ = Ø for i ≠ j).</li>
-                    <li>The union of the events is the entire sample space (B₁ ∪ B₂ ∪ ... ∪ Bₙ = Ω).</li>
-                    <li>P(Bᵢ) > 0 for all i.</li>
-                </ol>
-                <p>Then, for any event A in the sample space Ω, its probability can be calculated as:</p>
-                <pre class="formula">P(A) = Σ<sub>i=1</sub><sup>n</sup> P(A|Bᵢ)P(Bᵢ)</pre>
-                <p>Or expanded:</p>
-                <pre class="formula">P(A) = P(A|B₁)P(B₁) + P(A|B₂)P(B₂) + ... + P(A|Bₙ)P(Bₙ)</pre>
-                <p>Where P(A|Bᵢ) is the conditional probability of event A occurring given that event Bᵢ has occurred.</p>
-
-                <h5>Bayes' Formula (or Bayes' Theorem):</h5>
-                <p>Bayes' formula describes how to update the probability of a hypothesis (an event Bᵢ) based on new evidence (the occurrence of an event A). It relates the conditional probability P(Bᵢ|A) to P(A|Bᵢ).</p>
-                <p>Using the definition of conditional probability, P(Bᵢ|A) = P(A ∩ Bᵢ) / P(A) and P(A|Bᵢ) = P(A ∩ Bᵢ) / P(Bᵢ). Thus, P(A ∩ Bᵢ) = P(A|Bᵢ)P(Bᵢ).</p>
-                <p>Substituting this into the first equation for P(Bᵢ|A), we get Bayes' Formula:</p>
-                <pre class="formula">P(Bᵢ|A) = [P(A|Bᵢ)P(Bᵢ)] / P(A)</pre>
-                <p>Using the formula of total probability for P(A) in the denominator, Bayes' Formula can also be written as:</p>
-                <pre class="formula">P(Bᵢ|A) = [P(A|Bᵢ)P(Bᵢ)] / [Σ<sub>j=1</sub><sup>n</sup> P(A|Bⱼ)P(Bⱼ)]</pre>
-                <p>In this context:</p>
-                <ul>
-                    <li><strong>P(Bᵢ)</strong> is the <strong>prior probability</strong> of event Bᵢ (our belief before observing A).</li>
-                    <li><strong>P(A|Bᵢ)</strong> is the <strong>likelihood</strong> of observing event A given that Bᵢ is true.</li>
-                    <li><strong>P(Bᵢ|A)</strong> is the <strong>posterior probability</strong> of event Bᵢ (our updated belief after observing A).</li>
-                    <li><strong>P(A)</strong> is the marginal likelihood or evidence.</li>
-                </ul>
-                <p>Bayes' theorem is widely used in fields like medical diagnosis, spam filtering, and machine learning.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 12-MAVZU TUGASHI -->
-
-    <!-- 13-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">13. Sequence of independent trials. Bernoulli's formula. Poisson's theorem.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <p>These concepts deal with scenarios involving multiple repetitions of an experiment where each repetition is independent of the others.</p>
-
-                <h5>Sequence of Independent Trials:</h5>
-                <p>A sequence of trials is said to be <strong>independent</strong> if the outcome of each trial does not influence or depend on the outcome of any other trial in the sequence. If the probability of a particular event remains the same for each trial, these are often called <strong>Bernoulli trials</strong> (if there are only two outcomes).</p>
-
-                <h5>Bernoulli's Formula (Binomial Probability Formula):</h5>
-                <p>Bernoulli's formula calculates the probability of obtaining exactly <em>k</em> successes in a sequence of <em>n</em> independent Bernoulli trials. A Bernoulli trial is an experiment with only two possible outcomes, typically labeled "success" (S) and "failure" (F).</p>
-                <p>Let:</p>
-                <ul>
-                    <li><strong>n</strong> = total number of independent trials.</li>
-                    <li><strong>k</strong> = exact number of successes desired.</li>
-                    <li><strong>p</strong> = probability of success on a single trial (constant for each trial).</li>
-                    <li><strong>q</strong> = 1 - p = probability of failure on a single trial.</li>
-                </ul>
-                <p>The probability of exactly k successes in n trials, Pₙ(k) or P(X=k), is given by Bernoulli's formula (also known as the binomial probability formula):</p>
-                <pre class="formula">Pₙ(k) = C(n,k) * p<sup>k</sup> * q<sup>(n-k)</sup></pre>
-                <p>Where C(n,k) is the binomial coefficient, "n choose k", calculated as:</p>
-                <pre class="formula">C(n,k) = n! / [k! * (n-k)!]</pre>
-                <p>The random variable X representing the number of successes in n Bernoulli trials follows a Binomial Distribution, denoted X ~ B(n,p).</p>
-
-                <h5>Poisson's Theorem (Law of Rare Events / Poisson Approximation to Binomial):</h5>
-                <p>Poisson's theorem states that the binomial distribution B(n,p) can be approximated by the Poisson distribution Po(λ) with parameter λ = np, under certain conditions. This approximation is generally good when:</p>
-                <ul>
-                    <li><strong>n</strong> (number of trials) is very large (e.g., n ≥ 100).</li>
-                    <li><strong>p</strong> (probability of success) is very small (e.g., p ≤ 0.05 or p ≤ 0.1).</li>
-                    <li>The product <strong>λ = np</strong> is a moderate constant (e.g., np ≤ 10 or np ≤ 20, though guidelines vary).</li>
-                </ul>
-                <p>If these conditions hold, the probability of k successes can be approximated using the Poisson probability mass function:</p>
-                <pre class="formula">P(X=k) ≈ (e<sup>-λ</sup> * λ<sup>k</sup>) / k!</pre>
-                <p>Where:</p>
-                <ul>
-                    <li><strong>λ = np</strong> is the average number of successes in n trials.</li>
-                    <li><strong>e</strong> is the base of the natural logarithm (approximately 2.71828).</li>
-                </ul>
-                <p>The Poisson distribution is often used to model the number of occurrences of a "rare" event over a large number of opportunities or within a specific interval of time or space (e.g., number of typos per page, number of calls to a call center per hour).</p>
-            </div>
-        </div>
-    </div>
-    <!-- 13-MAVZU TUGASHI -->
-
-    <!-- 14-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">14. Concept of a continuous random variable. Distribution function and its properties.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <h5>Concept of a Continuous Random Variable:</h5>
-                <p>A <strong>continuous random variable</strong> is a random variable that can take on any value within a specified range or interval (or multiple intervals) on the real number line. Unlike discrete random variables, which have countable outcomes, continuous random variables have an uncountably infinite number of possible values.</p>
-                <p>Key characteristics:</p>
-                <ul>
-                    <li>Its possible values form a continuous spectrum.</li>
-                    <li>The probability that a continuous random variable X takes on any single specific value is zero, i.e., P(X=c) = 0 for any constant c.</li>
-                    <li>Probabilities are defined for intervals, e.g., P(a ≤ X ≤ b) or P(X > c).</li>
-                    <li>For continuous random variables, P(a ≤ X ≤ b) = P(a < X ≤ b) = P(a ≤ X < b) = P(a < X < b) because the probability at single points is zero.</li>
-                </ul>
-                <p><em>Examples:</em> Height of a person, temperature, time taken to complete a task, length of an object.</p>
-
-                <h5>Distribution Function (Cumulative Distribution Function - CDF):</h5>
-                <p>The <strong>distribution function</strong>, more commonly known as the <strong>Cumulative Distribution Function (CDF)</strong>, denoted as F(x), is defined for any random variable X (both discrete and continuous) as the probability that X takes on a value less than or equal to x.</p>
-                <pre class="formula">F(x) = P(X ≤ x)</pre>
-
-                <h5>Properties of the CDF for a Continuous Random Variable:</h5>
-                <ol>
-                    <li>
-                        <strong>Range of F(x):</strong>
-                        <pre class="formula">0 ≤ F(x) ≤ 1</pre>
-                        <p>Since F(x) is a probability, it must be between 0 and 1.</p>
-                    </li>
-                    <li>
-                        <strong>Non-decreasing Function:</strong>
-                        <p>If a < b, then F(a) ≤ F(b). This means the CDF never decreases as x increases.</p>
-                    </li>
-                    <li>
-                        <strong>Limits:</strong>
-                        <pre class="formula">lim<sub>x→-∞</sub> F(x) = 0</pre>
-                        <pre class="formula">lim<sub>x→+∞</sub> F(x) = 1</pre>
-                        <p>As x approaches negative infinity, the probability P(X ≤ x) approaches 0. As x approaches positive infinity, the probability P(X ≤ x) approaches 1.</p>
-                    </li>
-                    <li>
-                        <strong>Continuity:</strong>
-                        <p>For a continuous random variable, its CDF F(x) is continuous everywhere. There are no "jumps" in the graph of F(x).</p>
-                    </li>
-                    <li>
-                        <strong>Calculating Probabilities for Intervals:</strong>
-                        <pre class="formula">P(a < X ≤ b) = F(b) - F(a)</pre>
-                        <p>Since P(X=a) = 0 for continuous RVs, this also means P(a ≤ X ≤ b) = F(b) - F(a).</p>
-                    </li>
-                    <li>
-                        <strong>Relationship with Probability Density Function (PDF):</strong>
-                        <p>If f(t) is the Probability Density Function (PDF) of a continuous random variable X, then the CDF is given by:</p>
-                        <pre class="formula">F(x) = P(X ≤ x) = ∫<sub>-∞</sub><sup>x</sup> f(t) dt</pre>
-                        <p>Conversely, the PDF can be obtained by differentiating the CDF (where F is differentiable):</p>
-                        <pre class="formula">f(x) = dF(x) / dx = F'(x)</pre>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-    <!-- 14-MAVZU TUGASHI -->
-
-    <!-- 15-MAVZU BOSHLANISHI -->
-    <div class="accordion-item">
-        <button class="accordion-button" aria-expanded="false">
-            <span class="accordion-title">15. Two-dimensional random variable. Discrete two-dimensional random variable and its distribution law.</span>
-            <span class="accordion-icon open-icon">+</span>
-            <span class="accordion-icon close-icon">×</span>
-        </button>
-        <div class="accordion-content">
-            <div class="accordion-content-inner">
-                <h5>Two-dimensional Random Variable (Random Vector):</h5>
-                <p>A <strong>two-dimensional random variable</strong>, also known as a <strong>bivariate random variable</strong> or a <strong>random vector</strong> of dimension 2, is an ordered pair of random variables, say (X, Y), defined on the same sample space Ω. It assigns a pair of real numbers (x, y) to each outcome ω in the sample space Ω.</p>
-                <p><em>Example:</em> If we randomly select a student, X could be their height and Y could be their weight. (X,Y) would be a two-dimensional random variable.</p>
-                <p>The behavior of a two-dimensional random variable is described by its <strong>joint distribution function</strong> (or joint CDF):</p>
-                <pre class="formula">F(x,y) = P(X ≤ x, Y ≤ y)</pre>
-                <p>This gives the probability that X is less than or equal to x AND Y is less than or equal to y.</p>
-
-                <h5>Discrete Two-dimensional Random Variable:</h5>
-                <p>A two-dimensional random variable (X,Y) is <strong>discrete</strong> if both X and Y are discrete random variables. This means that the pair (X,Y) can take on a finite or countably infinite set of distinct pairs of values (xᵢ, yⱼ).</p>
-
-                <h5>Distribution Law (Joint Probability Mass Function - PMF):</h5>
-                <p>For a discrete two-dimensional random variable (X,Y), its distribution law is described by the <strong>joint probability mass function (joint PMF)</strong>, denoted as p(xᵢ, yⱼ) or P(X=xᵢ, Y=yⱼ).</p>
-                <pre class="formula">p(xᵢ, yⱼ) = P(X=xᵢ, Y=yⱼ)</pre>
-                <p>This function gives the probability that the random variable X takes the value xᵢ *and simultaneously* the random variable Y takes the value yⱼ.</p>
-
-                <h6>Properties of the Joint PMF:</h6>
-                <ol>
-                    <li>
-                        <strong>Non-negativity:</strong>
-                        <pre class="formula">p(xᵢ, yⱼ) ≥ 0</pre>
-                        <p>The probability of any specific pair of outcomes must be non-negative.</p>
-                    </li>
-                    <li>
-                        <strong>Normalization:</strong>
-                        <pre class="formula">Σ<sub>i</sub> Σ<sub>j</sub> p(xᵢ, yⱼ) = 1</pre>
-                        <p>The sum of the probabilities over all possible pairs of (xᵢ, yⱼ) must equal 1.</p>
-                    </li>
-                </ol>
-
-                <h6>Representation:</h6>
-                <p>The joint PMF of a discrete two-dimensional random variable is often represented in a <strong>joint probability distribution table</strong> (also called a contingency table for frequencies). The rows might represent the possible values of X, and the columns the possible values of Y (or vice versa). Each cell (i, j) in the table contains the probability p(xᵢ, yⱼ).</p>
-                <p><em>Example Table:</em></p>
-                <table border="1" style="border-collapse: collapse; text-align: center;">
-                    <tr>
-                        <td rowspan="2">Y \ X</td>
-                        <td colspan="2">Values of X</td>
-                        <td rowspan="2">P(Y=y<sub>j</sub>) (Marginal for Y)</td>
-                    </tr>
-                    <tr>
-                        <td>x₁</td>
-                        <td>x₂</td>
-                    </tr>
-                    <tr>
-                        <td>y₁</td>
-                        <td>p(x₁,y₁)</td>
-                        <td>p(x₂,y₁)</td>
-                        <td>P(Y=y₁)</td>
-                    </tr>
-                    <tr>
-                        <td>y₂</td>
-                        <td>p(x₁,y₂)</td>
-                        <td>p(x₂,y₂)</td>
-                        <td>P(Y=y₂)</td>
-                    </tr>
-                    <tr>
-                        <td>P(X=x<sub>i</sub>) (Marginal for X)</td>
-                        <td>P(X=x₁)</td>
-                        <td>P(X=x₂)</td>
-                        <td>1</td>
-                    </tr>
-                </table>
-
-                <h6>Marginal Distributions:</h6>
-                <p>From the joint PMF, we can obtain the individual (marginal) PMFs for X and Y:</p>
-                <pre class="formula">P(X=xᵢ) = Σ<sub>j</sub> p(xᵢ, yⱼ)   (Sum over all possible y values for a fixed xᵢ)</pre>
-                <pre class="formula">P(Y=yⱼ) = Σ<sub>i</sub> p(xᵢ, yⱼ)   (Sum over all possible x values for a fixed yⱼ)</pre>
-                <p>These are the row sums and column sums in the joint probability table, respectively.</p>
-            </div>
-        </div>
-    </div>
-    <!-- 15-MAVZU TUGASHI -->
-
-
-
-</body>
-</html>
-
+         
+        });
+    });
+});
+    </script>
+    
 <script src="script.js"></script>
 </body>
 </html>
