@@ -1,914 +1,2259 @@
 <!DOCTYPE html>
-<html lang="uz">
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veb Dasturlash Bo'yicha Savol-Javoblar</title>
-    <link rel="stylesheet" href="stele.css"> <!-- CSS faylingiz nomi -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Web Application Test Questions & Answers</title>
+<script src="/script.js"></script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        .accordion-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .accordion-button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 3px 3px 0 0;
+        }
+        .accordion-button:hover {
+            background-color: #0056b3;
+        }
+        .accordion-title {
+            flex-grow: 1;
+        }
+        .accordion-icon {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .accordion-button .close-icon {
+            display: none;
+        }
+        .accordion-button[aria-expanded="true"] .open-icon {
+            display: none;
+        }
+        .accordion-button[aria-expanded="true"] .close-icon {
+            display: inline;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            border-top: 1px solid #ddd;
+        }
+        .accordion-content-inner {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 0 0 3px 3px;
+        }
+        .accordion-content-inner h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .accordion-content-inner h4 {
+            margin-top: 15px;
+            color: #0056b3; /* Darker blue for question titles */
+            font-size: 1.1em;
+        }
+        .accordion-content-inner h5 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .accordion-content-inner ol, .accordion-content-inner ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .accordion-content-inner li {
+            margin-bottom: 8px;
+        }
+        .accordion-content-inner .meta-info {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+        .actual-x {
+            font-family: 'Arial', sans-serif;
+        }
+        .practice-question {
+            font-style: italic;
+            color: #28a745;
+        }
+        .theory-question {
+            /* Standard styling */
+        }
+        pre {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            border: 1px solid #ccc;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="cantent"> <!-- yoki .accordion-container, agar shunday nomlagan bo'lsangiz -->
-    <div class="where"> <!-- yoki .accordion-container, agar shunday nomlagan bo'lsangiz -->
+<h1>Web Application Test Questions & Answers</h1>
 
-        <h1>kopyuter tarmoqlari</h1>
-<!-- VERSION-1 BOSHLANISHI -->
+<!-- TEST-1 -->
 <div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-1, 1. Explain the "Point-to-Point" topology.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>"Nuqtadan-nuqtaga" (Point-to-Point) topologiyasi</strong> bu ikki qurilma o'rtasida to'g'ridan-to'g'ri, maxsus ajratilgan aloqa kanalini o'rnatishdir. Tasavvur qiling, sizning uyingiz va do'stingizning uyi o'rtasida faqat ikkingiz uchun mo'ljallangan maxsus telefon liniyasi bor. Bu juda sodda va xavfsiz, chunki butun aloqa quvvati faqat shu ikki qurilma uchun ishlatiladi.</p>
-<h5>Asosiy xususiyatlari:</h5>
-<ul>
-<li><strong>To'g'ridan-to'g'ri aloqa:</strong> Ma'lumotlar bir qurilmadan ikkinchisiga boshqa oraliq qurilmalarsiz (oddiy takrorlagichlardan tashqari) uzatiladi.</li>
-<li><strong>Maxsus ajratilgan:</strong> Kanalning butun o'tkazuvchanlik qobiliyati faqat shu ikki ulangan qurilma uchun mavjud.</li>
-<li><strong>Soddalik:</strong> O'rnatish va tushunish uchun eng oddiy tarmoq topologiyasi.</li>
-<li><strong>Xavfsizlik:</strong> To'g'ridan-to'g'ri aloqa bo'lgani uchun, agar jismoniy muhit himoyalangan bo'lsa, u umumiy muhitlarga qaraganda xavfsizroq bo'lishi mumkin.</li>
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-1">
+        <span class="accordion-title">TEST-1</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-1">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Components of a web application. Frontend and backend technologies</li>
+                <li class="theory-question">Javascript Browser Object Model (BOM).</li>
+                <li class="theory-question">Advantages and disadvantages of using CMS</li>
+                <li class="practice-question">PHP: Create a form that accepts two numbers and shows the larger one</li>
+                <li class="practice-question">CRUD Operations in PHP and MySQL</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-1:</h3>
+
+            <h4>1. Components of a web application. Frontend and backend technologies</h4>
+            <p><strong>Components of a Web Application:</strong></p>
+            <ul>
+                <li><strong>Web Browser (Client):</strong> Software on the user's computer (e.g., Chrome, Firefox) that requests and renders web pages.</li>
+                <li><strong>Web Server:</strong> Software (e.g., Apache, Nginx) or hardware that stores website files and responds to HTTP requests.</li>
+                <li><strong>Application Server (often part of Backend):</strong> Hosts and executes the application's business logic.</li>
+                <li><strong>Database:</strong> Stores and manages the application's data (e.g., user information, content).</li>
+            </ul>
+            <p><strong>Frontend Technologies (Client-Side):</strong> Deal with what the user sees and interacts with in the browser.</p>
+            <ul>
+                <li><strong>HTML (HyperText Markup Language):</strong> Defines the structure and content of web pages.</li>
+                <li><strong>CSS (Cascading Style Sheets):</strong> Styles the presentation of HTML elements.</li>
+                <li><strong>JavaScript (JS):</strong> Adds interactivity, dynamic content updates, and client-side logic. Frameworks/Libraries: React, Angular, Vue.js.</li>
+            </ul>
+            <p><strong>Backend Technologies (Server-Side):</strong> Deal with the server, application logic, and database operations.</p>
+            <ul>
+                <li><strong>Programming Languages:</strong> PHP, Python (Django, Flask), Ruby (Rails), Java (Spring), Node.js.</li>
+                <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, SQL Server.</li>
+                <li><strong>Web Server Software:</strong> Apache, Nginx.</li>
+                <li><strong>APIs (Application Programming Interfaces):</strong> Allow different software components to communicate.</li>
+            </ul>
+
+            <h4>2. Javascript Browser Object Model (BOM).</h4>
+            <p>The Browser Object Model (BOM) allows JavaScript to interact with the browser window and its components. It's not standardized, so features can vary slightly between browsers.</p>
+            <h5>Key objects in the BOM include:</h5>
+            <ul>
+                <li><strong><code>window</code>:</strong> The global object, representing the browser window.
+                    <ul>
+                        <li><code>window.innerHeight</code>, <code>window.innerWidth</code>: Get window dimensions.</li>
+                        <li><code>window.open()</code>, <code>window.close()</code>: Manage browser windows.</li>
+                        <li><code>window.alert()</code>, <code>window.prompt()</code>, <code>window.confirm()</code>: Display dialog boxes.</li>
+                        <li>Timers: <code>setTimeout()</code>, <code>setInterval()</code>, <code>clearTimeout()</code>, <code>clearInterval()</code>.</li>
+                    </ul>
+                </li>
+                <li><strong><code>navigator</code>:</strong> Information about the visitor's browser (e.g., <code>navigator.userAgent</code>, <code>navigator.language</code>).</li>
+                <li><strong><code>screen</code>:</strong> Information about the visitor's screen (e.g., <code>screen.width</code>, <code>screen.height</code>).</li>
+                <li><strong><code>history</code>:</strong> Contains the browser's session history (e.g., <code>history.back()</code>, <code>history.forward()</code>).</li>
+                <li><strong><code>location</code>:</strong> Information about the current URL (e.g., <code>location.href</code>, <code>location.reload()</code>).</li>
+            </ul>
+
+            <h4>3. Advantages and disadvantages of using CMS</h4>
+            <p>A Content Management System (CMS) is software that helps users create, manage, and modify content on a website without specialized technical knowledge.</p>
+            <h5>Advantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Ease of Use:</strong> User-friendly interfaces for content creation and management.</li>
+                <li><strong>Rapid Development:</strong> Pre-built templates and plugins speed up website creation.</li>
+                <li><strong>User Roles and Permissions:</strong> Built-in systems for managing different user access levels.</li>
+                <li><strong>Themes and Templates:</strong> Wide variety of designs available.</li>
+                <li><strong>Plugins and Extensions:</strong> Extend functionality easily (SEO, e-commerce, forms).</li>
+                <li><strong>Community Support:</strong> Large communities provide ample documentation and help.</li>
+                <li><strong>SEO-Friendly Features:</strong> Many CMSs offer tools or plugins for search engine optimization.</li>
+            </ul>
+            <h5>Disadvantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Security Risks:</strong> Popular CMSs can be targets for hackers if not kept updated.</li>
+                <li><strong>Performance Issues:</strong> Can be slower than custom-coded sites, especially with many plugins.</li>
+                <li><strong>Customization Limits:</strong> Highly specific functionalities might be hard to implement.</li>
+                <li><strong>Bloat:</strong> May come with many unneeded features.</li>
+                <li><strong>Learning Curve:</strong> Complex CMSs still require time to learn advanced features.</li>
+                <li><strong>Update Compatibility:</strong> Updates can sometimes cause issues with themes or plugins.</li>
+            </ul>
+
+            <h4>4. PHP: Create a form that accepts two numbers and shows the larger one</h4>
+            <pre><code><!DOCTYPE html>
+
+<html>
+<head>
+    <title>Find Larger Number</title>
+</head>
+<body>
+    <h2>Find the Larger of Two Numbers</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Enter first number: <input type="number" name="num1" required><br><br>
+        Enter second number: <input type="number" name="num2" required><br><br>
+        <input type="submit" name="submit" value="Find Larger">
+    </form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    if (isset($_POST['num1']) && is_numeric($_POST['num1']) && 
+        isset($_POST['num2']) && is_numeric($_POST['num2'])) {
+        $num1 = floatval($_POST['num1']);
+        $num2 = floatval($_POST['num2']);
+        $larger_number = "";
+
+        if ($num1 > $num2) {
+            $larger_number = $num1;
+        } elseif ($num2 > $num1) {
+            $larger_number = $num2;
+        } else {
+            $larger_number = "Both numbers are equal (" . $num1 . ")";
+        }
+
+        echo "<h3>Result:</h3>";
+        if (is_numeric($larger_number)) {
+            echo "The larger number is: " . htmlspecialchars($larger_number);
+        } else {
+            echo htmlspecialchars($larger_number);
+        }
+    } else {
+        echo "<h3>Error:</h3>";
+        echo "Please enter valid numbers.";
+    }
+}
+?>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
+
+<h4>5. CRUD Operations in PHP and MySQL</h4>
+            <p>CRUD stands for Create, Read, Update, and Delete - the four basic functions of persistent storage. In PHP and MySQL:</p>
+            <ul>
+                <li><strong>Create (SQL: <code>INSERT</code>):</strong> Adding new data.
+                    <pre><code>// Assuming $conn is your MySQLi connection object
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+𝑠
+𝑞
+𝑙
+=
+"
+𝐼
+𝑁
+𝑆
+𝐸
+𝑅
+𝑇
+𝐼
+𝑁
+𝑇
+𝑂
+𝑢
+𝑠
+𝑒
+𝑟
+𝑠
+(
+𝑓
+𝑖
+𝑟
+𝑠
+𝑡
+𝑛
+𝑎
+𝑚
+𝑒
+,
+𝑙
+𝑎
+𝑠
+𝑡
+𝑛
+𝑎
+𝑚
+𝑒
+,
+𝑒
+𝑚
+𝑎
+𝑖
+𝑙
+)
+𝑉
+𝐴
+𝐿
+𝑈
+𝐸
+𝑆
+(
+′
+𝐽
+𝑜
+ℎ
+𝑛
+′
+,
+′
+𝐷
+𝑜
+𝑒
+′
+,
+′
+𝑗
+𝑜
+ℎ
+𝑛
+.
+𝑑
+𝑜
+𝑒
+@
+𝑒
+𝑥
+𝑎
+𝑚
+𝑝
+𝑙
+𝑒
+.
+𝑐
+𝑜
+𝑚
+′
+)
+"
+;
+𝑖
+𝑓
+(
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+𝑞
+𝑢
+𝑒
+𝑟
+𝑦
+(
+sql="INSERTINTOusers(firstname,lastname,email)VALUES(
+′
+John
+′
+,
+′
+Doe
+′
+,
+′
+john.doe@example.com
+′
+)";if(mysqli
+q
+	​
+
+uery(
+conn, 
+𝑠
+𝑞
+𝑙
+)
+)
+/
+∗
+.
+.
+.
+∗
+/
+<
+/
+𝑐
+𝑜
+𝑑
+𝑒
+>
+<
+/
+𝑝
+𝑟
+𝑒
+>
+<
+/
+𝑙
+𝑖
+>
+<
+𝑙
+𝑖
+>
+<
+𝑠
+𝑡
+𝑟
+𝑜
+𝑛
+𝑔
+>
+𝑅
+𝑒
+𝑎
+𝑑
+(
+𝑆
+𝑄
+𝐿
+:
+<
+𝑐
+𝑜
+𝑑
+𝑒
+>
+𝑆
+𝐸
+𝐿
+𝐸
+𝐶
+𝑇
+<
+/
+𝑐
+𝑜
+𝑑
+𝑒
+>
+)
+:
+<
+/
+𝑠
+𝑡
+𝑟
+𝑜
+𝑛
+𝑔
+>
+𝑅
+𝑒
+𝑡
+𝑟
+𝑖
+𝑒
+𝑣
+𝑖
+𝑛
+𝑔
+𝑑
+𝑎
+𝑡
+𝑎
+.
+<
+𝑝
+𝑟
+𝑒
+>
+<
+𝑐
+𝑜
+𝑑
+𝑒
+>
+sql))/∗...∗/</code></pre></li><li><strong>Read(SQL:<code>SELECT</code>):</strong>Retrievingdata.<pre><code>
+sql = "SELECT id, firstname, lastname FROM users WHERE lastname='Doe'";
+
+𝑟
+𝑒
+𝑠
+𝑢
+𝑙
+𝑡
+=
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+𝑞
+𝑢
+𝑒
+𝑟
+𝑦
+(
+result=mysqli
+q
+	​
+
+uery(
+conn, 
+𝑠
+𝑞
+𝑙
+)
+;
+𝑖
+𝑓
+(
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+𝑛
+𝑢
+𝑚
+𝑟
+𝑜
+𝑤
+𝑠
+(
+sql);if(mysqli
+n
+	​
+
+um
+r
+	​
+
+ows(
+result) > 0) { while(
+𝑟
+𝑜
+𝑤
+=
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+𝑓
+𝑒
+𝑡
+𝑐
+ℎ
+𝑎
+𝑠
+𝑠
+𝑜
+𝑐
+(
+row=mysqli
+f
+	​
+
+etch
+a
+	​
+
+ssoc(
+result)) { /* ... / } }</code></pre>
+</li>
+<li><strong>Update (SQL: <code>UPDATE</code>):</strong> Modifying existing data.
+<pre><code>
+𝑠
+𝑞
+𝑙
+=
+"
+𝑈
+𝑃
+𝐷
+𝐴
+𝑇
+𝐸
+𝑢
+𝑠
+𝑒
+𝑟
+𝑠
+𝑆
+𝐸
+𝑇
+𝑒
+𝑚
+𝑎
+𝑖
+𝑙
+=
+′
+𝑗
+𝑜
+ℎ
+𝑛
+.
+𝑑
+𝑜
+𝑒
+.
+𝑢
+𝑝
+𝑑
+𝑎
+𝑡
+𝑒
+𝑑
+@
+𝑒
+𝑥
+𝑎
+𝑚
+𝑝
+𝑙
+𝑒
+.
+𝑐
+𝑜
+𝑚
+′
+𝑊
+𝐻
+𝐸
+𝑅
+𝐸
+𝑖
+𝑑
+=
+1
+"
+;
+𝑖
+𝑓
+(
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+𝑞
+𝑢
+𝑒
+𝑟
+𝑦
+(
+sql="UPDATEusersSETemail=
+′
+john.doe.updated@example.com
+′
+WHEREid=1";if(mysqli
+q
+	​
+
+uery(
+conn, 
+𝑠
+𝑞
+𝑙
+)
+)
+/
+∗
+.
+.
+.
+∗
+/
+<
+/
+𝑐
+𝑜
+𝑑
+𝑒
+>
+<
+/
+𝑝
+𝑟
+𝑒
+>
+<
+/
+𝑙
+𝑖
+>
+<
+𝑙
+𝑖
+>
+<
+𝑠
+𝑡
+𝑟
+𝑜
+𝑛
+𝑔
+>
+𝐷
+𝑒
+𝑙
+𝑒
+𝑡
+𝑒
+(
+𝑆
+𝑄
+𝐿
+:
+<
+𝑐
+𝑜
+𝑑
+𝑒
+>
+𝐷
+𝐸
+𝐿
+𝐸
+𝑇
+𝐸
+<
+/
+𝑐
+𝑜
+𝑑
+𝑒
+>
+)
+:
+<
+/
+𝑠
+𝑡
+𝑟
+𝑜
+𝑛
+𝑔
+>
+𝑅
+𝑒
+𝑚
+𝑜
+𝑣
+𝑖
+𝑛
+𝑔
+𝑑
+𝑎
+𝑡
+𝑎
+.
+<
+𝑝
+𝑟
+𝑒
+>
+<
+𝑐
+𝑜
+𝑑
+𝑒
+>
+sql))/∗...∗/</code></pre></li><li><strong>Delete(SQL:<code>DELETE</code>):</strong>Removingdata.<pre><code>
+sql = "DELETE FROM users WHERE id=1";
+if (mysqli_query($conn, $sql)) { / ... */ }</code></pre>
+</li>
 </ul>
+<p>These operations involve connecting to MySQL, constructing SQL queries, executing them, and processing results or errors.</p>
 </div>
 </div>
 </div>
 
+<!-- TEST-2 -->
 <div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-1, 2. What are the protocols of the transport layer?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Transport qatlami kompyuteringiz ma'lumotlari uchun pochta xizmati kabi ishlaydi. Uning ikkita asosiy "xizmati" yoki protokoli mavjud:</p>
-<h5>TCP (Transmission Control Protocol - Uzatishni Boshqarish Protokoli):</h5>
-<ul>
-<li><strong>Ishonchli:</strong> Bu buyurtma xat kabi. Ma'lumotlaringiz to'g'ri tartibda yetib borishini va xatoliklarni tekshirishni ta'minlaydi. Ma'lumotlarni yuborishdan oldin aloqa o'rnatadi.</li>
-<li><strong>Foydalanish holatlari:</strong> Veb-sahifalarni ko'rish (HTTP/HTTPS), elektron pochta (SMTP, POP3), fayl uzatish (FTP).</li>
-</ul>
-<h5>UDP (User Datagram Protocol - Foydalanuvchi Datagramma Protokoli):</h5>
-<ul>
-<li><strong>Ishonchsiz, lekin tez:</strong> Bu otkritka yuborish kabi. Barcha ishonchlilik tekshiruvlari yoki aloqa o'rnatish bilan ovora bo'lmaydi, shuning uchun tezroq.</li>
-<li><strong>Foydalanish holatlari:</strong> Video oqimi, onlayn o'yinlar, DNS (Domen Nomlari Tizimi) so'rovlari kabi tezlik mukammal aniqlikdan muhimroq bo'lgan holatlar uchun yaxshi.</li>
-</ul>
-</div>
-</div>
-</div>
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-2">
+        <span class="accordion-title">TEST-2</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-2">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Working with lists in HTML.</li>
+                <li class="theory-question">Objects in JavaScript</li>
+                <li class="theory-question">CMS features</li>
+                <li class="practice-question">PHP: Create a form that accepts a string and counts the number of words</li>
+                <li class="practice-question">JS: You should change the color of this text "Working in JavaScript"</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-2:</h3>
 
+            <h4>1. Working with lists in HTML.</h4>
+            <p>HTML provides three main types of lists:</p>
+            <ul>
+                <li><strong>Unordered Lists (<code><ul></code>):</strong> Items are typically marked with bullets. Used when order doesn't matter. Each item is <code><li></code>.
+                    <pre><code><ul>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul></code></pre>
+                    </li>
+                    <li><strong>Ordered Lists (<code><ol></code>):</strong> Items are marked with numbers or letters. Used when order is important. Each item is <code><li></code>.
+                        <pre><code><ol type="A">
+  <li>First item</li>
+  <li>Second item</li>
+</ol></code></pre>
+                    </li>
+                    <li><strong>Description Lists (<code><dl></code>):</strong> Used for terms and descriptions.
+                        <ul>
+                            <li><code><dl></code>: Defines the list.</li>
+                            <li><code><dt></code>: Defines the term.</li>
+                            <li><code><dd></code>: Defines the description.</li>
+                        </ul>
+                        <pre><code><dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+</dl></code></pre>
+                    </li>
+                </ul>
+                <p>Lists can also be nested within each other.</p>
+
+<h4>2. Objects in JavaScript</h4>
+            <p>In JavaScript, an object is a collection of key-value pairs (properties and methods). Properties can be primitive values, other objects, or functions (methods).</p>
+            <h5>Creating Objects:</h5>
+            <ul>
+                <li><strong>Object Literal:</strong> Simplest way.
+                    <pre><code>let car = {
+make: "Toyota",
+model: "Camry",
+start: function() { console.log("Engine started!"); }
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+};</code></pre>
+</li>
+<li><strong>Using <code>new Object()</code>:</strong>
+<pre><code>let person = new Object();
+person.firstName = "John";</code></pre>
+</li>
+<li><strong>Using a Constructor Function:</strong> For creating multiple objects of the same type.
+<pre><code>function Person(first, last) {
+this.firstName = first;
+this.lastName = last;
+}
+let myFather = new Person("John", "Doe");</code></pre>
+</li>
+</ul>
+<h5>Accessing Properties:</h5>
+<ul>
+<li>Dot notation: <code>car.model</code></li>
+<li>Bracket notation: <code>car["model"]</code></li>
+</ul>
+<h5>Calling Methods:</h5>
+<pre><code>car.start();</code></pre>
+<p>The <code>this</code> keyword inside an object method refers to the current object.</p>
+
+<h4>3. CMS features</h4>
+            <p>Content Management Systems (CMS) offer features to simplify website creation and management:</p>
+            <ul>
+                <li><strong>Content Creation & Editing:</strong> WYSIWYG editors, content versioning, media management.</li>
+                <li><strong>User Management & Roles:</strong> User registration, role-based access control (Admin, Editor, etc.).</li>
+                <li><strong>Design & Templating:</strong> Themes/templates for website appearance, customization options.</li>
+                <li><strong>Extensibility & Integration:</strong> Plugins/modules/extensions for added functionality (SEO, e-commerce), API access.</li>
+                <li><strong>Content Organization:</strong> Categories, tags, custom post types.</li>
+                <li><strong>SEO Tools:</strong> URL management, meta tags, sitemap generation.</li>
+                <li><strong>Workflow & Publishing Control:</strong> Drafts, content scheduling.</li>
+                <li><strong>Multilingual Support:</strong> Features or plugins for multiple languages.</li>
+            </ul>
+
+            <h4>4. PHP: Create a form that accepts a string and counts the number of words</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head>
+    <title>Word Counter</title>
+</head>
+<body>
+    <h2>Word Counter</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Enter a string: <textarea name="user_string" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" name="submit" value="Count Words">
+    </form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    if (isset($_POST['user_string'])) {
+        $input_string = trim($_POST['user_string']);
+        $word_count = 0;
+        if (!empty($input_string)) {
+            $word_count = str_word_count($input_string);
+        }
+        echo "<h3>Result:</h3>";
+        echo "The input string: <pre>" . htmlspecialchars($input_string) . "</pre>";
+        echo "Number of words: " . $word_count;
+    }
+}
+?>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
+
+<h4>5. JS: You should change the color of this text "Working in JavaScript"</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head>
+    <title>Change Text Color JS</title>
+</head>
+<body>
+    <p id="myTextToChange">Working in JavaScript</p>
+    <button onclick="changeColor()">Change Color</button>
+
+<script>
+    function changeColor() {
+        document.getElementById("myTextToChange").style.color = "blue";
+    }
+    // To change it immediately on load without a button:
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     document.getElementById("myTextToChange").style.color = "green"; 
+    // });
+</script>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
+                <p>If the instruction implies changing it without any user interaction, you can remove the button and use the commented-out <code>DOMContentLoaded</code> listener or simply:
+                <pre><code><p id="myTextToChange">Working in JavaScript</p>
+<script>
+    document.getElementById("myTextToChange").style.color = "purple";
+</script></code></pre>
+            </div>
+        </div>
+    </div>
+
+<!-- TEST-3 -->
 <div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-1, 3. Explain the tree topology.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Daraxtsimon (Tree) topologiya</strong> - bu teskari daraxtni tasavvur qiling. Sizda markaziy "ildiz" qurilma (asosiy kommutator yoki server kabi) mavjud. Ushbu ildizdan boshqa qurilmalar yoki markazlar/kommutatorlarga "shoxlar" tarqaladi va bu shoxlardan ko'proq "novdalar" (alohida kompyuterlar) ulanishi mumkin.</p>
-<h5>Asosiy xususiyatlari:</h5>
-<ul>
-<li><strong>Ierarxik tuzilma:</strong> Tarmoqni kengaytirish uchun ko'pincha ishlatiladi.</li>
-<li><strong>Markaziy nuqtaga bog'liqlik:</strong> Agar ildiz qurilma ishdan chiqsa, tarmoqning katta qismlari ishlamay qolishi mumkin.</li>
-<li><strong>Kengaytirilishi oson:</strong> Yangi shoxlar yoki barglar qo'shish orqali tarmoqni osongina kattalashtirish mumkin.</li>
-<li><strong>Foydalanish:</strong> Katta korporativ tarmoqlarda yoki bir nechta yulduzsimon tarmoqlarni birlashtirishda qo'llaniladi.</li>
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-3">
+        <span class="accordion-title">TEST-3</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-3">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Box model concept. Box model rules in CSS</li>
+                <li class="theory-question">JavaScript Date object methods and properties</li>
+                <li class="theory-question">Modern types of CMS</li>
+                <li class="practice-question">JS: you should calculate two numbers and shows their sum</li>
+                <li class="practice-question">PHP: Write code to connect php and database ?</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-3:</h3>
+
+            <h4>1. Box model concept. Box model rules in CSS</h4>
+            <p>The CSS box model describes how HTML elements are rendered as rectangular boxes. Each box has four parts:</p>
+            <ol>
+                <li><strong>Content:</strong> The actual content (text, images). Its dimensions are <code>width</code> and <code>height</code>.</li>
+                <li><strong>Padding:</strong> Transparent area around the content, inside the border.</li>
+                <li><strong>Border:</strong> A line around the padding and content.</li>
+                <li><strong>Margin:</strong> Transparent area outside the border, creating space between elements.</li>
+            </ol>
+            <h5>Box Model Rules:</h5>
+            <ul>
+                <li><strong>Total Width/Height Calculation (Standard Model):</strong> <code>Total Width = width + left/right padding + left/right border + left/right margin</code>.</li>
+                <li><strong><code>box-sizing</code> Property:</strong>
+                    <ul>
+                        <li><code>content-box</code> (default): <code>width</code> and <code>height</code> apply to the content area only.</li>
+                        <li><code>border-box</code>: <code>width</code> and <code>height</code> include content, padding, and border. This is often more intuitive for layout.
+                            <pre><code>.element { box-sizing: border-box; width: 100px; padding: 10px; border: 1px solid black; }
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+/* The visible width of .element will be 100px */</code></pre>
+</li>
 </ul>
+</li>
+<li><strong>Margin Collapsing:</strong> Vertical margins of adjacent block elements can collapse into a single margin.</li>
+</ul>
+
+<h4>2. JavaScript Date object methods and properties</h4>
+            <p>The JavaScript <code>Date</code> object is used to work with dates and times.</p>
+            <h5>Creating a Date Object:</h5>
+            <ul>
+                <li><code>new Date()</code>: Current date and time.</li>
+                <li><code>new Date(milliseconds)</code></li>
+                <li><code>new Date(dateString)</code></li>
+                <li><code>new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)</code> (monthIndex is 0-11).</li>
+            </ul>
+            <h5>Common Getter Methods:</h5>
+            <ul>
+                <li><code>getFullYear()</code>, <code>getMonth()</code> (0-11), <code>getDate()</code> (1-31), <code>getDay()</code> (0-6, Sunday is 0)</li>
+                <li><code>getHours()</code>, <code>getMinutes()</code>, <code>getSeconds()</code>, <code>getMilliseconds()</code></li>
+                <li><code>getTime()</code>: Milliseconds since Jan 1, 1970.</li>
+                <li><code>toString()</code>, <code>toDateString()</code>, <code>toLocaleDateString()</code>, <code>toISOString()</code></li>
+            </ul>
+            <h5>Common Setter Methods:</h5>
+            <ul>
+                <li><code>setFullYear()</code>, <code>setMonth()</code>, <code>setDate()</code>, etc.</li>
+            </ul>
+            <pre><code>let now = new Date();
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+console.log(now.toLocaleDateString()); // e.g., "10/26/2023" (depends on locale)
+console.log(now.getFullYear()); // e.g., 2023</code></pre>
+
+<h4>3. Modern types of CMS</h4>
+            <p>Modern Content Management Systems have evolved beyond traditional monolithic systems:</p>
+            <ul>
+                <li><strong>Traditional / Coupled / Monolithic CMS:</strong> Backend and frontend are tightly integrated (e.g., WordPress default, Joomla). All-in-one, often easier for beginners.</li>
+                <li><strong>Headless CMS (Decoupled API-first):</strong> Backend (content management) is separate from the presentation layer. Content is delivered via API (e.g., Contentful, Strapi, Sanity). Offers flexibility, better performance for omnichannel delivery.</li>
+                <li><strong>Decoupled CMS (Hybrid):</strong> Has a backend and often a default frontend, but also provides robust API access for other channels (e.g., Drupal).</li>
+                <li><strong>SaaS (Software as a Service) CMS:</strong> Cloud-hosted platforms managed by a provider (e.g., Squarespace, Wix, Shopify). Easy setup, no server management.</li>
+                <li><strong>Static Site Generators (SSG) with a CMS:</strong> Tools like Gatsby, Next.js, Hugo pre-build static sites, often pulling content from a Headless CMS or Git-based CMS. Excellent performance and security.</li>
+            </ul>
+
+            <h4>4. JS: you should calculate two numbers and shows their sum</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head>
+    <title>JS Sum Calculator</title>
+</head>
+<body>
+    <h2>JavaScript Sum Calculator</h2>
+    Number 1: <input type="number" id="num1_js" value="0"><br><br>
+    Number 2: <input type="number" id="num2_js" value="0"><br><br>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p>The sum is: <span id="result_js"></span></p>
+
+<script>
+    function calculateSum() {
+        var number1 = parseFloat(document.getElementById("num1_js").value);
+        var number2 = parseFloat(document.getElementById("num2_js").value);
+        var sum = number1 + number2;
+        if (isNaN(sum)) {
+            document.getElementById("result_js").textContent = "Invalid input";
+        } else {
+            document.getElementById("result_js").textContent = sum;
+        }
+    }
+</script>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
+
+<h4>5. PHP: Write code to connect php and database ?</h4>
+            <p>PHP connects to databases (commonly MySQL) using extensions like MySQLi or PDO.</p>
+            <h5>Using MySQLi (Object-Oriented Style):</h5>
+            <pre><code><?php
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database_name";
+
+// Create connection
+
+𝑐
+𝑜
+𝑛
+𝑛
+=
+𝑛
+𝑒
+𝑤
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+(
+conn=newmysqli(
+servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully to database: " . $dbname;
+
+// $conn->close(); // Close connection when done
+?></code></pre>
+<h5>Using PDO (PHP Data Objects - recommended for versatility):</h5>
+<pre><code><?php
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database_name";
+$charset = "utf8mb4";
+
+𝑑
+𝑠
+𝑛
+=
+"
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+:
+ℎ
+𝑜
+𝑠
+𝑡
+=
+dsn="mysql:host=
+servername;dbname=
+𝑑
+𝑏
+𝑛
+𝑎
+𝑚
+𝑒
+;
+𝑐
+ℎ
+𝑎
+𝑟
+𝑠
+𝑒
+𝑡
+=
+dbname;charset=
+charset";
+$options = [
+PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+
+𝑝
+𝑑
+𝑜
+=
+𝑛
+𝑒
+𝑤
+𝑃
+𝐷
+𝑂
+(
+pdo=newPDO(
+dsn, $username, $password, $options);
+echo "Connected successfully to database: " . $dbname . " (using PDO)";
+} catch (\PDOException $e) {
+die("Connection failed: " . $e->getMessage());
+}
+
+// $pdo = null; // Close connection when done
+?></code></pre>
+<p>Replace placeholders with your actual database credentials.</p>
 </div>
 </div>
 </div>
 
+<!-- TEST-4 -->
 <div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-1, 4. Describe the Token-Ring network.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Token-Ring tarmog'i</strong> - bu kompyuterlar mantiqiy halqa yoki aylana shaklida ulangan tarmoq turidir. Ushbu halqa bo'ylab "token" deb nomlangan maxsus ma'lumotlar paketi aylanib yuradi.</p>
-<h5>Ishlash prinsipi:</h5>
-<ul>
-<li><strong>Tokenni egallash:</strong> Kompyuter faqatgina tokenni egallagan taqdirdagina ma'lumot yuborishi mumkin.</li>
-<li><strong>Ma'lumotlarni biriktirish:</strong> Tokenni olgach, u o'z ma'lumotlarini unga biriktiradi va belgilangan manzilga yuboradi.</li>
-<li><strong>Tokenni bo'shatish:</strong> Ma'lumotlar yuborilgandan so'ng, token yana halqaga bo'shatiladi.</li>
-<li><strong>To'qnashuvlarning oldini olish:</strong> Bu usul ma'lumotlar to'qnashuvining oldini olishga yordam beradi, chunki bir vaqtning o'zida faqat bitta kompyuter uzatishi mumkin.</li>
-</ul>
-<p>Bu texnologiya eskirgan bo'lib, hozirda Ethernet keng tarqalgan.</p>
-</div>
-</div>
-</div>
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-4">
+        <span class="accordion-title">TEST-4</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-4">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">CSS animations.</li>
+                <li class="theory-question">Working with functions in JavaScript</li>
+                <li class="theory-question">Advantages and disadvantages of using CMS</li>
+                <li class="practice-question">JS: Create a form that accepts a string and count a vowel letter</li>
+                <li class="practice-question">PHP: How we connect PHP to MySQL?</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-4:</h3>
 
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-1, 5. Give examples of switching methods.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Kommutatsiya - bu ma'lumotlarni kirish portidan chiqish portiga yo'naltirish usuli. Asosiy kommutatsiya usullariga quyidagilar kiradi:</p>
-<h5>1. Kanallar kommutatsiyasi (Circuit Switching):</h5>
-<ul>
-<li><strong>Ta'rifi:</strong> Eski uslubdagi telefon qo'ng'irog'ini tasavvur qiling. Ikki nuqta o'rtasida aloqa davomida maxsus jismoniy yo'l (kanal) o'rnatiladi. Boshqa hech kim bu yo'ldan foydalana olmaydi.</li>
-<li><strong>Misollar:</strong> An'anaviy telefon tarmoqlari (PSTN).</li>
-</ul>
-<h5>2. Paketlar kommutatsiyasi (Packet Switching):</h5>
-<ul>
-<li><strong>Ta'rifi:</strong> Internetdagi aksariyat ma'lumotlar shu tarzda harakatlanadi. Ma'lumotlar paket deb nomlangan kichik qismlarga bo'linadi. Har bir paket mustaqil ravishda harakatlanishi, ehtimol turli yo'llarni bosib o'tishi va manzilida qayta yig'ilishi mumkin. Tarmoq resurslari umumiy foydalaniladi.</li>
-<li><strong>Turlari:</strong>
-<ul>
-<li><strong>Saqlash va uzatish (Store-and-Forward):</strong> Kommutator butun paketni qabul qiladi, xatoliklarni tekshiradi va keyin uni uzatadi. Sekinroq, lekin ishonchliroq.</li>
-<li><strong>Kesib o'tish (Cut-Through):</strong> Kommutator manzil manzilini o'qishi bilan butun paketni kutmasdan paketni uzatishni boshlaydi. Tezroq, lekin xato paketlarni uzatishi mumkin.</li>
-</ul>
-</li>
-<li><strong>Misollar:</strong> Internet, Ethernet tarmoqlari.</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- VERSION-1 TUGASHI -->
+            <h4>1. CSS animations.</h4>
+            <p>CSS animations allow transitions from one CSS style configuration to another. They consist of:</p>
+            <ol>
+                <li><strong><code>@keyframes</code> rule:</strong> Defines stages and styles of the animation using percentages (0% to 100% or <code>from</code>/<code>to</code>).</li>
+                <li><strong><code>animation</code> properties:</strong> Applied to HTML elements to control the animation.</li>
+            </ol>
+            <h5><code>@keyframes</code> Example:</h5>
+            <pre><code>@keyframes slideIn {
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
 
-<!-- VERSION-2 BOSHLANISHI -->
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-2, 1. Explain the classes of IPv4.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>IPv4 manzillari (masalan, 192.168.1.1) dastlab katta miqdordagi potentsial manzillarni boshqarish uchun sinflarga (A, B, C, D, E) bo'lingan edi:</p>
+from { transform: translateX(-100%); opacity: 0; }
+to   { transform: translateX(0); opacity: 1; }
+}</code></pre>
+<h5><code>animation</code> Properties:</h5>
 <ul>
-<li><strong>A sinfi (Class A):</strong> Juda katta tarmoqlar uchun (kam sonli tarmoqlar, ko'p sonli xostlar). Birinchi raqam 1-126 oralig'ida bo'ladi. Masalan, 10.0.0.0.</li>
-<li><strong>B sinfi (Class B):</strong> O'rta o'lchamdagi tarmoqlar uchun. Birinchi raqam 128-191 oralig'ida. Masalan, 172.16.0.0.</li>
-<li><strong>C sinfi (Class C):</strong> Kichik tarmoqlar uchun (ko'p sonli tarmoqlar, kam sonli xostlar). Birinchi raqam 192-223 oralig'ida. Masalan, 192.168.1.0.</li>
-<li><strong>D sinfi (Class D):</strong> Ko'p manzilli uzatish (multicasting) uchun ishlatiladi (ma'lumotlarni bir guruh xostlarga yuborish). Birinchi raqam 224-239 oralig'ida.</li>
-<li><strong>E sinfi (Class E):</strong> Eksperimental maqsadlar uchun zaxiralangan. Birinchi raqam 240-255 oralig'ida.</li>
+<li><code>animation-name</code>: Name of the <code>@keyframes</code> rule.</li>
+<li><code>animation-duration</code>: Length of one animation cycle (e.g., <code>2s</code>).</li>
+<li><code>animation-timing-function</code>: Acceleration curve (e.g., <code>ease-in</code>, <code>linear</code>).</li>
+<li><code>animation-delay</code>: Delay before animation starts.</li>
+<li><code>animation-iteration-count</code>: Number of repetitions (e.g., <code>3</code>, <code>infinite</code>).</li>
+<li><code>animation-direction</code>: Play direction (e.g., <code>normal</code>, <code>alternate</code>).</li>
+<li><code>animation-fill-mode</code>: Styles applied before/after animation (e.g., <code>forwards</code>).</li>
+<li><code>animation-play-state</code>: Pause/resume (<code>running</code>, <code>paused</code>).</li>
 </ul>
-<p>Bu sinfli tizim asosan eskirgan va Classless Inter-Domain Routing (CIDR) bilan almashtirilgan, ammo sinflarni tushunish hali ham foydalidir.</p>
-</div>
-</div>
-</div>
+<h5>Shorthand <code>animation</code> property:</h5>
+<pre><code>.my-element {
+animation: slideIn 1s ease-out 0.5s 1 normal forwards;
+}</code></pre>
 
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-2, 2. What is FTP?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>FTP (File Transfer Protocol - Fayllarni Uzatish Protokoli)</strong> bu kompyuterlar o'rtasida, masalan, internet orqali fayllarni yuborish va qabul qilish uchun maxsus ishlab chiqilgan raqamli yetkazib berish xizmatidir.</p>
-<h5>Asosiy vazifalari:</h5>
-<ul>
-<li>Fayllarni serverga yuklash (upload).</li>
-<li>Fayllarni serverdan yuklab olish (download).</li>
-<li>Serverdagi fayllar va kataloglar ro'yxatini ko'rish.</li>
-<li>Fayllarni qayta nomlash yoki o'chirish (server ruxsatiga qarab).</li>
-</ul>
-<p>FTP ikkita aloqa kanalidan foydalanadi: biri boshqaruv buyruqlari uchun, ikkinchisi esa ma'lumotlarni uzatish uchun. U an'anaviy ravishda 21-portni boshqaruv uchun va 20-portni ma'lumotlar uchun ishlatadi (faol rejimda).</p>
-</div>
-</div>
-</div>
+<h4>2. Working with functions in JavaScript</h4>
+            <p>Functions are blocks of code designed to perform a particular task. They are executed when invoked (called).</p>
+            <h5>Defining Functions:</h5>
+            <ul>
+                <li><strong>Function Declaration:</strong>
+                    <pre><code>function greet(name) {
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
 
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-2, 3. Provide information about the IPv6 protocol.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>IPv6 (Internet Protocol version 6)</strong> - bu Internet Protokolining yangi avlodi bo'lib, IPv4 manzillarining tugab borayotganligi sababli uni almashtirish uchun ishlab chiqilgan.</p>
-<h5>Asosiy afzalliklari va xususiyatlari:</h5>
-<ul>
-<li><strong>Kengaytirilgan manzil maydoni:</strong> IPv6 128 bitli manzillardan foydalanadi (IPv4 ning 32 bitiga nisbatan). Bu deyarli cheksiz miqdordagi noyob manzillarni taqdim etadi.</li>
-<li><strong>Soddalashtirilgan sarlavha (header):</strong> Paket sarlavhasi optimallashtirilgan, bu esa marshrutizatsiyani samaraliroq qilishi mumkin.</li>
-<li><strong>Avtomatik konfiguratsiya (Stateless Address Autoconfiguration - SLAAC):</strong> Qurilmalar tarmoqqa ulanganda o'zlarini avtomatik ravishda sozlay oladi.</li>
-<li><strong>O'rnatilgan xavfsizlik (IPSec):</strong> IPSec xavfsizlik protokoli IPv6 ning ajralmas qismi sifatida ko'zda tutilgan (ammo uning qo'llanilishi ixtiyoriy).</li>
-<li><strong>Mobil qurilmalar uchun yaxshiroq qo'llab-quvvatlash:</strong> Mobile IPv6 kabi xususiyatlar yaxshiroq integratsiya qilingan.</li>
-<li><strong>Multicasting uchun yaxshilangan qo'llab-quvvatlash.</strong></li>
+console.log("Hello, " + name);
+}</code></pre>
+(Hoisted: can be called before definition)
+</li>
+<li><strong>Function Expression:</strong>
+<pre><code>const greet = function(name) {
+console.log("Hello, " + name);
+};</code></pre>
+(Not hoisted)
+</li>
+<li><strong>Arrow Functions (ES6):</strong> Concise syntax.
+<pre><code>const add = (a, b) => a + b;
+const greet = name => console.log("Hello, " + name);</code></pre>
+(Lexical <code>this</code>: inherits <code>this</code> from surrounding scope)
+</li>
 </ul>
-</div>
-</div>
-</div>
+<h5>Calling Functions:</h5>
+<pre><code>greet("Alice"); // Outputs: Hello, Alice</code></pre>
+<h5>Parameters and Arguments:</h5>
+<ul>
+<li>Parameters are variables in the function definition.</li>
+<li>Arguments are actual values passed when calling.</li>
+<li>Default Parameters (ES6): <code>function say(message = "Hi") { ... }</code></li>
+<li>Rest Parameters (ES6): <code>function sumAll(...numbers) { ... }</code> (collects arguments into an array)</li>
+</ul>
+<h5>Return Values:</h5>
+<p>Functions can return a value using the <code>return</code> statement. If no <code>return</code> or <code>return</code> without a value, it returns <code>undefined</code>.</p>
+<pre><code>function multiply(a, b) {
+return a * b;
+}</code></pre>
 
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-2, 4. Describe and explain the channel allocation of PDH technology.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>PDH (Plesiochronous Digital Hierarchy - Pleziyoxron Raqamli Ierarxiya)</strong> bu telekommunikatsiyalarda bir nechta past tezlikdagi raqamli oqimlarni (masalan, ovozli qo'ng'iroqlarni) uzatish uchun yuqori tezlikdagi oqimlarga birlashtirish uchun ishlatiladigan eski texnologiya.</p>
-<h5>Kanal ajratish (Channel Allocation):</h5>
-<ul>
-<li>"Pleziyoxron" "deyarli sinxron" degan ma'noni anglatadi. Alohida oqimlar biroz farqli soat tezligida ishlaydi.</li>
-<li>PDH multiplekslash tizimidan foydalanadi. Masalan:
-<ul>
-<li><strong>Yevropada (E1 liniyasi):</strong> 30 ta ovozli kanal (har biri 64 kbit/s) va signalizatsiya kanallari birlashtirilib, E1 liniyasini (2.048 Mbit/s) hosil qiladi. Bir nechta E1 lar E2, E3 va hokazolarni hosil qilish uchun birlashtirilishi mumkin.</li>
-<li><strong>Shimoliy Amerikada (T1 liniyasi):</strong> 24 ta ovozli kanal va signalizatsiya kanallari birlashtirilib, T1 liniyasini (1.544 Mbit/s) hosil qiladi.</li>
-</ul>
-</li>
-<li><strong>Bit qo'shish (Stuffing):</strong> Birlashtirilayotgan oqimlar orasidagi kichik vaqt farqlarini boshqarish uchun "qo'shimcha bitlar" (stuffing bits) qo'shiladi. Bu yuqori tezlikdagi oqimdan bitta past tezlikdagi kanalni ajratib olishni murakkablashtiradi; ko'pincha butun oqimni demultiplekslash kerak bo'ladi. Bu SDH/SONET kabi yangi texnologiyalarga nisbatan asosiy kamchilikdir.</li>
-</ul>
-</div>
-</div>
-</div>
+<h4>3. Advantages and disadvantages of using CMS</h4>
+            <p><em>(This answer is the same as in TEST-1, Question 3. See above for details.)</em></p>
+            <p>A Content Management System (CMS) is software that helps users create, manage, and modify content on a website without specialized technical knowledge.</p>
+            <h5>Advantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Ease of Use:</strong> User-friendly interfaces for content creation and management.</li>
+                <li><strong>Rapid Development:</strong> Pre-built templates and plugins speed up website creation.</li>
+                <li><strong>User Roles and Permissions:</strong> Built-in systems for managing different user access levels.</li>
+                <li><strong>Themes and Templates:</strong> Wide variety of designs available.</li>
+                <li><strong>Plugins and Extensions:</strong> Extend functionality easily (SEO, e-commerce, forms).</li>
+                <li><strong>Community Support:</strong> Large communities provide ample documentation and help.</li>
+                <li><strong>SEO-Friendly Features:</strong> Many CMSs offer tools or plugins for search engine optimization.</li>
+            </ul>
+            <h5>Disadvantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Security Risks:</strong> Popular CMSs can be targets for hackers if not kept updated.</li>
+                <li><strong>Performance Issues:</strong> Can be slower than custom-coded sites, especially with many plugins.</li>
+                <li><strong>Customization Limits:</strong> Highly specific functionalities might be hard to implement.</li>
+                <li><strong>Bloat:</strong> May come with many unneeded features.</li>
+                <li><strong>Learning Curve:</strong> Complex CMSs still require time to learn advanced features.</li>
+                <li><strong>Update Compatibility:</strong> Updates can sometimes cause issues with themes or plugins.</li>
+            </ul>
 
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-2, 5. What kind of protocol is UDP?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>UDP (User Datagram Protocol - Foydalanuvchi Datagramma Protokoli)</strong> bu transport qatlamining "aloqasiz" (connectionless) protokolodir. Uni otkritka yuborishga o'xshatish mumkin:</p>
-<h5>Asosiy xususiyatlari:</h5>
-<ul>
-<li><strong>Aloqa o'rnatilmaydi:</strong> Ma'lumotlarni yuborishdan oldin aloqa o'rnatmaydi. Shunchaki yuboradi.</li>
-<li><strong>Ishonchsiz:</strong> Paketlarning yetib borishini, tartibda kelishini yoki xatosiz bo'lishini kafolatlamaydi.</li>
-<li><strong>Tez va yengil:</strong> TCP kabi qo'shimcha yuklamalari (masalan, tasdiqlashlar va qayta uzatishlar) bo'lmagani uchun u ancha tezroq. Boshqaruv ma'lumotlari kamroq.</li>
-<li><strong>Foydalanish sohalari:</strong> Tezlik muhim va ba'zi ma'lumotlar yo'qolishi qabul qilinadigan ilovalar uchun yaxshi, masalan:
-<ul>
-<li>Video/audio oqimi</li>
-<li>Onlayn o'yinlar</li>
-<li>DNS (Domen Nomlari Tizimi) so'rovlari</li>
-<li>DHCP (Dynamic Host Configuration Protocol)</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- VERSION-2 TUGASHI -->
+            <h4>4. JS: Create a form that accepts a string and count a vowel letter</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head>
+    <title>Vowel Counter</title>
+</head>
+<body>
+    <h2>Vowel Counter</h2>
+    <label for="stringInput">Enter a string:</label>
+    <input type="text" id="stringInput" placeholder="Type something here">
+    <button onclick="countVowels()">Count Vowels</button>
+    <p>Number of vowels: <span id="vowelResult">0</span></p>
 
-<!-- QOLGAN VERSIONLAR XUDDI SHU TARTIBDA DAVOM ETADI -->
+<script>
+    function countVowels() {
+        const inputText = document.getElementById("stringInput").value;
+        const resultSpan = document.getElementById("vowelResult");
+        
+        if (!inputText) {
+            resultSpan.textContent = "0 (Please enter a string)";
+            return;
+        }
 
-<!-- VERSION-3 BOSHLANISHI -->
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-3, 1. Explain the operator network.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Operator tarmog'i</strong> (yoki provayder tarmog'i) bu telekommunikatsiya xizmatlarini ko'rsatuvchi kompaniyalar (masalan, mobil aloqa operatorlari yoki internet-provayderlar) tomonidan qurilgan va boshqariladigan keng ko'lamli infratuzilmadir. Bu bizga qo'ng'iroq qilish, SMS yuborish va internetga kirish imkonini beruvchi kabellar, minoralar, kommutatorlar, marshrutizatorlar va serverlarning murakkab tarmog'idir.</p>
-<h5>Asosiy komponentlari va vazifalari:</h5>
-<ul>
-<li><strong>Kirish tarmog'i (Access Network):</strong> Foydalanuvchilarni (abonentlarni) tarmoqning markaziy qismiga ulaydi (masalan, mobil telefonlar uchun tayanch stansiyalari, uy interneti uchun DSLAM yoki OLT qurilmalari).</li>
-<li><strong>Tayanch tarmog'i (Core Network / Backbone Network):</strong> Yuqori tezlikdagi aloqa kanallari orqali turli hududlardagi kirish tarmoqlarini va boshqa operator tarmoqlarini o'zaro bog'laydi. Ma'lumotlar trafigining asosiy qismini qayta ishlaydi.</li>
-<li><strong>Transport tarmog'i:</strong> Ma'lumotlarni tarmoqning turli qismlari o'rtasida tashish uchun ishlatiladigan texnologiyalar (masalan, optik tolali liniyalar, mikroto'lqinli aloqa).</li>
-<li><strong>Boshqaruv va monitoring tizimlari:</strong> Tarmoq ishini nazorat qilish, nosozliklarni aniqlash va tuzatish, xizmat sifatini ta'minlash uchun zarur.</li>
-<li><strong>Xizmat ko'rsatish platformalari:</strong> Ovozli aloqa, ma'lumotlar uzatish, SMS, internetga kirish kabi turli xizmatlarni taqdim etish uchun serverlar va dasturiy ta'minot.</li>
-</ul>
-<p>Operator tarmoqlari yuqori darajada ishonchli, kengaytiriladigan va xavfsiz bo'lishi uchun doimiy ravishda modernizatsiya qilinadi.</p>
-</div>
-</div>
-</div>
+        const lowerCaseText = inputText.toLowerCase();
+        let vowelCount = 0;
+        const vowels = "aeiou"; // Or ['a', 'e', 'i', 'o', 'u']
 
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-3, 2. How are routers classified based on their usage?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Marshrutizatorlar (routerlar), ya'ni tarmoqlar o'rtasidagi trafikni yo'naltiruvchi qurilmalar, ularning ishlatilish joyi va vazifasiga qarab quyidagicha tasniflanishi mumkin:</p>
-<ul>
-<li><strong>Magistral marshrutizatorlar (Core Routers):</strong>
-    <ul>
-    <li>Bular eng kuchli va tezkor marshrutizatorlar bo'lib, internetning yoki juda katta korporativ tarmoqlarning magistralini (backbone) tashkil qiladi. Ular ulkan hajmdagi trafikni qayta ishlaydi. Juda yuqori o'tkazuvchanlik va ishonchlilikka ega.</li>
-    </ul>
-</li>
-<li><strong>Chekka marshrutizatorlar (Edge Routers yoki Border Routers):</strong>
-    <ul>
-    <li>Bu marshrutizatorlar tarmoqning chekkasida joylashadi va uni boshqa tarmoqlarga (masalan, ISP tarmog'iga yoki boshqa kompaniyaning tarmog'iga) ulaydi. Ular ko'pincha xavfsizlik (firewall), xizmat sifati (QoS) va tarmoq manzillarini translatsiya qilish (NAT) kabi vazifalarni bajaradi.</li>
-    </ul>
-</li>
-<li><strong>Taqsimlovchi marshrutizatorlar (Distribution Routers):</strong>
-    <ul>
-    <li>Kattaroq tarmoqlarda bu marshrutizatorlar bir nechta kirish marshrutizatorlaridan kelayotgan trafikni jamlaydi va uni magistralga yo'naltiradi. Ular kirish qatlami va magistral qatlami o'rtasida vositachi bo'lib xizmat qiladi.</li>
-    </ul>
-</li>
-<li><strong>Kirish marshrutizatorlari (Access Routers):</strong>
-    <ul>
-    <li>Bular odatda uylarda (Wi-Fi routeringiz) yoki kichik ofislarda topiladigan marshrutizatorlar bo'lib, oxirgi foydalanuvchi qurilmalarini tarmoqqa ulanishini ta'minlaydi. Ko'pincha kommutator, simsiz kirish nuqtasi va marshrutizator funksiyalarini birlashtiradi.</li>
-    </ul>
-</li>
-<li><strong>Virtual marshrutizatorlar (Virtual Routers):</strong>
-    <ul>
-    <li>Bular jismoniy qurilma emas, balki dasturiy ta'minot asosida ishlaydigan marshrutizatorlardir. Virtualizatsiya texnologiyalari va bulutli hisoblashlarda keng qo'llaniladi.</li>
-    </ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-3, 3. Explain the layers of SDN architecture.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>SDN (Software-Defined Networking - Dasturiy Ta'minot Bilan Belgilanadigan Tarmoqlar)</strong> tarmoqning boshqaruvini ("miya") haqiqiy ma'lumotlarni uzatuvchi uskunalardan ("mushak") ajratadi. Uning qatlamli arxitekturasi quyidagicha:</p>
-<h5>1. Ilova qatlami (Application Layer):</h5>
-<ul>
-<li>Bu yerda tarmoq ilovalari va xizmatlari ishlaydi, masalan, yuklama muvozanati (load balancing), xavfsizlik monitoringi yoki tarmoq virtualizatsiyasi. Ushbu ilovalar kontrollerga qanday tarmoq xatti-harakati kerakligini aytadi.</li>
-<li>Masalan, xavfsizlik ilovasi shubhali trafikni bloklash uchun kontrollerga ko'rsatma berishi mumkin.</li>
-</ul>
-<h5>2. Boshqaruv qatlami (Control Layer):</h5>
-<ul>
-<li>Bu "miya". Markazlashtirilgan SDN kontrolleri tarmoqni boshqaradi. U ilova qatlamidan ko'rsatmalarni oladi va ularni ma'lumotlarni uzatuvchi qurilmalar uchun konfiguratsiyalarga aylantiradi. U tarmoqning global ko'rinishiga ega.</li>
-<li>Asosiy komponent bu <strong>SDN Controller</strong>. U tarmoq qurilmalarining holatini biladi va ularga qanday ishlash kerakligini aytadi.</li>
-</ul>
-<h5>3. Infratuzilma qatlami (Infrastructure Layer yoki Data Plane):</h5>
-<ul>
-<li>Bu qatlam haqiqiy ma'lumotlar paketlarini uzatuvchi jismoniy yoki virtual kommutatorlar va marshrutizatorlardan iborat. Ular kontrollerdan <strong>OpenFlow</strong> kabi interfeys orqali ko'rsatmalarni oladi.</li>
-<li>Bu qurilmalar (switchlar, routerlar) faqat kontroller aytgan ishni qiladi, o'zlari "o'ylamaydi".</li>
-</ul>
-<p>SDN ning asosiy g'oyasi tarmoqni dasturlash imkoniyatini berish, uni yanada moslashuvchan, boshqariladigan va innovatsion qilishdir.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-3, 4. Explain the VPN secure network.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>VPN (Virtual Private Network - Virtual Xususiy Tarmoq)</strong> bu ochiq tarmoq (masalan, internet) orqali xavfsiz, shifrlangan "tunnel" yaratadigan texnologiyadir. Tasavvur qiling, siz oddiy pochta orqali maxfiy xabar yuboryapsiz, lekin uni faqat qabul qiluvchida kaliti bor qulflangan qutiga solib qo'ygansiz.</p>
-<h5>VPN qanday xavfsizlikni ta'minlaydi:</h5>
-<ul>
-<li><strong>Maxfiylik (Privacy):</strong> Sizning internetdagi faoliyatingizni ISP (Internet Service Provider) va ochiq tarmoqdagi boshqalardan yashiradi. Sizning haqiqiy IP manzilingiz VPN serverining IP manzili bilan almashtiriladi.</li>
-<li><strong>Xavfsizlik (Security):</strong> Shifrlash ma'lumotlaringizni xakerlar tomonidan ushlab qolinishi va o'qilishidan himoya qiladi. Barcha trafik shifrlangan tunnel orqali o'tadi.</li>
-<li><strong>Ma'lumotlar yaxlitligi (Data Integrity):</strong> Ba'zi VPN protokollari ma'lumotlarning uzatish paytida o'zgartirilmaganligini tekshirishga yordam beradi.</li>
-<li><strong>Autentifikatsiya (Authentication):</strong> Foydalanuvchi va VPN serveri bir-birining haqiqiyligini tekshiradi.</li>
-</ul>
-<h5>VPN turlari:</h5>
-<ul>
-<li><strong>Masofaviy kirish VPN (Remote Access VPN):</strong> Alohida foydalanuvchilarga (masalan, masofadan ishlaydigan xodimlarga) xususiy tarmoqqa xavfsiz ulanish imkonini beradi.</li>
-<li><strong>Saytdan-saytga VPN (Site-to-Site VPN):</strong> Ikki yoki undan ortiq alohida tarmoqlarni (masalan, kompaniyaning filiallarini) internet orqali xavfsiz bog'laydi.</li>
-</ul>
-<p>VPN xavfsizlikni oshirish, geocheklovlarni chetlab o'tish va xususiy resurslarga masofadan kirish uchun keng qo'llaniladi.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-3, 5. What is the UMTS standard?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>UMTS (Universal Mobile Telecommunications System - Universal Mobil Telekommunikatsiya Tizimi)</strong> bu <strong>3G (uchinchi avlod)</strong> mobil aloqa texnologiyasi standartidir. U 2G (masalan, GSM) dan keyingi muhim yangilanish bo'lib, ancha yuqori ma'lumotlar uzatish tezligini taklif qilgan.</p>
-<h5>Asosiy xususiyatlari va imkoniyatlari:</h5>
-<ul>
-<li><strong>Yuqori ma'lumotlar tezligi:</strong> 2G ga nisbatan ancha tezroq ma'lumotlar uzatish imkoniyatini berdi (nazariy jihatdan bir necha Mbit/s gacha), bu esa mobil internetdan foydalanish, videoqo'ng'iroqlar va multimedia xabarlar kabi xizmatlarni rivojlantirishga turtki bo'ldi.</li>
-<li><strong>W-CDMA (Wideband Code Division Multiple Access):</strong> Asosiy radio interfeysi sifatida keng polosali kodli ko'p martalik kirish texnologiyasidan foydalanadi. Bu bir vaqtning o'zida ko'proq foydalanuvchilarga xizmat ko'rsatish va chastota spektridan samaraliroq foydalanish imkonini beradi.</li>
-<li><strong>Global standart:</strong> Dunyoning ko'plab mamlakatlarida 3G tarmoqlari uchun asosiy standart sifatida qabul qilingan.</li>
-<li><strong>Xizmatlar:</strong> Ovozli aloqa, videoqo'ng'iroqlar, mobil internet, multimedia xabarlar (MMS), joylashuvni aniqlash xizmatlari va boshqalar.</li>
-<li><strong>Evolyutsiya:</strong> Keyinchalik HSPA (High-Speed Packet Access) va HSPA+ kabi takomillashtirilgan versiyalari bilan tezlik va samaradorlik yanada oshirildi, bu esa 4G/LTE ga o'tish uchun zamin yaratdi.</li>
-</ul>
-<p>UMTS mobil aloqa tarixida muhim bosqich bo'lib, mobil qurilmalarning imkoniyatlarini sezilarli darajada kengaytirdi.</p>
-</div>
-</div>
-</div>
-<!-- VERSION-3 TUGASHI -->
-
-<!-- VERSION-4 BOSHLANISHI -->
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-4, 1. The most common LAN topologies.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>LAN (Lokal Tarmoq) topologiyalari qurilmalarning jismoniy yoki mantiqiy ulanish usullarini tavsiflaydi. Eng keng tarqalgan LAN topologiyalari quyidagilar:</p>
-<h5>1. Yulduzsimon topologiya (Star Topology):</h5>
-<ul>
-<li><strong>Tuzilishi:</strong> Barcha qurilmalar markaziy qurilmaga (masalan, kommutator yoki hab) ulanadi.</li>
-<li><strong>Afzalliklari:</strong> Boshqarish va nosozliklarni aniqlash oson; agar bitta kabel ishdan chiqsa, faqat o'sha qurilma ta'sirlanadi. Yangi qurilma qo'shish oson.</li>
-<li><strong>Kamchiliklari:</strong> Agar markaziy qurilma ishdan chiqsa, butun tarmoq ishlamay qoladi. Ko'proq kabel talab qiladi.</li>
-<li><strong>Hozirgi holati:</strong> Bugungi kunda eng keng tarqalgan LAN topologiyasi.</li>
-</ul>
-<h5>2. Shina topologiyasi (Bus Topology):</h5>
-<ul>
-<li><strong>Tuzilishi:</strong> Barcha qurilmalar bitta umumiy aloqa liniyasiga (shina) ulanadi. Liniyaning ikki uchida terminatorlar bo'ladi.</li>
-<li><strong>Afzalliklari:</strong> O'rnatish oddiy va arzon. Kam kabel talab qiladi.</li>
-<li><strong>Kamchiliklari:</strong> Agar asosiy kabel uzilsa, butun tarmoq ishdan chiqadi. Ma'lumotlar to'qnashuvi muammo bo'lishi mumkin. Nosozlikni aniqlash qiyin.</li>
-<li><strong>Hozirgi holati:</strong> Hozir kamroq qo'llaniladi.</li>
-</ul>
-<h5>3. Halqasimon topologiya (Ring Topology):</h5>
-<ul>
-<li><strong>Tuzilishi:</strong> Qurilmalar aylana shaklida bir-biriga ulanadi. Ma'lumotlar bir yo'nalishda harakatlanadi.</li>
-<li><strong>Afzalliklari:</strong> Token Ring kabi protokollar bilan to'qnashuvlar bo'lmaydi.</li>
-<li><strong>Kamchiliklari:</strong> Bitta qurilma yoki kabelning ishdan chiqishi butun halqani ishdan chiqarishi mumkin (ba'zi dizaynlar bundan mustasno). Qurilma qo'shish yoki olib tashlash tarmoqni buzishi mumkin.</li>
-<li><strong>Hozirgi holati:</strong> LANlar uchun kamroq tarqalgan, ammo ba'zi magistral tarmoqlarda (masalan, Token Ring, garchi bu ko'proq protokol bo'lsa ham) qo'llaniladi.</li>
-</ul>
-<h5>4. To'rsimon topologiya (Mesh Topology):</h5>
-<ul>
-<li><strong>Tuzilishi:</strong> Har bir qurilma boshqa har bir qurilmaga (to'liq to'r) yoki kamida bir nechta boshqa qurilmalarga (qisman to'r) ulanadi.</li>
-<li><strong>Afzalliklari:</strong> Juda chidamli va yuqori trafikni bajara oladi. Agar bitta aloqa uzilsa, alternativ yo'llar mavjud.</li>
-<li><strong>Kamchiliklari:</strong> Simlarni ulash qimmat va murakkab. Ko'p port talab qiladi.</li>
-<li><strong>Hozirgi holati:</strong> Odatda WAN magistrallarida yoki yuqori ishonchlilik talab qilinadigan joylarda ishlatiladi.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-4, 2. What is an optical splitter?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Optik ajratgich (Optical Splitter)</strong> bu optik tolali tarmoqlarda ishlatiladigan passiv qurilmadir (ya'ni, u quvvat talab qilmaydi). U bitta tolada kelayotgan yagona optik signalni (yorug'likni) bir nechta tolalarda chiqadigan ko'p signallarga ajratadi.</p>
-<h5>Ishlash prinsipi va vazifalari:</h5>
-<ul>
-<li><strong>Signalni taqsimlash:</strong> Uni bog'ning shlangi uchun Y-ajratgichga o'xshatish mumkin, faqat bu yorug'lik uchun.</li>
-<li><strong>Passiv qurilma:</strong> Elektr ta'minotisiz ishlaydi, bu esa uni arzonroq va texnik xizmat ko'rsatishni osonlashtiradi.</li>
-<li><strong>PON arxitekturalarida muhimligi:</strong> Ular PON (Passiv Optik Tarmoq) arxitekturalarida, masalan, FTTH (Uyga Tolali Optika) da markaziy ofisdan keladigan bitta tolani bir nechta abonentlar o'rtasida taqsimlash uchun juda muhimdir.</li>
-<li><strong>Ajratish nisbati:</strong> Optik ajratgichlar turli xil ajratish nisbatlariga ega bo'lishi mumkin (masalan, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64). Bu kirish signalining qancha chiqish portiga taqsimlanishini bildiradi. Ajratish nisbati qanchalik yuqori bo'lsa, har bir chiqish portidagi signal kuchi shunchalik past bo'ladi (signal yo'qotilishi tufayli).</li>
-</ul>
-<p>Optik ajratgichlar optik tolali aloqa tarmoqlarini samarali va tejamkor tarzda kengaytirishga yordam beradi.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-4, 3. List and explain all OSI layers related to networking.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>OSI (Open Systems Interconnection - Ochiq Tizimlarning O'zaro Aloqasi) modeli</strong> bu tarmoq aloqasi qanday amalga oshishini tavsiflovchi 7 qatlamli konseptual asosdir:</p>
-<ol>
-<li><strong>Fizik qatlam (Physical Layer - Layer 1):</strong>
-    <ul>
-    <li>Tarmoqning jismoniy xususiyatlarini (kabellar, ulagichlar, kuchlanishlar, bit uzatish) belgilaydi. Bu xom bitlarni jismoniy muhit orqali yuborish bilan bog'liq. Masalan, Ethernet kabeli, Wi-Fi radio to'lqinlari.</li>
-    </ul>
-</li>
-<li><strong>Kanal qatlami (Data Link Layer - Layer 2):</strong>
-    <ul>
-    <li>Bir xil tarmoqdagi ikkita to'g'ridan-to'g'ri ulangan tugunlar o'rtasida ma'lumotlarni uzatish uchun jismoniy manzillash (MAC manzillari) va xatoliklarni aniqlash/tuzatish bilan shug'ullanadi. Kommutatorlar shu qatlamda ishlaydi. LLC (Logical Link Control) va MAC (Media Access Control) kichik qatlamlariga bo'linadi.</li>
-    </ul>
-</li>
-<li><strong>Tarmoq qatlami (Network Layer - Layer 3):</strong>
-    <ul>
-    <li>Mantiqiy manzillash (IP manzillari) va paketlarni turli tarmoqlar bo'ylab marshrutlash uchun mas'ul. Marshrutizatorlar ushbu qatlamda ishlaydi.</li>
-    </ul>
-</li>
-<li><strong>Transport qatlami (Transport Layer - Layer 4):</strong>
-    <ul>
-    <li>Xostlar o'rtasida ishonchli yoki ishonchsiz ma'lumotlarni yetkazib berishni ta'minlaydi. TCP (ishonchli) va UDP (ishonchsiz) shu yerda ishlaydi. Segmentatsiya, oqim nazorati va xato nazorati bilan shug'ullanadi.</li>
-    </ul>
-</li>
-<li><strong>Sessiya qatlami (Session Layer - Layer 5):</strong>
-    <ul>
-    <li>Ilovalar o'rtasidagi aloqalarni (sessiyalarni) boshqaradi. Ushbu sessiyalarni o'rnatish, saqlash va tugatish bilan shug'ullanadi (masalan, tizimga kirish sessiyalari).</li>
-    </ul>
-</li>
-<li><strong>Taqdimot qatlami (Presentation Layer - Layer 6):</strong>
-    <ul>
-    <li>Ma'lumotlarni formatlash, shifrlash va siqish bilan shug'ullanadi. Bir tizim tomonidan yuborilgan ma'lumotlarning boshqasi tomonidan o'qilishi mumkinligini ta'minlaydi (masalan, belgilar kodirovkalarini o'zgartirish).</li>
-    </ul>
-</li>
-<li><strong>Ilova qatlami (Application Layer - Layer 7):</strong>
-    <ul>
-    <li>Foydalanuvchiga eng yaqin qatlam. Ilovalarga tarmoq xizmatlariga kirish uchun interfeysni taqdim etadi (masalan, veb-brauzer uchun HTTP, fayl uzatish uchun FTP, elektron pochta uchun SMTP).</li>
-    </ul>
-</ol>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-4, 4. Wireless systems and their types.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Simsiz tizimlar</strong> ma'lumotlarni kabellar o'rniga radio to'lqinlar yordamida uzatadi. Keng tarqalgan turlari quyidagilar:</p>
-<ul>
-<li><strong>Wi-Fi (Wireless Fidelity, IEEE 802.11 standartlariga asoslangan):</strong>
-    <ul>
-    <li>Uylarda, ofislarda va jamoat joylarida mahalliy tarmoqlar (WLAN) uchun ishlatiladi. Turli standartlar (802.11a/b/g/n/ac/ax) har xil tezlik va masofalarni taklif qiladi.</li>
-    </ul>
-</li>
-<li><strong>Bluetooth:</strong>
-    <ul>
-    <li>Qurilmalar o'rtasida qisqa masofali aloqa uchun ishlatiladi, masalan, telefonni naushnikka, sichqonchani kompyuterga yoki aqlli uy qurilmalarini ulash.</li>
-    </ul>
-</li>
-<li><strong>Uyali aloqa tarmoqlari (masalan, 3G, 4G/LTE, 5G):</strong>
-    <ul>
-    <li>Uyali aloqa minoralari yordamida keng geografik hududlarda mobil ovozli va ma'lumotlar xizmatlarini taqdim etadi.</li>
-    </ul>
-</li>
-<li><strong>Sun'iy yo'ldosh aloqasi (Satellite):</strong>
-    <ul>
-    <li>Yerni aylanib yuruvchi sun'iy yo'ldoshlardan foydalanib aloqani ta'minlaydi, ko'pincha uzoq hududlar, GPS yoki televizion eshittirishlar uchun ishlatiladi.</li>
-    </ul>
-</li>
-<li><strong>NFC (Near Field Communication - Yaqin Maydon Aloqasi):</strong>
-    <ul>
-    <li>Juda qisqa masofali (bir necha santimetr) aloqa, masalan, kontaktsiz to'lovlar va qurilmalarni bir-biriga tekkizish orqali ma'lumotlarni uzatish uchun ishlatiladi.</li>
-    </ul>
-</li>
-<li><strong>Mikroto'lqinli aloqa (Microwave):</strong>
-    <ul>
-    <li>Uzoqroq masofalarda nuqtadan-nuqtaga aloqa uchun yuqori chastotali radio to'lqinlardan foydalanadi, ko'pincha magistral ulanishlar (backhaul links) uchun ishlatiladi.</li>
-    </ul>
-</li>
-<li><strong>Infraqizil aloqa (Infrared):</strong>
-    <ul>
-    <li>Qisqa masofali, to'g'ridan-to'g'ri ko'rish talab qiladigan aloqa uchun (masalan, televizor pultlari).</li>
-    </ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-4, 5. What is a domain?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Tarmoq sohasida "domen" bir nechta narsani anglatishi mumkin:</p>
-<ul>
-<li><strong>Domen nomi (DNS da):</strong>
-    <ul>
-    <li>Internet resursi uchun odamlar o'qiy oladigan nom, masalan, <code>www.google.com</code>. Domen Nomlari Tizimi (DNS) bu nomlarni IP manzillariga tarjima qiladi. Bu internetda saytlarni topishni osonlashtiradi.</li>
-    </ul>
-</li>
-<li><strong>Keng tarqatish domeni (Broadcast Domain):</strong>
-    <ul>
-    <li>Tarmoqning mantiqiy hududi bo'lib, unda biron bir qurilma keng tarqatish kadrini (broadcast frame) uzatsa, u shu hududdagi boshqa barcha qurilmalar tomonidan qabul qilinadi. Odatda marshrutizatorlar keng tarqatish domenlarini ajratadi. Kommutatorlar esa bitta keng tarqatish domenini hosil qiladi (VLANlar ishlatilmagan bo'lsa).</li>
-    </ul>
-</li>
-<li><strong>To'qnashuv domeni (Collision Domain):</strong>
-    <ul>
-    <li>Tarmoqning hududi bo'lib, agar ikkita qurilma bir vaqtning o'zida uzatsa, ularning signallari to'qnashishi va buzilishi mumkin. Kommutatorlar to'qnashuv domenlarini segmentlarga ajratishga yordam beradi (har bir port alohida to'qnashuv domeni bo'ladi), hablar esa bitta to'qnashuv domenini yaratadi.</li>
-    </ul>
-</li>
-<li><strong>Ma'muriy domen (masalan, Windows Domeni):</strong>
-    <ul>
-    <li>Umumiy qoidalar va xavfsizlik siyosatlari ostida boshqariladigan kompyuterlar va foydalanuvchilar guruhi, ko'pincha markaziy server (domen kontrolleri) tomonidan boshqariladi. Bu korporativ muhitlarda resurslarni markazlashtirilgan boshqarish va xavfsizlikni ta'minlash uchun ishlatiladi.</li>
-    </ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- VERSION-4 TUGASHI -->
-
-<!-- VERSION-5 BOSHLANISHI -->
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-5, 1. What kind of protocol is UDP?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>UDP (User Datagram Protocol - Foydalanuvchi Datagramma Protokoli)</strong> bu transport qatlamining "aloqasiz" (connectionless) protokolodir. Uni otkritka yuborishga o'xshatish mumkin:</p>
-<h5>Asosiy xususiyatlari:</h5>
-<ul>
-<li><strong>Aloqa o'rnatilmaydi:</strong> Ma'lumotlarni yuborishdan oldin aloqa o'rnatmaydi. Shunchaki yuboradi.</li>
-<li><strong>Ishonchsiz:</strong> Paketlarning yetib borishini, tartibda kelishini yoki xatosiz bo'lishini kafolatlamaydi. Agar paket yo'qolsa, UDP uni qayta yubormaydi.</li>
-<li><strong>Tez va yengil:</strong> TCP kabi qo'shimcha yuklamalari (masalan, tasdiqlashlar va qayta uzatishlar) bo'lmagani uchun u ancha tezroq. Sarlavhasi kichik.</li>
-<li><strong>Foydalanish sohalari:</strong> Tezlik muhim va ba'zi ma'lumotlar yo'qolishi qabul qilinadigan ilovalar uchun yaxshi, masalan:
-<ul>
-<li>Video/audio oqimi (streaming)</li>
-<li>Onlayn o'yinlar</li>
-<li>DNS (Domen Nomlari Tizimi) so'rovlari</li>
-<li>DHCP (Dynamic Host Configuration Protocol)</li>
-<li>TFTP (Trivial File Transfer Protocol)</li>
-</ul>
-</li>
-</ul>
-<p>UDP "eng yaxshi harakat" (best-effort) yetkazib berishni ta'minlaydi, ya'ni u paketlarni yetkazib berishga harakat qiladi, lekin muvaffaqiyatni kafolatlamaydi.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-5, 2. Explain the VPN secure network.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>VPN (Virtual Private Network - Virtual Xususiy Tarmoq)</strong> bu ochiq tarmoq (masalan, internet) orqali xavfsiz, shifrlangan "tunnel" yaratadigan texnologiyadir. Bu sizga internet orqali xuddi xususiy tarmoqqa ulanganingizdek xavfsiz aloqa qilish imkonini beradi.</p>
-<h5>VPN qanday xavfsizlikni ta'minlaydi:</h5>
-<ul>
-<li><strong>Shifrlash (Encryption):</strong> Sizning internet trafigingiz shifrlanadi, bu esa uni uchinchi shaxslar (masalan, xakerlar yoki internet provayderingiz) tomonidan o'qilishini qiyinlashtiradi.</li>
-<li><strong>Tunnel yaratish (Tunneling):</strong> Ma'lumotlaringiz ochiq internet orqali o'tadigan maxsus "tunnel" ichiga joylashtiriladi. Bu sizning ma'lumotlaringizni tashqi muhitdan ajratib turadi.</li>
-<li><strong>IP manzilni yashirish (IP Masking):</strong> VPN sizning haqiqiy IP manzilingizni VPN serverining IP manzili bilan almashtiradi, bu esa sizning onlayn anonimligingizni va joylashuvingizni yashirishga yordam beradi.</li>
-<li><strong>Ma'lumotlar yaxlitligi (Data Integrity):</strong> Ba'zi VPN protokollari ma'lumotlarning uzatish paytida o'zgartirilmaganligini tekshirishga yordam beradi.</li>
-</ul>
-<h5>VPN ning qo'llanilishi:</h5>
-<ul>
-<li>Jamoat Wi-Fi tarmoqlarida xavfsizlikni oshirish.</li>
-<li>Geografik cheklovlarni chetlab o'tish (masalan, ma'lum bir mamlakatda mavjud bo'lmagan kontentga kirish).</li>
-<li>Korporativ tarmoqlarga masofadan xavfsiz ulanish.</li>
-<li>Onlayn maxfiylikni himoya qilish.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-5, 3. Describe the general characteristics of the ICMP protocol.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>ICMP (Internet Control Message Protocol - Internet Boshqaruv Xabarlari Protokoli)</strong> bu IP protokolining yordamchi protokolodir. U foydalanuvchi ma'lumotlarini tashish uchun emas, balki tarmoq sharoitlari haqida xatolik xabarlari va operatsion ma'lumotlarni yuborish uchun ishlatiladi. Uni tarmoqning muammolar va holatlar haqidagi xabarchisiga o'xshatish mumkin.</p>
-<h5>Asosiy xususiyatlari va vazifalari:</h5>
-<ul>
-<li><strong>Xatoliklarni xabarlash:</strong> Agar marshrutizator paketni yetkaza olmasa (masalan, manzilga erishib bo'lmaydi, paket juda katta), u manbaga ICMP orqali xabar yuboradi. Misollar: "Destination Unreachable" (Manzilga erishib bo'lmaydi), "Time Exceeded" (Vaqt tugadi).</li>
-<li><strong>Diagnostika:</strong> <code>ping</code> (ulanish imkoniyatini tekshiradi) va <code>traceroute</code> (paketlar bosib o'tadigan yo'lni ko'rsatadi) kabi yordamchi dasturlar ICMP xabarlaridan foydalanadi.
-    <ul>
-    <li><code>ping</code> "Echo Request" va "Echo Reply" ICMP xabarlarini ishlatadi.</li>
-    </ul>
-</li>
-<li><strong>Boshqaruv, ma'lumot emas:</strong> Veb-sahifalar yoki elektron pochta kabi ilova ma'lumotlarini tashimaydi.</li>
-<li><strong>Tarmoq qatlamida ishlaydi:</strong> U IP bilan birga ishlaydi. ICMP xabarlari IP paketlari ichiga joylashtiriladi.</li>
-<li><strong>Ishonchsiz:</strong> ICMP xabarlarining o'zi ishonchli yetkazib berilishini kafolatlamaydi (garchi ular ko'pincha yetib borsa ham).</li>
-</ul>
-<p>ICMP tarmoq muammolarini aniqlash va tarmoqning umumiy holatini tushunish uchun muhim vositadir.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-5, 4. What are malicious programs?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Zararli dasturlar (Malicious Programs yoki Malware)</strong> bu kompyuter tizimlariga, tarmoqlariga yoki foydalanuvchilariga ularning roziligisiz zarar yetkazish yoki ulardan foydalanish uchun mo'ljallangan dasturiy ta'minotdir.</p>
-<h5>Keng tarqalgan zararli dastur turlari:</h5>
-<ul>
-<li><strong>Viruslar (Viruses):</strong> O'zlarini qonuniy dasturlarga biriktiradi va ushbu dasturlar ishga tushirilganda tarqaladi. Ular fayllarni buzishi, o'chirishi yoki tizim ishini sekinlashtirishi mumkin.</li>
-<li><strong>Chuvalchanglar (Worms):</strong> O'z-o'zini ko'paytiradigan dasturlar bo'lib, xost dasturiga ehtiyoj sezmasdan tarmoqlar bo'ylab tarqaladi. Ular tarmoq trafigini ortiqcha yuklashi va xavfsizlik zaifliklaridan foydalanishi mumkin.</li>
-<li><strong>Troyanlar (Trojan Horses):</strong> O'zlarini qonuniy dasturiy ta'minot sifatida niqoblaydi, lekin dastur ishga tushirilganda bajariladigan zararli kodni o'z ichiga oladi. Ular ma'lumotlarni o'g'irlashi, tizimga ruxsatsiz kirishni ta'minlashi yoki boshqa zararli dasturlarni o'rnatishi mumkin.</li>
-<li><strong>Shifrlagich-tovlamachilar (Ransomware):</strong> Foydalanuvchining fayllarini shifrlaydi va ularni shifrdan chiqarish uchun to'lov (tovlama) talab qiladi.</li>
-<li><strong>Josus dasturlar (Spyware):</strong> Foydalanuvchining faoliyati haqida yashirincha ma'lumot to'playdi va uni uchinchi shaxsga yuboradi (masalan, klaviatura bosishlari, veb-sayt tarixini kuzatish).</li>
-<li><strong>Reklama dasturlari (Adware):</strong> Istalmagan reklamalarni ko'rsatadi, ba'zan josuslik funksiyalarini ham o'z ichiga olishi mumkin.</li>
-<li><strong>Botnetlar (Botnets):</strong> Zararlangan kompyuterlar tarmog'i ("botlar") bo'lib, ular markazlashtirilgan holda kiberjinoyatchi tomonidan boshqariladi va spam yuborish, DDoS hujumlari kabi zararli harakatlar uchun ishlatiladi.</li>
-<li><strong>Rootkitlar (Rootkits):</strong> Zararli dasturlarning mavjudligini va faoliyatini yashirish uchun mo'ljallangan dasturlar to'plami, tizimga chuqur kirib oladi.</li>
-</ul>
-<p>Zararli dasturlardan himoyalanish uchun antivirus dasturlarini ishlatish, dasturiy ta'minotni yangilab turish va ehtiyotkorlik bilan internetdan foydalanish muhim.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-5, 5. Protocols used for data transmission at the data link layer?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p>Kanal qatlami (Data Link Layer - OSI modelining 2-qatlami) ikkita to'g'ridan-to'g'ri ulangan tugunlar o'rtasida ishonchli ma'lumotlarni uzatish bilan shug'ullanadi. Ushbu qatlamda ma'lumotlarni uzatish uchun ishlatiladigan keng tarqalgan protokollar quyidagilar:</p>
-<ul>
-<li><strong>Ethernet:</strong>
-    <ul>
-    <li>Eng keng tarqalgan lokal tarmoq (LAN) texnologiyasi. U ma'lumotlarning kadrlarga (frames) qanday formatlanishini va qurilmalarning umumiy muhitga kirish usulini (masalan, CSMA/CD yordamida) belgilaydi. MAC manzillarini ishlatadi.</li>
-    </ul>
-</li>
-<li><strong>PPP (Point-to-Point Protocol - Nuqtadan-Nuqtaga Protokol):</strong>
-    <ul>
-    <li>Ko'pincha ikkita tarmoq tugunlari o'rtasida to'g'ridan-to'g'ri aloqalarni o'rnatish uchun ishlatiladi, masalan, dial-up ulanishlar yoki ba'zi keng polosali ulanishlar (PPPoE - PPP over Ethernet). Autentifikatsiya, siqish va xatoliklarni aniqlash kabi xususiyatlarni taqdim etadi.</li>
-    </ul>
-</li>
-<li><strong>HDLC (High-Level Data Link Control - Yuqori Darajadagi Kanal Boshqaruvi Protokoli):</strong>
-    <ul>
-    <li>Nuqtadan-nuqtaga va ko'p nuqtali ulanishlar uchun ishlatiladigan bitga yo'naltirilgan protokol. Ko'pincha WAN ulanishlarida ishlatilgan. Boshqa ko'plab kanalli protokollar uchun asos bo'lgan (masalan, PPP, Frame Relay).</li>
-    </ul>
-</li>
-<li><strong>Frame Relay:</strong>
-    <ul>
-    <li>Eskirgan WAN texnologiyasi bo'lib, ulanishga yo'naltirilgan kanal qatlami aloqasini ta'minlaydi. Paketlarni kommutatsiya qilish texnologiyasining bir turi bo'lib, bir nechta virtual kanallarni bitta jismoniy liniya orqali uzatish imkonini beradi.</li>
-    </ul>
-</li>
-<li><strong>ATM (Asynchronous Transfer Mode - Asinxron Uzatish Rejimi):</strong>
-    <ul>
-    <li>Kichik, qat'iy o'lchamdagi katakchalarga (cells) asoslangan kommutatsiya texnologiyasi. Ham LAN, ham WAN uchun ishlatilgan va Xizmat Sifati (QoS) imkoniyatlari bilan mashhur bo'lgan. Hozirda kamroq qo'llaniladi.</li>
-    </ul>
-</li>
-<li><strong>Wi-Fi (IEEE 802.11 protokollari):</strong>
-    <ul>
-    <li>Simsiz lokal tarmoqlar uchun kanal qatlami protokollarini (shu jumladan MAC kichik qatlamini) belgilaydi. CSMA/CA (Collision Avoidance) kabi muhitga kirish usullaridan foydalanadi.</li>
-    </ul>
-</li>
-</ul>
-<p>Bu protokollar ma'lumotlarning kadrlarga qadoqlanishi, jismoniy manzillanishi (MAC), xatoliklarni aniqlash va muhitga kirishni boshqarish kabi vazifalarni bajaradi.</p>
-</div>
-</div>
-</div>
-<!-- VERSION-5 TUGASHI -->
-
-<!-- QOLGAN 15 TA VERSION XUDDI SHU TARTIBDA HTML FORMATIDA BO'LADI. BU YERDA FAQAT BIR NECHTA VERSION KO'RSATILDI. -->
-<!-- ... (Version 6 dan Version 20 gacha bo'lgan HTML kodlari shu yerda davom etadi) ... -->
-
-<!-- VERSION-20 BOSHLANISHI (NAMUNA UCHUN OXIRGISI) -->
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-20, 1. What kind of protocol is TCP?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>TCP (Transmission Control Protocol - Uzatishni Boshqarish Protokoli)</strong> bu TCP/IP to'plamidagi asosiy <strong>transport qatlami</strong> protokolodir. U quyidagi xususiyatlari bilan mashhur:</p>
-<ul>
-<li><strong>Aloqaga yo'naltirilgan (Connection-Oriented):</strong> Ikki aloqa qiluvchi qurilma o'rtasida har qanday ma'lumot yuborilishidan oldin aloqa ("uch tomonlama qo'l siqish" - three-way handshake) o'rnatadi. Ushbu aloqa ma'lumotlarni uzatish tugaguniga qadar saqlanadi va keyin tugatiladi.</li>
-<li><strong>Ishonchli (Reliable):</strong> TCP bir uchdan yuborilgan ma'lumotlarning boshqa uch tomonidan to'g'ri, tartibda va takrorlanmasdan qabul qilinishini kafolatlaydi.
-    <ul>
-    <li><strong>Tasdiqlashlar (Acknowledgements - ACKs):</strong> Qabul qiluvchi qabul qilingan ma'lumot segmentlari uchun yuboruvchiga tasdiqlashlarni qaytaradi.</li>
-    <li><strong>Qayta uzatish (Retransmission):</strong> Agar yuboruvchi ma'lum bir vaqt ichida ACK olmasa, u yo'qolgan segmentni qayta yuboradi.</li>
-    <li><strong>Ketma-ketlik (Sequencing):</strong> Ma'lumotlar segmentlarga bo'linadi va har bir segment raqamlanadi, shunda ular manzilida to'g'ri tartibda qayta yig'ilishi mumkin.</li>
-    </ul>
-</li>
-<li><strong>Oqim nazorati (Flow Control):</strong> Tez yuboruvchining sekin qabul qiluvchini ortiqcha yuklashini oldini olish uchun ma'lumotlarni uzatish tezligini boshqaradi.</li>
-<li><strong>Tirbandlik nazorati (Congestion Control):</strong> Tarmoq sharoitlariga qarab yuborish tezligini sozlash orqali tarmoq tirbandligini oldini olishga yordam beradi.</li>
-<li><strong>Baytlar oqimi (Byte Stream):</strong> TCP ma'lumotlarni uzluksiz baytlar oqimi sifatida qaraydi.</li>
-<li><strong>Foydalanish sohalari:</strong> Ishonchlilik muhim bo'lgan ilovalar uchun ishlatiladi, masalan, veb-brauzer (HTTP/HTTPS), elektron pochta (SMTP, POP3, IMAP), fayl uzatish (FTP) va xavfsiz qobiq (SSH).</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-20, 2. What are multiplexing and demultiplexing processes?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Multiplekslash (Multiplexing)</strong> va <strong>Demultiplekslash (Demultiplexing)</strong> tarmoqlarda cheklangan resurslardan (masalan, bitta aloqa kanali) samarali foydalanish uchun muhim jarayonlardir.</p>
-<h5>Multiplekslash (Multiplexing):</h5>
-<ul>
-<li><strong>Ta'rifi:</strong> Bir nechta signal yoki ma'lumotlar oqimini bitta umumiy aloqa kanaliga yoki muhitiga birlashtirish jarayoni. Tasavvur qiling, bir nechta yo'l chizig'i bitta katta magistralga qo'shiladi.</li>
-<li><strong>Maqsadi:</strong> Umumiy resursdan (kabel, radiochastota diapazoni) samarali foydalanish. Xarajatlarni kamaytirish va o'tkazuvchanlik qobiliyatini oshirish.</li>
-<li><strong>Misollar:</strong>
-    <ul>
-    <li><strong>Vaqtinchalik multiplekslash (Time Division Multiplexing - TDM):</strong> Har bir manbaga umumiy kanalda uzatish uchun ma'lum bir vaqt oralig'i (time slot) ajratiladi.</li>
-    <li><strong>Chastotali multiplekslash (Frequency Division Multiplexing - FDM):</strong> Har bir manbaga umumiy kanal ichida turli chastota diapazoni ajratiladi.</li>
-    <li><strong>To'lqin uzunligi bo'yicha multiplekslash (Wavelength Division Multiplexing - WDM/DWDM):</strong> Optik tolalarda ishlatiladi, bunda turli ma'lumotlar oqimlari turli yorug'lik to'lqin uzunliklarida (ranglarida) uzatiladi.</li>
-    <li><strong>Statistik multiplekslash:</strong> O'tkazuvchanlik qobiliyatini talabga qarab ajratadi, notekis (bursty) trafik uchun samaraliroq.</li>
-    </ul>
-</li>
-</ul>
-<h5>Demultiplekslash (Demultiplexing):</h5>
-<ul>
-<li><strong>Ta'rifi:</strong> Teskari jarayon. Qabul qiluvchi tomonda birlashtirilgan signal yana o'zining asl alohida ma'lumotlar oqimlariga ajratiladi va ular tegishli manzillariga yo'naltiriladi. Bu magistraldan chiqayotgan trafikning o'ziga xos chiqish yo'llariga yo'naltirilishiga o'xshaydi.</li>
-<li><strong>Talab:</strong> Demultipleksor signallarning qanday birlashtirilganligini bilishi kerak, shunda ularni to'g'ri ajrata oladi. Masalan, transport qatlamida port raqamlari demultiplekslash uchun ishlatiladi, ya'ni kelgan segment qaysi ilovaga tegishli ekanligini aniqlaydi.</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-20, 3. Explain the concept of the Telecommunication Management Network (TMN).</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>TMN (Telecommunication Management Network - Telekommunikatsiya Boshqaruv Tarmog'i)</strong> bu telekommunikatsiya tarmoqlarini boshqarish uchun ITU-T tomonidan belgilangan model yoki arxitekturadir. U turli boshqaruv funksiyalari va tizimlari qanday o'zaro ta'sir qilishi kerakligi uchun asosni taqdim etadi.</p>
-<h5>Asosiy maqsadlari va prinsiplari:</h5>
-<ul>
-<li>Telekommunikatsiya tarmoqlari va xizmatlarini samarali boshqarish uchun standartlashtirilgan yondashuvni ta'minlash.</li>
-<li>Turli ishlab chiqaruvchilarning uskunalari va boshqaruv tizimlarining o'zaro ishlashini (interoperability) osonlashtirish.</li>
-<li>Boshqaruv operatsiyalarini avtomatlashtirish va optimallashtirish.</li>
-</ul>
-<h5>TMN ning funksional sohalari (FCAPS):</h5>
-<p>TMN beshta asosiy boshqaruv funksional sohasini belgilaydi, ular FCAPS qisqartmasi bilan tanilgan:</p>
-<ul>
-<li><strong>F - Fault Management (Nosozliklarni boshqarish):</strong> Tarmoqdagi nosozliklarni aniqlash, izolyatsiya qilish, tuzatish va qayd etish.</li>
-<li><strong>C - Configuration Management (Konfiguratsiyani boshqarish):</strong> Tarmoq qurilmalari va xizmatlarini sozlash, nazorat qilish va inventarizatsiya qilish.</li>
-<li><strong>A - Accounting Management (Hisob-kitobni boshqarish / Billing):</strong> Tarmoqdan foydalanishni hisobga olish va billing uchun ma'lumotlarni to'plash.</li>
-<li><strong>P - Performance Management (Ishlash samaradorligini boshqarish):</strong> Tarmoqning ishlashini kuzatish, tahlil qilish va optimallashtirish, xizmat sifatini (QoS) ta'minlash.</li>
-<li><strong>S - Security Management (Xavfsizlikni boshqarish):</strong> Tarmoq resurslarini ruxsatsiz kirishdan himoya qilish, xavfsizlik siyosatlarini amalga oshirish.</li>
-</ul>
-<h5>TMN ning mantiqiy qatlamli arxitekturasi:</h5>
-<ul>
-<li><strong>Biznes boshqaruvi qatlami (Business Management Layer - BML)</strong></li>
-<li><strong>Xizmat boshqaruvi qatlami (Service Management Layer - SML)</strong></li>
-<li><strong>Tarmoq boshqaruvi qatlami (Network Management Layer - NML)</strong></li>
-<li><strong>Element boshqaruvi qatlami (Element Management Layer - EML)</strong></li>
-<li><strong>Tarmoq elementi qatlami (Network Element Layer - NEL)</strong></li>
-</ul>
-<p>TMN murakkab, ko'pincha ko'p vendorli telekommunikatsiya tarmoqlarini samarali va standartlashtirilgan boshqarish imkonini berishga qaratilgan.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-20, 4. What kind of technology is E-PON?</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>E-PON (Ethernet Passive Optical Network - Ethernet Passiv Optik Tarmog'i)</strong> bu passiv optik tarmoqlar uchun yana bir standart bo'lib, u ham FTTH (Uyga Tolali Optika) uchun ishlatiladi. U IEEE tomonidan standartlashtirilgan (IEEE 802.3ah).</p>
-<h5>Asosiy xususiyatlari va G-PON bilan taqqoslash:</h5>
-<ul>
-<li><strong>Ethernet asosidagi:</strong> Nomidan ko'rinib turibdiki, u ma'lumotlarni uzatish uchun standart Ethernet kadrlaridan (frames) foydalanadi. Bu esa uni mavjud Ethernet LAN tarmoqlari bilan yaxshi integratsiya qilish imkonini beradi.</li>
-<li><strong>Tejamkorlik:</strong> Ko'pincha Ethernet komponentlarining keng tarqalganligi va arzonligi tufayli ba'zi hollarda G-PON ga qaraganda tejamkorroq hisoblanadi.</li>
-<li><strong>Simmetrik o'tkazuvchanlik:</strong> Odatda simmetrik o'tkazuvchanlikni taklif qiladi (yuqoriga va pastga yo'nalishda bir xil tezlik, masalan, 1 Gbit/s yuqoriga / 1 Gbit/s pastga), ammo o'zgarishlar mavjud.</li>
-<li><strong>Standartlashtirish:</strong> E-PON IEEE tomonidan, G-PON esa ITU-T tomonidan standartlashtirilgan. Ular PON bozorida raqobatlashuvchi texnologiyalardir.</li>
-<li><strong>Qo'llanilishi:</strong> Asosan Osiyo mamlakatlarida keng tarqalgan, ammo boshqa hududlarda ham qo'llaniladi.</li>
-<li><strong>Tarmoq arxitekturasi:</strong> G-PON kabi, E-PON ham bitta markaziy ofis tolasi (OLT - Optical Line Terminal) va bir nechta abonent qurilmalari (ONU - Optical Network Unit yoki ONT - Optical Network Terminal) o'rtasida passiv optik ajratgichlardan foydalanadigan nuqtadan-ko'p nuqtaga (point-to-multipoint) arxitekturaga ega.</li>
-</ul>
-<p>E-PON va G-PON ikkalasi ham yuqori tezlikdagi internet, IPTV va VoIP xizmatlarini optik tola orqali yetkazib berish uchun samarali texnologiyalardir.</p>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<button class="accordion-button" aria-expanded="false">
-<span class="accordion-title">Version-20, 5. Explain the router device.</span>
-<span class="accordion-icon open-icon">+</span>
-<span class="accordion-icon close-icon">×</span>
-</button>
-<div class="accordion-content">
-<div class="accordion-content-inner">
-<p><strong>Marshrutizator (Router)</strong> bu turli tarmoqlarni bir-biriga ulash va ular o'rtasida ma'lumotlar paketlarini yo'naltirish (marshrutlash) vazifasini bajaradigan tarmoq qurilmasidir.</p>
-<h5>Asosiy vazifalari va xususiyatlari:</h5>
-<ul>
-<li><strong>Tarmoqlararo ulanish:</strong> Lokal tarmoqni (LAN) global tarmoqqa (WAN, masalan, Internet) yoki boshqa lokal tarmoqlarga ulash imkonini beradi.</li>
-<li><strong>Marshrutlash (Routing):</strong> Paketning manzil IP-manziliga qarab, uni keyingi eng yaxshi yo'nalishga (next hop) yuborish to'g'risida qaror qabul qiladi. Buning uchun u o'zining marshrutlash jadvalidan (routing table) foydalanadi.</li>
-<li><strong>Tarmoq qatlamida (Layer 3) ishlash:</strong> OSI modelining tarmoq qatlamida ishlaydi va IP-manzillar asosida ish ko'radi.</li>
-<li><strong>Keng tarqatish domenlarini ajratish (Broadcast Domain Segmentation):</strong> Kommutatorlardan (2-qatlam) farqli o'laroq, marshrutizatorlar sukut bo'yicha keng tarqatish kadrlarini (broadcast frames) uzatmaydi. Bu tarmoqlarni segmentlarga ajratishga va keraksiz trafikni kamaytirishga yordam beradi.</li>
-<li><strong>Marshrutlash jadvallari:</strong> U erishishi mumkin bo'lgan tarmoqlar va ularga boradigan eng yaxshi yo'llar haqida ma'lumot saqlaydi. Bu jadvallar statik ravishda (qo'lda) yoki dinamik ravishda (RIP, OSPF, EIGRP, BGP kabi marshrutlash protokollari yordamida) yangilanib turishi mumkin.</li>
-<li><strong>Paketlarni filtrlash:</strong> Xavfsizlik devori (firewall) funksiyalari orqali ma'lum paketlarni bloklashi yoki ruxsat berishi mumkin.</li>
-<li><strong>Qo'shimcha funksiyalar:</strong> Zamonaviy marshrutizatorlar ko'pincha NAT (Network Address Translation), DHCP-server (Dynamic Host Configuration Protocol), VPN (Virtual Private Network) xizmatlarini ham taqdim etadi. Uy routerlari odatda kommutator va simsiz kirish nuqtasi funksiyalarini ham o'z ichiga oladi.</li>
-</ul>
-<p>Marshrutizatorlar Internetning ishlashi uchun muhim qurilmalar bo'lib, dunyodagi son-sanoqsiz tarmoqlarni bir-biriga bog'laydi.</p>
-</div>
-</div>
-</div>
-<!-- VERSION-20 TUGASHI -->
-    <script >
-        document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.simple-button');
-    const messageArea = document.getElementById('message-area');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const buttonText = this.textContent;
-            const message = `Siz "${buttonText}" tugmasini bosdingiz!`;
-
-            console.log(message);
-
-            if (messageArea) {
-                messageArea.textContent = message;
+        for (let i = 0; i < lowerCaseText.length; i++) {
+            if (vowels.includes(lowerCaseText[i])) {
+                vowelCount++;
             }
+        }
+        resultSpan.textContent = vowelCount;
+    }
+</script>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
 
-         
+<h4>5. PHP: How we connect PHP to MySQL?</h4>
+            <p><em>(This answer is similar to TEST-3, Question 5. See above for more detailed examples.)</em></p>
+            <p>PHP connects to MySQL using extensions like MySQLi or PDO.</p>
+            <h5>Key Methods:</h5>
+            <ul>
+                <li><strong>MySQLi (Procedural):</strong> <code>$conn = mysqli_connect("localhost", "user", "pass", "db");</code></li>
+                <li><strong>MySQLi (OOP):</strong> <code>$conn = new mysqli("localhost", "user", "pass", "db");</code></li>
+                <li><strong>PDO:</strong> <code>$pdo = new PDO("mysql:host=localhost;dbname=db;charset=utf8mb4", "user", "pass", $options);</code></li>
+            </ul>
+            <p>Always check for connection errors: <code>mysqli_connect_error()</code> or <code>$conn->connect_error</code> for MySQLi, or a <code>try-catch</code> block for PDO.</p>
+        </div>
+    </div>
+</div>
+
+<!-- TEST-5 -->
+<div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-5">
+        <span class="accordion-title">TEST-5</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-5">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Working with CSS properties in the Document Object Model (DOM)</li>
+                <li class="theory-question">Working with lists in HTML</li>
+                <li class="theory-question">Advantages and disadvantages of using CMS</li>
+                <li class="practice-question">JS: create a function to calculate three numbers sum</li>
+                <li class="practice-question">PHP: How PHP create a MYSQL Database?</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-5:</h3>
+
+            <h4>1. Working with CSS properties in the Document Object Model (DOM)</h4>
+            <p>JavaScript can interact with the DOM to dynamically change the style of HTML elements.</p>
+            <h5>Accessing and Modifying CSS Properties:</h5>
+            <p>Use the <code>style</code> property of a DOM element object. CSS property names are usually camelCased in JavaScript (e.g., <code>backgroundColor</code> for <code>background-color</code>).</p>
+            <pre><code>let myElement = document.getElementById("myDiv");
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+if (myElement) {
+myElement.style.backgroundColor = "lightblue";
+myElement.style.color = "navy";
+myElement.style.fontSize = "20px";
+myElement.style.display = "none"; // Hides
+}</code></pre>
+<h5>Getting CSS Properties:</h5>
+<ul>
+<li><code>element.style.propertyName</code>: Only retrieves inline styles.</li>
+<li><code>window.getComputedStyle(element).getPropertyValue("property-name")</code>: Gets the actual computed style, including styles from stylesheets.
+<pre><code>let computedStyle = window.getComputedStyle(myElement);
+let actualColor = computedStyle.getPropertyValue("color");</code></pre>
+</li>
+</ul>
+<h5>Manipulating CSS Classes (Recommended):</h5>
+<p>A better practice is to add/remove CSS classes defined in your stylesheet.</p>
+<pre><code>// CSS: .highlight { background-color: yellow; }
+// JS:
+myElement.classList.add("highlight");
+myElement.classList.remove("highlight");
+myElement.classList.toggle("hidden");
+if (myElement.classList.contains("highlight")) { /* ... */ }</code></pre>
+
+<h4>2. Working with lists in HTML</h4>
+            <p><em>(This answer is the same as in TEST-2, Question 1. See above for details.)</em></p>
+             <p>HTML provides three main types of lists:</p>
+            <ul>
+                <li><strong>Unordered Lists (<code><ul></code>):</strong> Items are typically marked with bullets. Used when order doesn't matter. Each item is <code><li></code>.</li>
+                <li><strong>Ordered Lists (<code><ol></code>):</strong> Items are marked with numbers or letters. Used when order is important. Each item is <code><li></code>.</li>
+                <li><strong>Description Lists (<code><dl></code>):</strong> Used for terms (<code><dt></code>) and their descriptions (<code><dd></code>).</li>
+            </ul>
+
+            <h4>3. Advantages and disadvantages of using CMS</h4>
+            <p><em>(This answer is the same as in TEST-1, Question 3. See above for details.)</em></p>
+             <p>A Content Management System (CMS) is software that helps users create, manage, and modify content on a website without specialized technical knowledge.</p>
+            <h5>Advantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Ease of Use:</strong> User-friendly interfaces for content creation and management.</li>
+                <li><strong>Rapid Development:</strong> Pre-built templates and plugins speed up website creation.</li>
+                <li><strong>User Roles and Permissions:</strong> Built-in systems for managing different user access levels.</li>
+                <li><strong>Themes and Templates:</strong> Wide variety of designs available.</li>
+                <li><strong>Plugins and Extensions:</strong> Extend functionality easily (SEO, e-commerce, forms).</li>
+                <li><strong>Community Support:</strong> Large communities provide ample documentation and help.</li>
+                <li><strong>SEO-Friendly Features:</strong> Many CMSs offer tools or plugins for search engine optimization.</li>
+            </ul>
+            <h5>Disadvantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Security Risks:</strong> Popular CMSs can be targets for hackers if not kept updated.</li>
+                <li><strong>Performance Issues:</strong> Can be slower than custom-coded sites, especially with many plugins.</li>
+                <li><strong>Customization Limits:</strong> Highly specific functionalities might be hard to implement.</li>
+                <li><strong>Bloat:</strong> May come with many unneeded features.</li>
+                <li><strong>Learning Curve:</strong> Complex CMSs still require time to learn advanced features.</li>
+                <li><strong>Update Compatibility:</strong> Updates can sometimes cause issues with themes or plugins.</li>
+            </ul>
+
+            <h4>4. JS: create a function to calculate three numbers sum</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head>
+    <title>Sum of Three Numbers</title>
+</head>
+<body>
+    <h2>Calculate Sum of Three Numbers</h2>
+    Num1: <input type="number" id="n1" value="5"><br>
+    Num2: <input type="number" id="n2" value="10"><br>
+    Num3: <input type="number" id="n3" value="15"><br>
+    <button onclick="displaySum()">Calculate Sum</button>
+    <p>Result: <span id="sumResult"></span></p>
+
+<script>
+    function calculateThreeNumbersSum(a, b, c) {
+        const numA = parseFloat(a);
+        const numB = parseFloat(b);
+        const numC = parseFloat(c);
+        if (isNaN(numA) || isNaN(numB) || isNaN(numC)) {
+            return "Invalid input.";
+        }
+        return numA + numB + numC;
+    }
+
+    function displaySum() {
+        const val1 = document.getElementById("n1").value;
+        const val2 = document.getElementById("n2").value;
+        const val3 = document.getElementById("n3").value;
+        const sum = calculateThreeNumbersSum(val1, val2, val3);
+        document.getElementById("sumResult").textContent = sum;
+    }
+</script>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
+
+<h4>5. PHP: How PHP create a MYSQL Database?</h4>
+            <p>PHP can create a MySQL database by executing the <code>CREATE DATABASE</code> SQL statement. The MySQL user PHP connects with must have the <code>CREATE</code> privilege.</p>
+            <h5>Using MySQLi (Object-Oriented):</h5>
+            <pre><code><?php
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+$servername = "localhost";
+$username = "your_admin_username"; // User with CREATE DATABASE privilege
+$password = "your_admin_password";
+
+// Create connection to MySQL server
+
+𝑐
+𝑜
+𝑛
+𝑛
+=
+𝑛
+𝑒
+𝑤
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+𝑖
+(
+conn=newmysqli(
+servername, $username, 
+𝑝
+𝑎
+𝑠
+𝑠
+𝑤
+𝑜
+𝑟
+𝑑
+)
+;
+𝑖
+𝑓
+(
+password);if(
+conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+$dbNameToCreate = "myNewDB";
+$sql = "CREATE DATABASE " . $dbNameToCreate;
+
+if (
+𝑐
+𝑜
+𝑛
+𝑛
+−
+>
+𝑞
+𝑢
+𝑒
+𝑟
+𝑦
+(
+conn−>query(
+sql) === TRUE) {
+echo "Database '" . $dbNameToCreate . "' created successfully.";
+} else {
+echo "Error creating database: " . $conn->error;
+}
+$conn->close();
+?></code></pre>
+<h5>Using PDO:</h5>
+<pre><code><?php
+$servername = "localhost";
+$username = "your_admin_username";
+$password = "your_admin_password";
+$charset = "utf8mb4";
+
+𝑑
+𝑠
+𝑛
+=
+"
+𝑚
+𝑦
+𝑠
+𝑞
+𝑙
+:
+ℎ
+𝑜
+𝑠
+𝑡
+=
+dsn="mysql:host=
+servername;charset=$charset"; // No dbname initially
+$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+
+try {
+
+𝑝
+𝑑
+𝑜
+=
+𝑛
+𝑒
+𝑤
+𝑃
+𝐷
+𝑂
+(
+pdo=newPDO(
+dsn, $username, $password, $options);
+$dbNameToCreate = "myNewDB_PDO";
+$sql = "CREATE DATABASE " . $dbNameToCreate . ""; // Backticks are good practice
+
+𝑝
+𝑑
+𝑜
+−
+>
+𝑒
+𝑥
+𝑒
+𝑐
+(
+pdo−>exec(
+sql);
+echo "Database '" . $dbNameToCreate . "' created successfully.";
+} catch (\PDOException $e) {
+die("Error: " . $e->getMessage());
+}
+$pdo = null;
+?></code></pre>
+<p><strong>Security Note:</strong> In production, it's safer to create databases manually or with dedicated setup scripts and use less privileged users for regular application operations.</p>
+</div>
+</div>
+</div>
+
+<!-- TEST-6 -->
+<div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-6">
+        <span class="accordion-title">TEST-6</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-6">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Working with forms in HTML.</li>
+                <li class="theory-question">CSS font properties.</li>
+                <li class="theory-question">Advantages and disadvantages of using CMS</li>
+                <li class="practice-question">JS. write code to replaces "World" with "Dunyo" in a string</li>
+                <li class="practice-question">PHP: Create a simple PHP form that allows a user to enter two numbers using a form and displays their sum.</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+
+            <hr>
+            <h3>Answers for TEST-6:</h3>
+
+            <h4>1. Working with forms in HTML.</h4>
+            <p>HTML forms (<code><form></code> element) collect user input. Key attributes: <code>action</code> (submission URL) and <code>method</code> (<code>GET</code> or <code>POST</code>).</p>
+            <h5>Common Form Input Elements:</h5>
+            <ul>
+                <li><code><input type="text"></code>, <code><input type="password"></code>, <code><input type="email"></code>, <code><input type="number"></code></li>
+                <li><code><input type="checkbox"></code>, <code><input type="radio"></code></li>
+                <li><code><input type="file"></code> (requires <code>enctype="multipart/form-data"</code> on form)</li>
+                <li><code><input type="submit"></code>, <code><input type="reset"></code>, <code><input type="button"></code></li>
+                <li><code><textarea></textarea></code> (multi-line text)</li>
+                <li><code><select></code> (with <code><option></code> elements for dropdowns)</li>
+                <li><code><label for="inputId">Label Text</label></code> (associates text with an input)</li>
+            </ul>
+            <h5>Common Attributes for Input Elements:</h5>
+            <p><code>name</code> (crucial for server-side processing), <code>value</code>, <code>id</code>, <code>placeholder</code>, <code>required</code>, <code>readonly</code>, <code>disabled</code>.</p>
+            <h5>Example Form:</h5>
+            <pre><code><form action="/submit.php" method="post">
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="user_name" required><br>
+<button type="submit">Submit</button>
+
+</form></code></pre>
+
+<h4>2. CSS font properties.</h4>
+            <p>CSS font properties control text appearance.</p>
+            <h5>Key Properties:</h5>
+            <ul>
+                <li><strong><code>font-family</code>:</strong> List of font names (e.g., <code>"Helvetica Neue", Arial, sans-serif</code>).</li>
+                <li><strong><code>font-size</code>:</strong> Size of the font (e.g., <code>1rem</code>, <code>16px</code>, <code>120%</code>).</li>
+                <li><strong><code>font-weight</code>:</strong> Boldness (e.g., <code>normal</code>, <code>bold</code>, <code>400</code>, <code>700</code>).</li>
+                <li><strong><code>font-style</code>:</strong> Style (e.g., <code>normal</code>, <code>italic</code>).</li>
+                <li><strong><code>line-height</code>:</strong> Space between lines of text (e.g., <code>1.5</code>, <code>20px</code>).</li>
+                <li><strong><code>color</code>:</strong> Text color.</li>
+            </ul>
+            <h5>Shorthand <code>font</code> property:</h5>
+            <p><code>font: [style] [variant] [weight] size[/line-height] family;</code> (size and family are required)</p>
+            <pre><code>p { font: italic bold 1em/1.6 "Georgia", serif; }</code></pre>
+            <h5><code>@font-face</code> Rule:</h5>
+            <p>Use custom fonts by linking to font files (<code>.woff2</code>, <code>.woff</code>).</p>
+            <pre><code>@font-face {
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+font-family: 'MyCustomFont';
+src: url('customfont.woff2') format('woff2');
+}
+body { font-family: 'MyCustomFont', sans-serif; }</code></pre>
+
+<h4>3. Advantages and disadvantages of using CMS</h4>
+            <p><em>(This answer is the same as in TEST-1, Question 3. See above for details.)</em></p>
+             <p>A Content Management System (CMS) is software that helps users create, manage, and modify content on a website without specialized technical knowledge.</p>
+            <h5>Advantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Ease of Use:</strong> User-friendly interfaces for content creation and management.</li>
+                <li><strong>Rapid Development:</strong> Pre-built templates and plugins speed up website creation.</li>
+                <li><strong>User Roles and Permissions:</strong> Built-in systems for managing different user access levels.</li>
+                <li><strong>Themes and Templates:</strong> Wide variety of designs available.</li>
+                <li><strong>Plugins and Extensions:</strong> Extend functionality easily (SEO, e-commerce, forms).</li>
+                <li><strong>Community Support:</strong> Large communities provide ample documentation and help.</li>
+                <li><strong>SEO-Friendly Features:</strong> Many CMSs offer tools or plugins for search engine optimization.</li>
+            </ul>
+            <h5>Disadvantages of using a CMS:</h5>
+            <ul>
+                <li><strong>Security Risks:</strong> Popular CMSs can be targets for hackers if not kept updated.</li>
+                <li><strong>Performance Issues:</strong> Can be slower than custom-coded sites, especially with many plugins.</li>
+                <li><strong>Customization Limits:</strong> Highly specific functionalities might be hard to implement.</li>
+                <li><strong>Bloat:</strong> May come with many unneeded features.</li>
+                <li><strong>Learning Curve:</strong> Complex CMSs still require time to learn advanced features.</li>
+                <li><strong>Update Compatibility:</strong> Updates can sometimes cause issues with themes or plugins.</li>
+            </ul>
+
+            <h4>4. JS. write code to replaces "World" with "Dunyo" in a string</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head><title>String Replace</title></head>
+<body>
+    <p id="originalP">Original: Hello World! This World is fun.</p>
+    <p id="replacedP">Replaced: </p>
+    <button onclick="doReplace()">Replace</button>
+    <script>
+        function doReplace() {
+            let originalString = "Hello World! This World is fun.";
+            // To replace all occurrences (case-sensitive)
+            let newString = originalString.replace(/World/g, "Dunyo");
+            // To replace only the first: originalString.replace("World", "Dunyo");
+
+document.getElementById("originalP").textContent = "Original: " + originalString;
+        document.getElementById("replacedP").textContent = "Replaced: " + newString;
+        console.log(newString);
+    }
+</script>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+</body>
+</html></code></pre>
+
+<h4>5. PHP: Create a simple PHP form that allows a user to enter two numbers using a form and displays their sum.</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head><title>PHP Sum</title></head>
+<body>
+    <h2>PHP Sum Calculator</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Num1: <input type="number" step="any" name="n1_php" required><br><br>
+        Num2: <input type="number" step="any" name="n2_php" required><br><br>
+        <input type="submit" name="submit_sum" value="Calculate Sum">
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_sum'])) {
+        if (isset($_POST['n1_php']) && is_numeric($_POST['n1_php']) && 
+            isset($_POST['n2_php']) && is_numeric($_POST['n2_php'])) {
+            $num1 = floatval($_POST['n1_php']);
+            $num2 = floatval($_POST['n2_php']);
+            $sum = $num1 + $num2;
+            echo "<h3>Result:</h3>";
+            echo "<p>" . htmlspecialchars($num1) . " + " . htmlspecialchars($num2) . " = " . htmlspecialchars($sum) . "</p>";
+        } else {
+            echo "<h3>Error:</h3><p>Please enter valid numbers.</p>";
+        }
+    }
+    ?>
+</body>
+</html></code></pre>
+            </div>
+        </div>
+    </div>
+
+<!-- TEST-7 -->
+<div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-7">
+        <span class="accordion-title">TEST-7</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-7">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Working with tables in HTML.</li>
+                <li class="theory-question">CSS box model.</li>
+                <li class="theory-question">The type of CMS technology</li>
+                <li class="practice-question">JS. Create a webpage where clicking a button changes the background color of the page.</li>
+                <li class="practice-question">PHP. Create a PHP form where the user enters a number. When submitted, the script should display whether the number is even or odd.</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-7:</h3>
+
+            <h4>1. Working with tables in HTML.</h4>
+            <p>HTML tables (<code><table></code>) display data in rows and columns.</p>
+            <h5>Basic Structure:</h5>
+            <ul>
+                <li><code><table></code>: Main table container.</li>
+                <li><code><tr></code>: Table row.</li>
+                <li><code><th></code>: Table header cell (bold, centered by default).</li>
+                <li><code><td></code>: Table data cell.</li>
+            </ul>
+            <pre><code><table border="1"> <!-- 'border' attribute is deprecated, use CSS -->
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Alice</td>
+    <td>30</td>
+  </tr>
+</table></code></pre>
+                <h5>Advanced Elements:</h5>
+                <ul>
+                    <li><code><caption></code>: Table title.</li>
+                    <li><code><thead></code>, <code><tbody></code>, <code><tfoot></code>: Group header, body, and footer content for semantic structure.</li>
+                </ul>
+                <h5>Cell Attributes:</h5>
+                <ul>
+                    <li><code>colspan="number"</code>: Cell spans multiple columns.</li>
+                    <li><code>rowspan="number"</code>: Cell spans multiple rows.</li>
+                </ul>
+                <p>Use CSS for styling tables (borders, padding, alignment). Avoid using tables for page layout; use CSS Flexbox or Grid.</p>
+
+<h4>2. CSS box model.</h4>
+            <p><em>(This answer is the same as in TEST-3, Question 1. See above for details.)</em></p>
+            <p>The CSS box model describes how HTML elements are rendered as rectangular boxes. Each box has four parts:</p>
+            <ol>
+                <li><strong>Content:</strong> The actual content (text, images). Its dimensions are <code>width</code> and <code>height</code>.</li>
+                <li><strong>Padding:</strong> Transparent area around the content, inside the border.</li>
+                <li><strong>Border:</strong> A line around the padding and content.</li>
+                <li><strong>Margin:</strong> Transparent area outside the border, creating space between elements.</li>
+            </ol>
+            <h5><code>box-sizing</code> Property:</h5>
+            <ul>
+                <li><code>content-box</code> (default): <code>width</code> and <code>height</code> apply to the content area only.</li>
+                <li><code>border-box</code>: <code>width</code> and <code>height</code> include content, padding, and border.</li>
+            </ul>
+
+            <h4>3. The type of CMS technology</h4>
+            <p><em>(This answer is similar to TEST-3, Question 3 "Modern types of CMS". See above for details.)</em></p>
+            <p>Key types of CMS technology include:</p>
+            <ul>
+                <li><strong>Traditional (Coupled/Monolithic):</strong> Backend and frontend are tightly integrated (e.g., WordPress).</li>
+                <li><strong>Headless (Decoupled API-first):</strong> Backend is separate; content delivered via API (e.g., Contentful, Strapi).</li>
+                <li><strong>Decoupled (Hybrid):</strong> Offers a default frontend but also robust API access (e.g., Drupal).</li>
+                <li><strong>Static Site Generator (SSG) based workflows:</strong> SSGs (e.g., Gatsby) pre-build static sites, often with a Headless or Git-based CMS.</li>
+                <li><strong>SaaS (Software as a Service):</strong> Cloud-hosted CMS managed by a provider (e.g., Squarespace, Wix).</li>
+            </ul>
+
+            <h4>4. JS. Create a webpage where clicking a button changes the background color of the page.</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head>
+    <title>Change Background</title>
+    <style> body { transition: background-color 0.5s ease; } </style>
+</head>
+<body>
+    <button id="bgColorButton">Change Background Color</button>
+    <script>
+        const button = document.getElementById("bgColorButton");
+        const colors = ["lightblue", "lightgreen", "lightcoral", "lightpink"];
+        let currentColorIndex = 0;
+        button.addEventListener("click", function() {
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length; 
+        });
+    </script>
+</body>
+</html></code></pre>
+
+<h4>5. PHP. Create a PHP form where the user enters a number. When submitted, the script should display whether the number is even or odd.</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head><title>PHP Even/Odd</title></head>
+<body>
+    <h2>Even or Odd Checker</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Enter a whole number: <input type="number" name="number_check" step="1" required><br><br>
+        <input type="submit" name="submit_check" value="Check Even/Odd">
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_check'])) {
+        if (isset($_POST['number_check']) && filter_var($_POST['number_check'], FILTER_VALIDATE_INT) !== false) {
+            $number = intval($_POST['number_check']);
+            echo "<h3>Result:</h3>";
+            echo "<p>The number entered is: " . htmlspecialchars($number) . "</p>";
+            if ($number % 2 == 0) {
+                echo "<p>" . htmlspecialchars($number) . " is an <strong>even</strong> number.</p>";
+            } else {
+                echo "<p>" . htmlspecialchars($number) . " is an <strong>odd</strong> number.</p>";
+            }
+        } else {
+            echo "<h3>Error:</h3><p>Please enter a valid whole number.</p>";
+        }
+    }
+    ?>
+</body>
+</html></code></pre>
+            </div>
+        </div>
+    </div>
+
+<!-- TEST-8 Note -->
+<div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-8" style="background-color: #6c757d;">
+        <span class="accordion-title">TEST-8</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-8">
+        <div class="accordion-content-inner">
+            <p>TEST-8 was not visible in the provided images. Answers cannot be provided.</p>
+        </div>
+    </div>
+</div>
+
+<!-- TEST-9 -->
+<div class="accordion-item">
+    <button class="accordion-button" aria-expanded="false" aria-controls="content-test-9">
+        <span class="accordion-title">TEST-9</span>
+        <span class="accordion-icon open-icon">+</span>
+        <span class="accordion-icon close-icon actual-x">×</span>
+    </button>
+    <div class="accordion-content" id="content-test-9">
+        <div class="accordion-content-inner">
+            <h4>Tashkent University of Information Technologies named after Muhammad Al-Khorazmi, Urganch Branch</h4>
+            <p><strong>Direction:</strong> Computer engineering<br>
+               <strong>Science:</strong> Creating Web Applications<br>
+               <strong>For:</strong> Second grade students</p>
+            <h5>Questions:</h5>
+            <ol>
+                <li class="theory-question">Working with links in HTML.</li>
+                <li class="theory-question">CSS border property</li>
+                <li class="theory-question">Functions in JS</li>
+                <li class="practice-question">JS. Create a form with two inputs. When the user clicks a button, display their sum without refreshing the page.</li>
+                <li class="practice-question">PHP. Create a simple PHP form that allows a user to enter two numbers using a form and displays their sum.</li>
+            </ol>
+            <p class="meta-info"><em>Note: Questions 1, 2, 3 are theory; 4 and 5 are practice.</em></p>
+            <p class="meta-info"><em>Created by: Yusupova F</em></p>
+            <hr>
+            <h3>Answers for TEST-9:</h3>
+
+            <h4>1. Working with links in HTML.</h4>
+            <p>HTML links (hyperlinks) are created using the <code><a></code> (anchor) tag. They navigate to other web pages, sections within the same page, or files.</p>
+            <p><strong>Basic Syntax:</strong> <code><a href="url">Link Text</a></code></p>
+            <h5>Key Attributes of <code><a></code>:</h5>
+            <ul>
+                <li><strong><code>href</code> (Hypertext Reference):</strong> (Required) Specifies the destination URL.
+                    <ul>
+                        <li>Absolute URLs: <code>https://www.example.com</code></li>
+                        <li>Relative URLs: <code>page2.html</code>, <code>images/pic.jpg</code></li>
+                        <li>Fragment Identifiers (same page): <code>#sectionId</code></li>
+                        <li>Email: <code>mailto:email@example.com</code></li>
+                        <li>Phone: <code>tel:+1234567890</code></li>
+                    </ul>
+                </li>
+                <li><strong><code>target</code>:</strong> Where to open the link.
+                    <ul>
+                        <li><code>_self</code> (default): Same window/tab.</li>
+                        <li><code>_blank</code>: New window/tab.</li>
+                    </ul>
+                </li>
+                <li><strong><code>title</code>:</strong> Advisory text (tooltip on hover).</li>
+                <li><strong><code>rel</code>:</strong> Relationship (e.g., <code>nofollow</code>, <code>noopener noreferrer</code> for security with <code>target="_blank"</code>).</li>
+                <li><strong><code>download [="filename"]</code>:</strong> Instructs browser to download the linked URL.</li>
+            </ul>
+            <h5>Styling Links with CSS:</h5>
+            <p>Pseudo-classes: <code>a:link</code>, <code>a:visited</code>, <code>a:hover</code>, <code>a:active</code>.</p>
+            <pre><code>a:link { color: blue; text-decoration: none; }
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+a:hover { color: red; text-decoration: underline; }</code></pre>
+
+<h4>2. CSS border property</h4>
+            <p>The CSS <code>border</code> property is a shorthand for setting border width, style, and color for all four sides of an element.</p>
+            <p><strong>Shorthand Syntax:</strong> <code>border: border-width border-style border-color;</code></p>
+            <ul>
+                <li><strong><code>border-width</code>:</strong> Thickness (e.g., <code>2px</code>, <code>medium</code>).</li>
+                <li><strong><code>border-style</code>:</strong> (Required for visibility) Line style (e.g., <code>solid</code>, <code>dotted</code>, <code>dashed</code>, <code>double</code>, <code>none</code>).</li>
+                <li><strong><code>border-color</code>:</strong> Color of the border.</li>
+            </ul>
+            <pre><code>div { border: 1px solid #ccc; }
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+
+p { border-bottom: 2px dashed blue; } /* Specific side */</code></pre>
+<h5>Individual Border Properties:</h5>
+<p><code>border-top-width</code>, <code>border-right-style</code>, <code>border-left-color</code>, etc. Also shorthands like <code>border-width: top right bottom left;</code>.</p>
+<h5><code>border-radius</code>:</h5>
+<p>Creates rounded corners (e.g., <code>border-radius: 5px;</code>, <code>border-radius: 50%;</code> for a circle on a square element).</p>
+
+<h4>3. Functions in JS</h4>
+            <p><em>(This answer is the same as in TEST-4, Question 2. See above for details.)</em></p>
+            <p>Functions are blocks of code designed to perform a particular task. They are executed when invoked (called).</p>
+            <h5>Defining Functions:</h5>
+            <ul>
+                <li><strong>Function Declaration:</strong> <code>function myFunction() { ... }</code> (Hoisted)</li>
+                <li><strong>Function Expression:</strong> <code>const myFunction = function() { ... };</code></li>
+                <li><strong>Arrow Functions (ES6):</strong> <code>const myFunction = () => { ... };</code> (Lexical <code>this</code>)</li>
+            </ul>
+            <h5>Key Concepts:</h5>
+            <p>Calling functions (<code>myFunction();</code>), parameters, arguments, return values (<code>return ...;</code>), scope.</p>
+
+            <h4>4. JS. Create a form with two inputs. When the user clicks a button, display their sum without refreshing the page.</h4>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head><title>JS Sum No Refresh</title></head>
+<body>
+    <h2>Sum (No Refresh)</h2>
+    Num1: <input type="number" id="jsNum1"><br>
+    Num2: <input type="number" id="jsNum2"><br>
+    <button type="button" onclick="calculateJsSum()">Calculate Sum</button>
+    <p>Sum: <strong id="jsSumResult"></strong></p>
+    <script>
+        function calculateJsSum() {
+            const num1 = parseFloat(document.getElementById("jsNum1").value) || 0;
+            const num2 = parseFloat(document.getElementById("jsNum2").value) || 0;
+            const sum = num1 + num2;
+            document.getElementById("jsSumResult").textContent = sum;
+        }
+    </script>
+</body>
+</html></code></pre>
+                <p>The <code>type="button"</code> on the button prevents default form submission. The JavaScript function reads input values, calculates the sum, and updates the content of the <code><strong></code> tag directly in the DOM.</p>
+
+<h4>5. PHP. Create a simple PHP form that allows a user to enter two numbers using a form and displays their sum.</h4>
+            <p><em>(This answer is the same as in TEST-6, Question 5. See above for details and code.)</em></p>
+            <pre><code><!DOCTYPE html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+IGNORE_WHEN_COPYING_END
+<html>
+<head><title>PHP Sum</title></head>
+<body>
+    <h2>PHP Sum Calculator</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Num1: <input type="number" step="any" name="n1_php_test9" required><br><br>
+        Num2: <input type="number" step="any" name="n2_php_test9" required><br><br>
+        <input type="submit" name="submit_sum_test9" value="Calculate Sum">
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_sum_test9'])) {
+        if (isset($_POST['n1_php_test9']) && is_numeric($_POST['n1_php_test9']) && 
+            isset($_POST['n2_php_test9']) && is_numeric($_POST['n2_php_test9'])) {
+            $num1 = floatval($_POST['n1_php_test9']);
+            $num2 = floatval($_POST['n2_php_test9']);
+            $sum = $num1 + $num2;
+            echo "<h3>Result:</h3>";
+            echo "<p>" . htmlspecialchars($num1) . " + " . htmlspecialchars($num2) . " = " . htmlspecialchars($sum) . "</p>";
+        } else {
+            echo "<h3>Error:</h3><p>Please enter valid numbers.</p>";
+        }
+    }
+    ?>
+</body>
+</html></code></pre>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Barcha akkordeon tugmachalarini topamiz
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        // Har bir tugmacha uchun hodisa tinglovchisini qo'shamiz
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Bosilgan tugmachadan keyingi elementni (kontent blokini) olamiz
+                const content = button.nextElementSibling;
+
+                // Tugmachaning joriy "aria-expanded" holatini tekshiramiz
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                // "aria-expanded" atributini teskari qiymatga o'zgartiramiz
+                button.setAttribute('aria-expanded', !isExpanded);
+
+                // Kontentni ochish yoki yopish
+                if (!isExpanded) {
+                    // Agar yopiq bo'lsa (endi ochiladi)
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    console.log('Ochildi:', button.querySelector('.accordion-title').textContent);
+                } else {
+                    // Agar ochiq bo'lsa (endi yopiladi)
+                    content.style.maxHeight = null; // yoki '0px'
+                    console.log('Yopildi:', button.querySelector('.accordion-title').textContent);
+                }
+            });
         });
     });
-});
-    </script>
-    
-<script src="script.js"></script>
+</script>
 </body>
 </html>
+
+

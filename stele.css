@@ -1,387 +1,140 @@
-/* --- Global o'zgaruvchilar ranglar va shriftlar uchun (QORONG'U MAVZU) --- */
-:root {
-    /* Qorong'u mavzu uchun ranglar */
-    --asosiy-rang: #3498db; /* Asosiy urg'u rangi (ko'k) */
-    --asosiy-rang-toq: #2980b9; /* Ochilgan sarlavha uchun */
-    --ikkinchi-darajali-rang: #2ecc71; /* Yashil */
-
-    --matn-rangi-toq: #e0e0e0; /* To'q matn (sarlavhalar) -> Och kulrang */
-    --matn-rangi-orta: #c5c5c5; /* O'rta matn (savollar) -> Biroz to'qroq och kulrang */
-    --matn-rangi-och: #a0a0a0;  /* Och matn (javoblar) -> Yanada ochroq kulrang */
-
-    --fon-asosiy: #121212; /* Juda to'q sahifa foni */
-    --fon-akkordeon-konteyner: #1e1e1e; /* Akkordeon konteyneri uchun fon */
-    --fon-tugma-hover: #2a2a2a; /* Tugma ustiga sichqoncha kelganda fon */
-    --fon-javob-mazmuni: #242424; /* Javob mazmuni uchun fon */
-
-    --chegara-rangi: #3a3a3a; /* Chegaralar rangi */
-
-    --shrift-asosiy: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --shrift-kod: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-
-    --soya-yumshoq: 0 4px 15px rgba(0, 0, 0, 0.2);
-    --soya-orta: 0 8px 25px rgba(0, 0, 0, 0.3);
-
-    --chegara-radiusi-asosiy: 12px;
-    --chegara-radiusi-ichki: 8px;
-}
-
-/* --- Asosiy uslublar --- */
 body {
-    font-family: var(--shrift-asosiy);
-    margin: 0;
-    padding: 0;
-    background-color: var(--fon-asosiy);
-    color: var(--matn-rangi-orta);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif; /* Sahifaning asosiy shrifti */
+    margin: 20px; /* Sahifa chetlaridan bo'sh joy */
+    background-color: #f4f4f4; /* Sahifaning orqa fon rangi */
+    line-height: 1.6; /* Satrlar orasidagi masofa */
 }
 
-.cantent {
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.where {
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: var(--fon-akkordeon-konteyner);
-    border-radius: var(--chegara-radiusi-asosiy);
-    box-shadow: var(--soya-orta);
-    padding: 25px 30px;
-}
-
-.where h1 {
-    text-align: center;
-    color: var(--matn-rangi-toq);
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 1.8rem;
-}
-
-/* --- Har bir akkordeon elementi uchun uslublar --- */
 .accordion-item {
-    border-bottom: 1px solid var(--chegara-rangi);
-}
-.accordion-item:last-child {
-    border-bottom: none;
+    background-color: #fff; /* Akkordeon elementining orqa fon rangi */
+    margin-bottom: 10px; /* Akkordeon elementlari orasidagi pastki bo'sh joy */
+    border: 1px solid #ddd; /* Akkordeon elementining chegarasi */
+    border-radius: 4px; /* Chegaraning yumaloqligi */
+    overflow: hidden; /* Kontent tashqariga chiqib ketmasligi uchun (agar border-radius ishlatilsa kerak) */
 }
 
-/* --- Savol-tugma uchun uslublar --- */
 .accordion-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 16px 0;
-    background-color: transparent;
-    border: none;
-    text-align: left;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--matn-rangi-orta);
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    background-color: #007bff; /* Tugmachaning orqa fon rangi (ko'k) */
+    color: white; /* Tugmachadagi matn rangi (oq) */
+    cursor: pointer; /* Sichqoncha belgisi (qo'l shaklida) */
+    padding: 15px; /* Tugmachaning ichki bo'sh joylari */
+    width: 100%; /* Tugmachaning kengligi (to'liq egallaydi) */
+    border: none; /* Tugmachaning o'z chegarasini olib tashlash */
+    text-align: left; /* Matnni chap tomonga tekislash */
+    outline: none; /* Fokuslanganda paydo bo'ladigan konturni olib tashlash */
+    font-size: 16px; /* Matn o'lchami */
+    display: flex; /* Elementlarni bir qatorda joylashtirish uchun (sarlavha va belgilar) */
+    justify-content: space-between; /* Sarlavha va belgilar orasida maksimal bo'sh joy */
+    align-items: center; /* Elementlarni vertikal o'q bo'yicha markazga tekislash */
+    /* Yuqori burchaklarni yumaloqlash (agar .accordion-item 'overflow: hidden' bo'lmasa kerak) */
+    /* border-radius: 3px 3px 0 0; */
 }
 
 .accordion-button:hover {
-    background-color: var(--fon-tugma-hover);
-}
-
-.accordion-button:hover .accordion-title,
-.accordion-button:focus .accordion-title {
-    color: var(--asosiy-rang);
-}
-.accordion-button:focus-visible {
-    box-shadow: 0 0 0 2px var(--asosiy-rang) inset;
-    border-radius: var(--chegara-radiusi-ichki);
+    background-color: #0056b3; /* Tugmachaga sichqoncha olib borilgandagi orqa fon rangi */
 }
 
 .accordion-title {
-    flex-grow: 1;
-    padding-right: 10px;
-    transition: color 0.2s ease;
+    flex-grow: 1; /* Sarlavha mavjud bo'sh joyni egallashi uchun */
 }
 
-/* --- "+" va "X" belgilari uchun uslublar --- */
 .accordion-icon {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--asosiy-rang);
-    margin-left: 10px;
-    transition: transform 0.3s ease, color 0.3s ease;
-    min-width: 18px;
-    text-align: center;
-    line-height: 1;
-    flex-shrink: 0;
+    font-size: 1.2em; /* Belgining o'lchami */
+    font-weight: bold; /* Belgining qalinligi */
+    margin-left: 10px; /* Belgidan chap tomonda bo'sh joy */
+    transition: transform 0.3s ease; /* Belgining aylanishi uchun silliq o'tish (agar kerak bo'lsa) */
+}
+
+/* "+" va "×" belgilarini boshqarish */
+.accordion-button .open-icon {
+    display: inline; /* Boshlang'ich holatda "+" belgisi ko'rinadi */
 }
 
 .accordion-button .close-icon {
-    display: none;
-    color: #ff6b6b;
-    transform: rotate(0deg);
+    display: none; /* Boshlang'ich holatda "×" belgisi yashirilgan */
 }
 
 .accordion-button[aria-expanded="true"] .open-icon {
-    display: none;
+    display: none; /* Akkordeon ochilganda (aria-expanded="true") "+" belgisi yashiriladi */
 }
 
 .accordion-button[aria-expanded="true"] .close-icon {
-    display: inline;
+    display: inline; /* Akkordeon ochilganda (aria-expanded="true") "×" belgisi ko'rinadi */
 }
 
-.accordion-button[aria-expanded="true"] .close-icon:not(.actual-x) {
-    transform: rotate(45deg);
-}
-.accordion-button[aria-expanded="true"] .close-icon.actual-x {
-    transform: rotate(0deg); /* Agar haqiqiy "X" belgisi bo'lsa, aylanish shart emas */
+/* "×" belgisi uchun chiroyliroq ko'rinish (agar kerak bo'lsa) */
+.actual-x {
+    font-family: 'Arial', sans-serif; /* "×" uchun shrift (bu shriftda chiroyliroq chiqadi) */
 }
 
-
-.accordion-button[aria-expanded="true"] .accordion-title {
-    color: var(--asosiy-rang);
-}
-.accordion-button[aria-expanded="true"] {
-    background-color: var(--fon-tugma-hover);
-}
-
-
-/* --- Javob mazmuni uchun uslublar --- */
 .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                padding-top 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                padding-bottom 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
-                opacity 0.3s ease-out;
-    background-color: var(--fon-javob-mazmuni);
-    opacity: 0;
-}
-
-.accordion-content.open {
-    max-height: 3000px;
-    opacity: 1;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    border-top: 1px solid var(--chegara-rangi);
+    max-height: 0; /* Boshlang'ich holatda kontent yashirilgan (balandligi 0) */
+    overflow: hidden; /* Balandlik 0 bo'lganda kontent ko'rinmasligi uchun */
+    transition: max-height 0.3s ease-out; /* Balandlik o'zgarishi uchun silliq animatsiya */
+    /* border-top: 1px solid #ddd; */ /* Tugma va kontent orasidagi chiziq (agar .accordion-item chegarasi bo'lmasa) */
 }
 
 .accordion-content-inner {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: var(--matn-rangi-och);
-    font-size: 0.95rem;
-    line-height: 1.65;
+    padding: 15px; /* Kontentning ichki bo'sh joylari */
+    background-color: #f9f9f9; /* Kontent blokining orqa fon rangi */
+    /* Pastki burchaklarni yumaloqlash (agar .accordion-item 'overflow: hidden' bo'lmasa kerak) */
+    /* border-radius: 0 0 3px 3px; */
+}
+
+/* Kontent ichidagi sarlavhalar va boshqa elementlar uchun namunaviy stillar */
+.accordion-content-inner h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.accordion-content-inner h4 {
+    margin-top: 15px;
+    color: #0056b3;
+    font-size: 1.1em;
 }
 
 .accordion-content-inner h5 {
-    color: var(--asosiy-rang);
-    margin-top: 18px;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-bottom: 1px solid var(--chegara-rangi);
-    padding-bottom: 5px;
-}
-.accordion-content-inner h5:first-child {
-    margin-top: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.accordion-content-inner p,
-.accordion-content-inner ul li,
-.accordion-content-inner ol li {
-    margin-bottom: 10px;
-    color: var(--matn-rangi-och);
-}
-
-.accordion-content-inner ul,
-.accordion-content-inner ol {
+.accordion-content-inner ol, .accordion-content-inner ul {
     padding-left: 20px;
-}
-.accordion-content-inner ul {
-    list-style-type: disc;
-}
-.accordion-content-inner ol {
-    list-style-type: decimal;
+    margin-bottom: 10px;
 }
 
-.accordion-content-inner ul li::marker,
-.accordion-content-inner ol li::marker {
-    color: var(--matn-rangi-och);
+.accordion-content-inner li {
+    margin-bottom: 8px;
 }
 
-
-.accordion-content-inner ul ul,
-.accordion-content-inner ol ol {
-    list-style-type: circle;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-.accordion-content-inner ol ul,
-.accordion-content-inner ul ol {
-    margin-top: 6px;
-    margin-bottom: 6px;
+.accordion-content-inner .meta-info {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
 }
 
-
-/* --- Formulalar va Kod bloklari uchun uslublar (QORONG'U MAVZU) --- */
-pre { /* `code` ni bu yerdan olib tashladim, chunki asosiy stillar pre uchun */
-    font-family: var(--shrift-kod);
-    background-color: #2c2c2c;
-    padding: 12px 16px; /* YUQORI/PASTKI: 12px, O'NG/CHAP: 16px */
-    border-radius: var(--chegara-radiusi-ichki);
-    border: 1px solid #444;
-    overflow-x: auto;
-    margin: 15px 0;
-    font-size: 0.88rem;
-    line-height: 1.55;
-    white-space: pre-wrap;
-    overflow-wrap: break-word; /* Yoki word-break: break-word; */
-    color: #d0d0d0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    -webkit-overflow-scrolling: touch;
-    box-sizing: border-box;
-    max-width: 100%;
+pre {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto; /* Kod bloklari gorizontal scroll bo'lishi uchun */
+    font-family: 'Courier New', Courier, monospace; /* Kod uchun mos shrift */
+    font-size: 0.9em;
+    border: 1px solid #ccc;
 }
 
-pre code { /* pre ichidagi code uchun minimal stillar */
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    font-size: inherit; /* pre dan shrift o'lchamini oladi */
-    line-height: inherit; /* pre dan qator balandligini oladi */
-    color: inherit; /* pre dan matn rangini oladi */
-    box-shadow: none;
-    white-space: inherit; /* pre dan white-space ni oladi */
-    overflow-wrap: inherit; /* pre dan overflow-wrap ni oladi */
-    word-break: inherit; /* pre dan word-break ni oladi */
-    /* Boshqa maxsus stillar kerak emas, chunki 'pre' o'zi formatlaydi */
+code {
+    font-family: 'Courier New', Courier, monospace; /* `<code>` tegi ichidagi matn uchun shrift */
 }
 
-/* Har bir kod misoli bloki uchun qo'shimcha (agar HTMLga qo'shilsa) */
-.code-example-block {
-    margin-bottom: 15px;
-}
-.code-example-block pre {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-code:not(pre code) { /* Bu faqat inline 'code' elementlari uchun */
-    padding: 0.15em 0.35em;
-    margin: 0;
-    font-size: 82%;
-    background-color: #333;
-    color: #ddd;
-    border-radius: 3px;
-    white-space: normal;
-    word-break: normal;
-}
-
-/* Jadval uchun qo'shimcha uslub (QORONG'U MAVZU) */
-.table-container {
-    overflow-x: auto;
-    margin: 18px 0;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-}
-th, td {
-    border: 1px solid var(--chegara-rangi);
-    padding: 8px 10px;
-    text-align: left;
-    vertical-align: top;
-}
-th {
-    background-color: #2a2a2a;
-    font-weight: 600;
-    color: var(--matn-rangi-toq);
-}
-tbody tr:nth-child(odd) {
-    background-color: #242424;
-}
-tbody tr:hover {
-    background-color: #303030;
-}
-
-/* --- Media So'rovlari (Adaptivlik uchun) --- */
-@media (max-width: 768px) {
-    .cantent {
-        padding: 15px;
-    }
-    .where {
-        margin: 20px auto;
-        padding: 15px 20px;
-    }
-    .where h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-    .accordion-button {
-        font-size: 1rem;
-        padding: 14px 0;
-    }
-    .accordion-icon {
-        font-size: 1.3rem;
-        margin-left: 8px;
-    }
-    .accordion-content-inner {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-    .accordion-content-inner h5 {
-        font-size: 0.95rem;
-    }
-    pre { /* Faqat 'pre' ni o'zgartiramiz, 'pre code' meros qilib oladi */
-        font-size: 0.8rem; /* Kichikroq ekranlar uchun shriftni yanada kichiklashtirish */
-        padding: 10px 12px;
-        line-height: 1.45;
-    }
-    table {
-        font-size: 0.85rem;
-    }
-    th, td {
-        padding: 6px 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cantent {
-        padding: 10px;
-    }
-    .where {
-        padding: 10px 15px;
-        margin: 10px auto;
-    }
-    .where h1 {
-        font-size: 1.3rem;
-    }
-    .accordion-button {
-        font-size: 0.95rem;
-        padding: 12px 0;
-    }
-    .accordion-title {
-        padding-right: 5px;
-    }
-    .accordion-icon {
-        font-size: 1.2rem;
-        margin-left: 5px;
-    }
-    .accordion-content.open {
-        padding-top: 10px;
-        padding-bottom: 15px;
-    }
-    .accordion-content-inner {
-        font-size: 0.85rem;
-    }
-    pre { /* Faqat 'pre' ni o'zgartiramiz */
-        font-size: 0.75rem; /* Eng kichik ekranlar uchun yanada kichikroq shrift */
-        padding: 8px 10px;
-        line-height: 1.4;
-    }
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

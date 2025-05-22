@@ -1,69 +1,78 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const accordionButtons = document.querySelectorAll('.accordion-button');
+    const accordionItems = document.querySelectorAll('.accordion-item');
 
-    accordionButtons.forEach(button => {
-        // Joriy tugma uchun belgilarni topish
-        const openIcon = button.querySelector('.open-icon');
-        const closeIcon = button.querySelector('.close-icon');
-        // Joriy tugma uchun kontentni topish
-        const content = button.nextElementSibling; // Tugmadan keyingi element - kontent
+    accordionItems.forEach(item => {
+        const button = item.querySelector('.accordion-button');
+        const openIcon = item.querySelector('.open-icon');
+        const closeIcon = item.querySelector('.close-icon');
+        // Kontentni topishda ehtiyot bo'lish kerak:
+        // Agar .accordion-content har doim .accordion-button dan keyin kelsa:
+        const content = button.nextElementSibling;
+        // Yoki .accordion-item ichidan qidirsak:
+        // const content = item.querySelector('.accordion-content');
 
-        // Agar kontent topilmasa yoki kerakli klassga ega bo'lmasa, xatolik chiqarib, keyingisiga o'tish
-        if (!content || !content.classList.contains('accordion-content')) {
-            console.error('Akkordeon kontenti topilmadi yoki noto\'g\'ri klassga ega:', button);
+
+        if (!button || !openIcon || !closeIcon || !content || !content.classList.contains('accordion-content')) {
+            console.error('Akkordeon uchun kerakli elementlar topilmadi yoki kontent xato:', item);
             return;
         }
-        
-        // Belgilarning boshlang'ich holati ("X" yashiringan)
-        if (closeIcon) closeIcon.style.display = 'none';
-        if (openIcon) openIcon.style.display = 'inline'; // "+" ko'rinadigan bo'lishiga ishonch hosil qilish
-        // Tugmaning boshlang'ich aria-expanded holati
+
+        // Boshlang'ich holat: yopiq
         button.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = null;
+        if (closeIcon) closeIcon.style.display = 'none';
+        if (openIcon) openIcon.style.display = 'inline';
 
+        openIcon.addEventListener('click', function (event) {
+            event.stopPropagation();
 
-        button.addEventListener('click', function () {
-            // Joriy tugma kengaytirilganmi (ochiqmi)?
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const isCurrentlyExpanded = button.getAttribute('aria-expanded') === 'true';
+            if (isCurrentlyExpanded) return; // Agar allaqachon ochiq bo'lsa (bu holat bo'lmasligi kerak, lekin himoya uchun)
 
-            // Avval barcha BOSHQA akkordeonlarni yopish
-            accordionButtons.forEach(otherButton => {
-                if (otherButton !== this) { // Agar bu joriy tugma bo'lmasa
-                    const otherContent = otherButton.nextElementSibling;
-                    const otherOpenIcon = otherButton.querySelector('.open-icon');
-                    const otherCloseIcon = otherButton.querySelector('.close-icon');
+            // Boshqa barcha ochiq akkordeonlarni yopish
+            accordionItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherButton = otherItem.querySelector('.accordion-button');
+                    // const otherContent = otherItem.querySelector('.accordion-content');
+                    const otherContent = otherButton.nextElementSibling; // Yuqoridagi kabi
+                    const otherOpenIcon = otherItem.querySelector('.open-icon');
+                    const otherCloseIcon = otherItem.querySelector('.close-icon');
 
-                    // Agar boshqa elementlar mavjud bo'lsa, ularni qayta ishlash
-                    if (otherContent && otherContent.classList.contains('accordion-content')) {
+                    if (otherButton && otherContent && otherOpenIcon && otherCloseIcon && otherButton.getAttribute('aria-expanded') === 'true') {
                         otherButton.setAttribute('aria-expanded', 'false');
-                        otherContent.classList.remove('open');
-                        // Animatsiya yopilishi uchun max-height ni tozalash
-                        otherContent.style.maxHeight = null; 
-                        
-                        // Boshqa tugmalarning belgilarini "yopiq" holatga qaytarish
-                        if (otherOpenIcon) otherOpenIcon.style.display = 'inline';
-                        if (otherCloseIcon) otherCloseIcon.style.display = 'none';
+                        if(otherContent.classList.contains('accordion-content')) otherContent.classList.remove('open'); // 'open' klassini olib tashlash
+                        otherContent.style.maxHeight = null;
+                        otherOpenIcon.style.display = 'inline';
+                        otherCloseIcon.style.display = 'none';
                     }
                 }
             });
 
-            // Endi joriy akkordeonni almashtirish
-            if (isExpanded) {
-                // Joriy akkordeonni yopish
-                this.setAttribute('aria-expanded', 'false');
-                content.classList.remove('open');
-                content.style.maxHeight = null; // Animatsiya yopilishi uchun
-                if (openIcon) openIcon.style.display = 'inline'; // "+" ni ko'rsatish
-                if (closeIcon) closeIcon.style.display = 'none';  // "X" ni yashirish
-            } else {
-                // Joriy akkordeonni ochish
-                this.setAttribute('aria-expanded', 'true');
-                content.classList.add('open');
-                // Ochilish animatsiyasi uchun max-height ni o'rnatish.
-                // scrollHeight kontentning haqiqiy balandligini beradi.
-                content.style.maxHeight = content.scrollHeight + "px";
-                if (openIcon) openIcon.style.display = 'none';   // "+" ni yashirish
-                if (closeIcon) closeIcon.style.display = 'inline'; // "X" ni ko'rsatish
-            }
+            // Joriy akkordeonni ochish
+            button.setAttribute('aria-expanded', 'true');
+            content.classList.add('open'); // 'open' klassini qo'shish
+            content.style.maxHeight = content.scrollHeight + "px";
+            openIcon.style.display = 'none';
+            closeIcon.style.display = 'inline';
+        });
+
+        closeIcon.addEventListener('click', function (event) {
+            event.stopPropagation();
+
+            const isCurrentlyExpanded = button.getAttribute('aria-expanded') === 'true';
+            if (!isCurrentlyExpanded) return; // Agar allaqachon yopiq bo'lsa
+
+            // Joriy akkordeonni yopish
+            button.setAttribute('aria-expanded', 'false');
+            content.classList.remove('open'); // 'open' klassini olib tashlash
+            content.style.maxHeight = null;
+            openIcon.style.display = 'inline';
+            closeIcon.style.display = 'none';
         });
     });
 });
+
+
+
+
+
