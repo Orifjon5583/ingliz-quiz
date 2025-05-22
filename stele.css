@@ -1,140 +1,284 @@
+/* dark-styles.css */
 body {
-    font-family: sans-serif; /* Sahifaning asosiy shrifti */
-    margin: 20px; /* Sahifa chetlaridan bo'sh joy */
-    background-color: #f4f4f4; /* Sahifaning orqa fon rangi */
-    line-height: 1.6; /* Satrlar orasidagi masofa */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background for body */
+    color: #e0e0e0; /* Light text color */
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
 }
 
 .accordion-item {
-    background-color: #fff; /* Akkordeon elementining orqa fon rangi */
-    margin-bottom: 10px; /* Akkordeon elementlari orasidagi pastki bo'sh joy */
-    border: 1px solid #ddd; /* Akkordeon elementining chegarasi */
-    border-radius: 4px; /* Chegaraning yumaloqligi */
-    overflow: hidden; /* Kontent tashqariga chiqib ketmasligi uchun (agar border-radius ishlatilsa kerak) */
+    border: 1px solid #444; /* Darker border */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Adjusted shadow for dark theme */
+    background-color: #2d2d2d; /* Dark background for item */
 }
 
 .accordion-button {
-    background-color: #007bff; /* Tugmachaning orqa fon rangi (ko'k) */
-    color: white; /* Tugmachadagi matn rangi (oq) */
-    cursor: pointer; /* Sichqoncha belgisi (qo'l shaklida) */
-    padding: 15px; /* Tugmachaning ichki bo'sh joylari */
-    width: 100%; /* Tugmachaning kengligi (to'liq egallaydi) */
-    border: none; /* Tugmachaning o'z chegarasini olib tashlash */
-    text-align: left; /* Matnni chap tomonga tekislash */
-    outline: none; /* Fokuslanganda paydo bo'ladigan konturni olib tashlash */
-    font-size: 16px; /* Matn o'lchami */
-    display: flex; /* Elementlarni bir qatorda joylashtirish uchun (sarlavha va belgilar) */
-    justify-content: space-between; /* Sarlavha va belgilar orasida maksimal bo'sh joy */
-    align-items: center; /* Elementlarni vertikal o'q bo'yicha markazga tekislash */
-    /* Yuqori burchaklarni yumaloqlash (agar .accordion-item 'overflow: hidden' bo'lmasa kerak) */
-    /* border-radius: 3px 3px 0 0; */
+    background-color: #333333; /* Darker button background */
+    color: #f0f0f0; /* Light text for button */
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4a4a4a; /* Subtle border */
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease;
 }
+
+.accordion-item:last-child .accordion-button {
+    border-bottom: none;
+     border-radius: 5px; /* Full radius if it's the only one or last one closed */
+}
+.accordion-item:last-child .accordion-button.active {
+    border-radius: 5px 5px 0 0; /* Keep top radius when active */
+}
+
 
 .accordion-button:hover {
-    background-color: #0056b3; /* Tugmachaga sichqoncha olib borilgandagi orqa fon rangi */
+    background-color: #404040; /* Slightly lighter on hover */
 }
 
-.accordion-title {
-    flex-grow: 1; /* Sarlavha mavjud bo'sh joyni egallashi uchun */
-}
-
-.accordion-icon {
-    font-size: 1.2em; /* Belgining o'lchami */
-    font-weight: bold; /* Belgining qalinligi */
-    margin-left: 10px; /* Belgidan chap tomonda bo'sh joy */
-    transition: transform 0.3s ease; /* Belgining aylanishi uchun silliq o'tish (agar kerak bo'lsa) */
-}
-
-/* "+" va "×" belgilarini boshqarish */
-.accordion-button .open-icon {
-    display: inline; /* Boshlang'ich holatda "+" belgisi ko'rinadi */
-}
-
-.accordion-button .close-icon {
-    display: none; /* Boshlang'ich holatda "×" belgisi yashirilgan */
-}
-
-.accordion-button[aria-expanded="true"] .open-icon {
-    display: none; /* Akkordeon ochilganda (aria-expanded="true") "+" belgisi yashiriladi */
-}
-
-.accordion-button[aria-expanded="true"] .close-icon {
-    display: inline; /* Akkordeon ochilganda (aria-expanded="true") "×" belgisi ko'rinadi */
-}
-
-/* "×" belgisi uchun chiroyliroq ko'rinish (agar kerak bo'lsa) */
-.actual-x {
-    font-family: 'Arial', sans-serif; /* "×" uchun shrift (bu shriftda chiroyliroq chiqadi) */
+.accordion-button.active {
+    background-color: #007bff; /* Accent color when active */
+    color: #ffffff;
+    border-bottom-color: #0056b3;
 }
 
 .accordion-content {
-    max-height: 0; /* Boshlang'ich holatda kontent yashirilgan (balandligi 0) */
-    overflow: hidden; /* Balandlik 0 bo'lganda kontent ko'rinmasligi uchun */
-    transition: max-height 0.3s ease-out; /* Balandlik o'zgarishi uchun silliq animatsiya */
-    /* border-top: 1px solid #ddd; */ /* Tugma va kontent orasidagi chiziq (agar .accordion-item chegarasi bo'lmasa) */
+    padding: 0 20px;
+    background-color: #252525; /* Dark background for content */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Added padding transition */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+.accordion-button.active + .accordion-content {
+   /* padding: 20px; */ /* Apply padding when active - handled by inner */
+}
+
 
 .accordion-content-inner {
-    padding: 15px; /* Kontentning ichki bo'sh joylari */
-    background-color: #f9f9f9; /* Kontent blokining orqa fon rangi */
-    /* Pastki burchaklarni yumaloqlash (agar .accordion-item 'overflow: hidden' bo'lmasa kerak) */
-    /* border-radius: 0 0 3px 3px; */
+    padding: 20px 0;
+    border-top: 1px dashed #444; /* Subtle top border for inner content */
 }
 
-/* Kontent ichidagi sarlavhalar va boshqa elementlar uchun namunaviy stillar */
-.accordion-content-inner h3 {
+.accordion-item .accordion-button.active + .accordion-content .accordion-content-inner {
+     border-top: none; /* No double border for the first content if button is active */
+}
+
+
+.accordion-icon.close-icon {
+    display: none;
+    font-size: 1.2em;
+}
+
+.accordion-button.active .accordion-icon.open-icon {
+    display: none;
+}
+
+.accordion-button.active .accordion-icon.close-icon {
+    display: inline;
+}
+
+h3 { /* Answers for TEST-X */
+    color: #00aeff; /* Light blue for main section titles */
     margin-top: 20px;
-    margin-bottom: 10px;
-    color: #333;
-    border-bottom: 1px solid #eee;
     padding-bottom: 5px;
+    border-bottom: 1px solid #555;
 }
 
-.accordion-content-inner h4 {
+h4 { /* Question titles */
+    color: #d6d6d6;
     margin-top: 15px;
-    color: #0056b3;
-    font-size: 1.1em;
 }
 
-.accordion-content-inner h5 {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.accordion-content-inner ol, .accordion-content-inner ul {
-    padding-left: 20px;
-    margin-bottom: 10px;
-}
-
-.accordion-content-inner li {
-    margin-bottom: 8px;
-}
-
-.accordion-content-inner .meta-info {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 10px;
+h5 { /* Sub-question titles or notes */
+    color: #b0b0b0;
 }
 
 pre {
-    background-color: #e9ecef;
-    padding: 10px;
+    background-color: #1a1a1a; /* Very dark for code blocks */
+    color: #dcdcdc; /* Light gray for code text */
+    padding: 15px;
+    border: 1px solid #383838; /* Subtle border for code blocks */
     border-radius: 4px;
-    overflow-x: auto; /* Kod bloklari gorizontal scroll bo'lishi uchun */
-    font-family: 'Courier New', Courier, monospace; /* Kod uchun mos shrift */
+    overflow-x: auto;
     font-size: 0.9em;
-    border: 1px solid #ccc;
+    white-space: pre-wrap; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
 }
 
 code {
-    font-family: 'Courier New', Courier, monospace; /* `<code>` tegi ichidagi matn uchun shrift */
+    font-family: 'Courier New', Courier, monospace;
+    color: #9cdcfe; /* Lighter blue for inline code or specific parts */
+    background-color: #2a2a2a; /* Slightly different dark for inline code bg */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+pre code { /* Reset for code inside pre */
+    background-color: transparent;
+    padding: 0;
+    color: inherit; /* Inherit pre's color by default */
+}
+
+
+.meta-info {
+    font-size: 0.9em;
+    color: #aaaaaa; /* Lighter gray for meta info */
+    font-style: italic;
 }
 
 hr {
     border: 0;
     height: 1px;
-    background-color: #ccc;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    background-color: #555555; /* Darker horizontal rule */
+    margin: 30px 0;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+li { margin-bottom: 8px; }
+
+
+.theory-question::before {
+    content: "T: ";
+    font-weight: bold;
+    color: #58a6ff; /* Light blue for theory marker */
+}
+.practice-question::before {
+    content: "P: ";
+    font-weight: bold;
+    color: #56d364; /* Light green for practice marker */
+}
+
+.note-test-8 {
+    background-color: #3a3f44; /* Darker note background */
+    padding: 15px;
+    border: 1px solid #5c6166; /* Darker note border */
+    border-radius: 4px;
+    color: #c0c5c9; /* Lighter text for note */
+}
+
+/* Form elements styling for dark theme */
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+label {
+    margin-bottom: 5px;
+    display: inline-block; /* Or block if you want them on new lines */
+}
+
+/* Result and Error messages for PHP forms */
+.result {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #2a4b6e; /* Dark blueish */
+    border: 1px solid #3b6aa0;
+    color: #e0f0ff;
+    border-radius: 5px;
+}
+.error {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #5c2a2a; /* Dark reddish */
+    border: 1px solid #8c4343;
+    color: #ffdddd;
+    border-radius: 5px;
+}
+.result h3, .error h3 {
+    margin-top: 0;
+    color: inherit; /* Inherit color from parent (.result or .error) */
+    border-bottom: none;
+}
+
+/* Specific styles for JS examples if needed */
+#currentColorName, #vowelResult, #jsSumResultDisplay, #sumResultDisplay {
+    font-weight: bold;
+    color: #61dafb; /* A bright color for results */
+}
+.error-message { /* For JS error messages */
+    color: #ff6b6b; /* Bright red for JS errors */
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Link styles for dark theme */
+a {
+  color: #6cb8f5; /* Light blue for links */
+  text-decoration: none;
+}
+a:visited {
+  color: #b39ddb; /* Light purple for visited links */
+}
+a:hover {
+  color: #8ed0ff; /* Brighter blue on hover */
+  text-decoration: underline;
+}
+a:active {
+  color: #ff8f68; /* Light orange for active links */
+}
+a:focus {
+  outline: 2px solid #6cb8f5;
+  outline-offset: 2px;
 }
